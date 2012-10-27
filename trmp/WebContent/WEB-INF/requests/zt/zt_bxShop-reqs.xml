@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="GBK"?>
+<requests>
+	<request>
+		<desc>初始化制定景点计划页面</desc>
+		<name>ztInitShopRbt</name>
+		<model name="com.trm.ztbx.ZtShopBxMngBLC.queryShopMng"/>
+		<model name="com.trm.ztbx.ZtTDBXZJXXBBLC.query"/>
+		<dispatch url="/main/ztbx/bxShop/bxShopGeneral.jsp" type="forward" on="" default="true"/>
+	</request>
+	<request>
+	<desc>初始化制定景点计划页面</desc>
+		<name>ztshopBXrequest</name>
+		<model name="com.trm.ztbx.ZtShopBxMngBLC.shopGeneralRbt"/>
+		<dispatch url="/main/ztbx/bxEdit.jsp" type="forward" on="" default="true"/>
+	</request>
+</requests>

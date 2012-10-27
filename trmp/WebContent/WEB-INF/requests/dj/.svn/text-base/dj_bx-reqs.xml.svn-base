@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="GBK"?>
+<requests>
+   <request>
+		<desc>查询所有要报销的团</desc>
+		<name>bxGuideAllList</name>
+		<model name="com.trmdj.businessPlan.groupMng.DjGroupMngBLC.rbtGuideAllList"/>
+		<dispatch url="/maindj/bx/bxList.jsp" type="forward" on="" default="true"/>
+	</request>
+	
+	<request>
+		<desc>初始化报销页面</desc>
+		<name>djInitBxPage</name>
+		<model name="com.trmdj.businessPlan.groupMng.DjGroupMngBLC.djInitBxPage"/>
+		<model name="com.trm.util.DMSMBLC.loadDMSM"/><!-- 加载代码值 -->
+		<model name="com.trmdj.businessPlan.groupMng.DjGroupDetailBLC.queryAllBxState"/><!-- 团计调安排情况 -->
+		<dispatch url="/maindj/bx/bxAjaxPage/allBxPage.jsp" type="forward" on="" default="true"/>
+	</request>
+	 <request>
+		<desc>初始化导游报账页面</desc>
+		<name>rbtGuideListByUser</name>
+		<model name="com.trmdj.bx.DjDjsbxBLC.query"/>
+		<model name="com.trmdj.bx.DjDjsbxBLC.queryDjsInfo"/>
+		<model name="com.trmdj.bx.DjGuidebxBLC.query"/>
+		<model name="com.trmdj.businessPlan.groupMng.DjGroupMngBLC.query4WriteOffInit"/>
+		<model name="com.trmdj.bx.DjHotelBxBLC.query"/>
+		<model name="com.trmdj.bx.DjDinnerBxBLC.query"/>
+		<model name="com.trmdj.bx.DjSceneryBxBLC.query"/>
+		<model name="com.trmdj.bx.DjTicketBxBLC.query"/>
+		<model name="com.trmdj.bx.DjVehBxBLC.query"/>
+		<model name="com.trmdj.bx.DjShopBxMngBLC.query"/>
+		<model name="com.trmdj.bx.DjPlusBxBLC.query"/>
+		<model name="com.trmdj.bx.DjPlusBxBLC.queryPlusInfo"/>
+		<model name="com.trmdj.businessPlan.plan.DJTDBXZJXXB.query"/>
+		<model name="com.trmdj.businessPlan.groupMng.DjGroupMngBLC.query"/>
+		<dispatch url="/maindj/bx/bxEdit.jsp" type="forward" on="" default="true"/>
+	</request>
+</requests>

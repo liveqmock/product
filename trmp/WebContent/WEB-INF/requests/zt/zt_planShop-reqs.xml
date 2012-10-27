@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="GBK"?>
+<requests>
+	<request>
+		<desc>初始化添加购物计划页面</desc>
+		<name>ztInitShopPlan</name>
+		<model name="com.trm.ztPlan.ZtShoppingPlanBLC.ztGetShopInfo"/>
+		<dispatch url="/main/ztPlans/shoppingPlan/addShoppingPlan.jsp" type="forward" on="" default="true"/>
+	</request> 
+	<request>
+		<desc>AJAX 初始化制定购物点名称以及人头费页面</desc>
+		<name>ztGetAllShopAndRTF</name>
+		<model name="com.trm.ztPlan.ZtShoppingPlanBLC.getAllShopAndRTF"/>
+		<dispatch url="/main/ztPlans/shoppingPlan/allShoppingByCity.jsp" type="forward" on="" default="true"/>
+	</request> 
+	<request>
+		<desc>添加购物计划信息</desc>
+		<name>ztShopGeneral</name>
+		<model name="com.trm.ztPlan.ZtShoppingPlanBLC.ztShopGeneral"/>
+		<dispatch url="%ContextPath%/main/ztPlans/ztInitMasterPlan.?TA_ZT_GROUP/ID=%groupId%&amp;TA_ZT_JHHOTEL/TID=%groupId%&amp;TA_TDJDXXZJB_ZT/TID=%groupId%&amp;TA_ZT_JHCT/TID=%groupId%&amp;TA_ZT_JH/TID=%groupId%&amp;TA_ZT_JHPW/TID=%groupId%&amp;TA_ZT_JHCL/TID=%groupId%&amp;TA_ZT_JHJD/TID=%groupId%&amp;TA_ZT_JHDJ/TID=%groupId%&amp;TA_ZT_JHGW/TID=%groupId%&amp;TA_ZT_JHJIAD/TID=%groupId%&amp;TA_ZT_JHDY/TID=%groupId%&amp;isCheck=Y&amp;mklb=1;" type="redirect" on="" default="true"/>
+	</request>  
+</requests>

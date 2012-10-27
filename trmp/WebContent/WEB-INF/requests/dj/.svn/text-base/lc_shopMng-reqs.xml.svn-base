@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="GBK"?>
+<requests>
+   <request>
+		<desc>查询签单列表</desc>
+		<name>LCshopList</name>
+		<model name="com.trmdj.financeMng.LCshopMngBLC.allLCLshopList"/>
+		<model name="com.trmdj.financeMng.LCshopMngBLC.selectAllshoppoint"/>
+		<dispatch url="/maindj/financeMng/lcqkShop/lcshopList.jsp" type="forward" on="" default="true"/>
+	</request>
+	  <request>
+		<desc>根据团ID结算签单</desc>
+		<name>getLcByTid</name>
+		<model name="com.trmdj.financeMng.LCshopMngBLC.getLcShopByTid"/>
+		<dispatch url="/maindj/financeMng/lcqkShop/addlcShop.jsp" type="forward" on="" default="true"/>
+	</request>
+	   <request>
+		<desc>提交结算签单</desc>
+		<name>addLc</name>
+		<model name="com.trmdj.financeMng.LCshopMngBLC.addLCshop"/>
+		<dispatch url="/maindj/financeMng/lcqkShop/lcshopList.jsp" type="forward" on="" default="true"/>
+	</request>
+		<request>
+		<desc>查看还款列表</desc>
+		<name>queryLClist</name>
+		<model name="com.trmdj.financeMng.LCshopMngBLC.queryLCshoplist"/>
+		<dispatch url="/maindj/financeMng/lcqkShop/viewlcShopList.jsp" type="forward" on="" default="true"/>
+	</request>
+		  
+</requests>

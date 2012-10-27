@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="GBK"?>
+<requests>
+	<request>
+		<desc>购物点基础信息列表</desc>
+		<name>getAllShop</name>
+		<model name="com.baseMng.ShopBLC.getAllShop"/>
+		<dispatch url="/baseMng/shop/shopList.jsp" type="forward" default="true" on=""/>
+	</request>
+	<request>
+		<desc>新增购物点</desc>
+		<name>addShop</name>
+		<model name="com.baseMng.ShopBLC.addShop"/>
+		<dispatch url="%ContextPath%/getAllShop.?TA_SHOPPOINT@pageNO=1&amp;TA_SHOPPOINT@pageSize=10" type="redirect" on="" default="false"/>
+	</request>
+	<request>
+		<name>getShopByName</name>
+		<model name="com.baseMng.ShopBLC.getShopByName"/>
+		<dispatch url="/baseMng/shop/shopList.jsp" type="forward" on="" default="true"/>
+	</request>	
+	<request>
+		<desc>根据购物点ID查询</desc>
+		<name>getShopById</name>
+		<model name="com.baseMng.ShopBLC.getShopById"/>
+		<model name="com.trm.util.DMSMBLC.loadDMSM"/>
+		<dispatch url="/baseMng/shop/updateShop.jsp" type="forward" default="true" on=""/>
+	</request>
+	<request>
+		<name>delShop</name>
+		<model name="com.baseMng.ShopBLC.delShop"/>
+			<dispatch url="%ContextPath%/getAllShop.?TA_SHOPPOINT/CITY_ID=%city_id%&amp;TA_SHOPPOINT@pageNO=1&amp;TA_SHOPPOINT@pageSize=10" type="redirect" on="" default="true"/>
+	</request>
+	<request>
+		<name>batchDelShop</name>
+		<model name="com.baseMng.ShopBLC.batchDelShop"/>
+		<dispatch url="%ContextPath%/getAllShop.?TA_SHOPPOINT/CITY_ID=%city_id%&amp;TA_SHOPPOINT@pageNO=1&amp;TA_SHOPPOINT@pageSize=10" type="redirect" on="" default="true"/>
+	</request>
+	<request>
+		<name>to_addShop</name>
+		<model name="com.trm.util.DMSMBLC.loadDMSM"/>
+		<dispatch url="/baseMng/shop/addShop.jsp" type="forward" default="true" on=""/>
+	</request>
+		<request>
+		<name>updateShop</name>
+		<model name="com.baseMng.ShopBLC.updateShop"/>
+		<dispatch url="%ContextPath%/getAllShop.?TA_SHOPPOINT/CITY_ID=%city_id%&amp;TA_SHOPPOINT@pageNO=1&amp;TA_SHOPPOINT@pageSize=10" type="redirect" on="" default="false"/>
+	</request>
+		<request>
+		<name>showRTF</name>
+		<model name="com.baseMng.ShopBLC.showRTF"/>
+		<dispatch url="/baseMng/shop/editRTF.jsp"  type="forward" on="" default="true"/>
+	</request>
+		<request>
+		<name>addRTF</name>
+		<model name="com.baseMng.ShopBLC.addRTF"/>
+		<dispatch url="/baseMng/shop/editRTF.jsp"  type="forward" on="" default="true"/>
+	</request>
+</requests>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="GBK"?>
+<requests>
+	<request>
+		<desc>AJAX初始化地接社信息</desc>
+		<name>djAjaxTravelPlanInfo</name>
+		<model name="com.trmdj.bx.DjDjsbxBLC.djAjaxTravelInfo"/>
+		<dispatch url="/maindj/bx/initPage4Ajax/initTravelPage.jsp" type="forward" on="" default="true"/>
+	</request>
+	<request>
+		<desc>新增地接社信息</desc>
+		<name>djFrmInsertBxTravel</name>
+		<model name="com.trmdj.bx.DjDjsbxBLC.insertTravel"/>
+		<dispatch url="/maindj/businessPlan/planSuccess.jsp" type="forward" on="" default="true"/>
+	</request>
+</requests>

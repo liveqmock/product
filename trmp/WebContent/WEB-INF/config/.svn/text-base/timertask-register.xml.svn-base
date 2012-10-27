@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tasks>
+	<task name="testTask1">
+		<type>generic</type>
+		<run>
+			<className>com.dream.bizsdk.common.timer.ReportBuildTimedTask</className>
+		</run>
+		<params>
+			<data name="templateName" value="report1"/>
+		</params>
+		<timer>
+			<year/>
+			<month/>
+			<day/>
+			<hour/>
+			<minute/>
+			<second/>
+			<isPeriodical>false</isPeriodical>
+			<!--in milliseconds if  isPeriodical equals to fixed-->
+			<period/>
+			<!-- the expires time of this timed task if it is a periodical task-->
+			<expiresTime/>
+			<!--system generated node valid for perodical tasks-->
+			<lastRunTime/>
+			<!--This node is first set by user, then system will regenerat this node,format must matches the application configurated  time format-->
+			<nextRunTime>2004-7-30 12:54:00</nextRunTime>
+		</timer>
+	</task>
+</tasks>

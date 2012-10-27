@@ -1,0 +1,40 @@
+<!--企业信息和合作关系列表-->
+.prolistsl{background-color:#FEF5D1}
+.prolist h1,.prolistsl h1{margin:5px 0px 3px;padding:0px;font-size:13px;font-weight:bolder}
+.prolist,.prolistsl{padding:14px 10px;clear:both;overflow:auto;margin:0 0 1px;zoom:1}
+.prolist .cnt,.prolistsl .cnt{float:left;margin-left:5px;width:542px}
+.prolist .cntC,.prolistsl .cntC{width:80%;float:left}
+.prolist .cgray,.prolistsl .cgray{margin-top:24px;float:left;text-align:center;width:70px}
+.prolist p,.prolistsl p{margin-bottom:5px;font-size:110%;}
+.prolist p strong,.prolistsl p strong{ font-weight:normal; font-size:106%}
+.prolist .com,.prolistsl .com{color:#888;font-size:12px}
+.prolist .com .green,.prolistsl .com .green{color:#B09526}
+.prolist p img,.prolistsl p img{ margin-right:15px}
+.prolist .price,.prolistsl .price{float:left;margin-top:18px;text-align:center;width:112px}
+.prolist .price span,.prolistsl .price span{display:block;font-weight:bold} 
+.act{float:right;width:94px;margin-top:20px;text-align:center}
+.act p{ margin-top:5px}
+.act p a{ font-size:90%; color:#888; text-decoration:underline}
+.act p a:hover{ color:#F26803}
+.gray {color:grey;}
+
+<!-- 企业信息页面 -->
+.companyInfo li{background:url(../../../images/icon_a2.gif) no-repeat 20px center;padding:4px 15px 4px 30px}
+.companyInfo li.b2{background-color:#fafafa}
+.companyInfo li.now{background-color:#f3faff}
+.companyInfo li a:link,.companyInfo li a:visited{color:#333}
+.companyInfo li.now a:link,.companyInfo li.now a:visited{color:#0084c5}
+.companyInfo li a:hover,.companyInfo li.now a:hover{color:#C0030A}
+.boxCont {margin: 10px;}
+<!-- 行政区划 -->
+* {margin:0;}
+body {font-size:12px;}
+#container div{margin:5px;}
+#select_city h3{float:left;font-size:16px;}
+#main_city,#all_province {clear:both;}
+#main_city div,#all_province div{margin:0 10px;width:600px;clear:left;}
+#main_city h4,#all_province h4{float:left;display:inline;font-size:16px;color: #006666;}
+#main_city div span,#all_province div span{margin:0 10px;cursor:pointer;font-size:12px;}
+#float_lay{width:200px;height:120px;border:1px #d1d1d1 solid;position:absolute;background:#fff;z-index:999;display:none;}
+#float_lay span{cursor:pointer;margin:0 10px;}
+h5{font-size: 13px;color:#006666;}

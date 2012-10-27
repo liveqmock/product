@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="GBK"?>
+<requests>
+	<request>
+		<desc>初始化导游报销</desc>
+		<name>ztInitGuideRbt</name>
+		<model name="com.trm.ztbx.ZtGuidebxBLC.queryGuideMng"/>
+		<model name="com.trm.ztbx.ZtTDBXZJXXBBLC.query"/>
+		<dispatch url="/main/ztbx/bxGuide/bxEditGuide.jsp" type="forward"  default="true"/>
+	</request>
+	<request>
+		<desc>保存提交导游报销</desc>
+		<name>ztEditGuideBx</name>
+		<model name="com.trm.ztbx.ZtGuidebxBLC.updateGuideBx"/>
+		<dispatch url="%getContextPath%/main/ztbx/rbtGuideListByUser.?TA_DJ_GROUP/ID=%=ID %&amp;TA_DJ_BXDY/TID=%=ID %" type="redirect"  default="true"/>
+	</request>
+</requests>

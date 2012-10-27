@@ -1,0 +1,51 @@
+ul, li {
+	/*清除ul和li上默认的小圆点*/
+	list-style: none;
+}
+ul, li {
+	/*清除子菜单的缩进值*/
+	padding: 0;
+	margin: 0;
+}
+.ckeditorli, .hckeditorli {
+	background: url(../images/header-bg.gif) repeat-x;
+	font-weight:bold; 
+	height:auto
+	background-color:white;
+}
+li {
+
+}
+.a {
+	/*取消所有的下划线*/
+	text-decoration: none;
+	text-align: left;
+	padding-left: 5px;
+	display: block;
+	display: inline-block;
+	width: 99.0%;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	margin:0px;
+}
+.a label {
+	font-weight: normal;
+	color: black;
+}
+.ckeditorli a, .ckeditorli a {
+	color: white;
+	/*background-image: url(../images/collapsed.gif);*/
+	background-repeat: no-repeat;
+	background-position: 3px center;
+}
+.ckeditorli li a, .ckeditorli li a {
+	color: black;
+	background-image: none;
+}
+.ckeditorli ul, .hckeditorli ul {
+	display: none;
+}
+.hmain {
+	float: left;
+	margin-right: 0px;
+}

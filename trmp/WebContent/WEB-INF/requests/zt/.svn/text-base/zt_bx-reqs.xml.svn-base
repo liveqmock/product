@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="GBK"?>
+<requests>
+   <request>
+		<desc>查询所有要报销的团</desc>
+		<name>ztbxGuideAllList</name>
+		<model name="com.trm.zttdMng.ZtGroupMngBLC.rbtGuideAllList"/>
+		<dispatch url="/main/ztbx/bxList.jsp" type="forward" on="" default="true"/>
+	</request>
+	 <request>
+		<desc>初始化导游报账页面</desc>
+		<name>ztrbtGuideListByUser</name>
+		<model name="com.trm.ztbx.ZtDjsbxBLC.query"/>
+		<model name="com.trm.ztbx.ZtDjsbxBLC.queryDjsInfo"/>
+		<model name="com.trm.ztbx.ZtGuidebxBLC.query"/>
+		<model name="com.trm.ztbx.ZtHotelBxBLC.query"/>
+		<model name="com.trm.ztbx.ZtDinnerBxBLC.query"/>
+		<model name="com.trm.ztbx.ZtSceneryBxBLC.query"/>
+		<model name="com.trm.ztbx.ZtTicketBxBLC.query"/>
+		<model name="com.trm.ztbx.ZtVehBxBLC.query"/>
+		<model name="com.trm.ztbx.ZtShopBxMngBLC.query"/>
+		<model name="com.trm.ztbx.ZtPlusBxBLC.query"/>
+		<model name="com.trm.ztbx.ZtPlusBxBLC.queryPlusInfo"/>
+		<model name="com.trm.zttdMng.ZtGroupMngBLC.queryBxGuideInfo"/>
+		<model name="com.trm.zttdMng.ZtGroupMngBLC.querySPYJInfo"/>
+		<model name="com.trm.ztbx.ZtTDBXZJXXBBLC.query"/><!-- 团队计划信息合计表 -->
+		<model name="com.trm.zttdMng.ZtGroupMngBLC.query"/>
+		<dispatch url="/main/ztbx/bxEdit.jsp" type="forward" on="" default="true"/>
+	</request>
+</requests>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="GBK"?>
+<requests>
+	<request>
+		<desc>根据行政区划ID查询该ID下所有的车队信息</desc>
+		<name>getAllCarTeam</name>
+		<model name="com.baseMng.CarBLC.getAllCarTeam"/>
+		<dispatch url="/baseMng/car/carTeamList.jsp" type="forward" on="" default="true"/>
+	</request>
+	<request>
+		<desc>删除车队</desc>
+		<name>delCarTeam</name>
+		<model name="com.baseMng.CarBLC.delCarTeam"/>
+		<dispatch url="%ContextPath%/getAllCarTeam.?TA_CAR_TEAM@pageNO=1&amp;TA_CAR_TEAM@pageSize=10" type="redirect" on="" default="true"/>
+	</request>	
+	<request>
+		<desc>车队添加初始化</desc>
+		<name>to_addTeam</name>
+		<model name="com.trm.util.DMSMBLC.loadDMSM"/>
+		<dispatch url="/baseMng/car/addTeam.jsp" type="forward" on="" default="true"/>
+	</request>
+	<request>
+		<desc>添加车队</desc>
+		<name>addCarTeam</name>
+		<model name="com.baseMng.CarBLC.addCarTeam"/>
+		<dispatch url="getAllCarTeam.?TA_CAR_TEAM@pageNO=1&amp;TA_CAR_TEAM@pageSize=10" type="redirect" on="" default="true"/>
+	</request>	
+	<request>
+		<desc>修改车队</desc>
+		<name>upCarTeam</name>
+		<model name="com.baseMng.CarBLC.upCarTeam"/>
+	<dispatch url="getAllCarTeam.?TA_CAR_TEAM@pageNO=1&amp;TA_CAR_TEAM@pageSize=10" type="redirect" on="" default="true"/>
+	</request>	
+	<request>
+		<name>getCarTeamById</name>
+		<model name="com.baseMng.CarBLC.getCarTeamById"/>
+		<model name="com.trm.util.DMSMBLC.loadDMSM"/>
+		<dispatch url="/baseMng/car/upCarTeam.jsp" type="forward" on="" default="true"/>
+	</request>
+	<request>
+		<name>getAllCar</name>
+		<model name="com.baseMng.CarBLC.getAllCar"/>
+		<dispatch url="/baseMng/car/carList.jsp" type="forward" on="" default="true"/>
+	</request>		
+	<request>
+		<name>to_addCar</name>
+		<model name="com.trm.util.DMSMBLC.loadDMSM"/>
+		<dispatch url="/baseMng/car/addCar.jsp" type="forward" on="" default="true"/>
+	</request>	
+	<request>
+		<desc>添加车辆</desc>
+		<name>addCar</name>
+		<model name="com.baseMng.CarBLC.addCar"/>
+		<dispatch url="getAllCar.?TA_CAR/TEAM_ID=%TEAM_ID%&amp;TA_CAR@pageNO=1&amp;TA_CAR@pageSize=10" type="redirect" on="" default="true"/>
+	</request>	
+	<request>
+		<name>getCarById</name>
+		<model name="com.baseMng.CarBLC.getCarById"/>
+		<model name="com.trm.util.DMSMBLC.loadDMSM"/>
+		<dispatch url="/baseMng/car/updateCar.jsp" type="forward" on="" default="true"/>
+	</request>		
+	<request>
+		<name>updateCar</name>
+		<model name="com.baseMng.CarBLC.updateCar"/>
+		<dispatch url="%ContextPath%/getAllCar.?TA_CAR/TEAM_ID=%TEAM_ID%&amp;TA_CAR@pageNO=1&amp;TA_CAR@pageSize=10" type="redirect" on="" default="true"/>
+	</request>
+	<request>
+		<name>delCar</name>
+		<model name="com.baseMng.CarBLC.delCar"/>
+		<dispatch url="getAllCar.?TA_CAR/TEAM_ID=%TEAM_ID%&amp;TA_CAR@pageNO=1&amp;TA_CAR@pageSize=10" type="redirect" on="" default="true"/>
+	</request>
+	<request>
+		<name>batchDelCar</name>
+		<model name="com.baseMng.CarBLC.batchDelCar"/>
+		<dispatch url="%ContextPath%/getAllCar.?TA_CAR/TEAM_ID=%TEAM_ID%&amp;TA_CAR@pageNO=1&amp;TA_CAR@pageSize=10" type="redirect" on="" default="true"/>
+	</request>
+	<request>
+		<desc>车队信息删除</desc>
+		<name>batchDelCarTeam</name>
+		<model name="com.baseMng.CarBLC.batchDelCarTeam"/>
+		<dispatch url="%ContextPath%/getAllCarTeam.?TA_CAR_TEAM@pageNO=1&amp;TA_CAR_TEAM@pageSize=10" type="redirect" on="" default="true"/>
+	</request>
+	<request>
+		<desc>根据车队名称查询</desc>
+		<name>getCarTeamByName</name>
+		<model name="com.baseMng.CarBLC.getCarTeamByName"/>
+		<dispatch url="/baseMng/car/carTeamList.jsp" type="forward" on="" default="true"/>
+	</request>
+	<request>
+		<name>getCarByName</name>
+		<model name="com.baseMng.CarBLC.getCarByName"/>
+		<dispatch url="/baseMng/car/carList.jsp" type="forward" on="" default="true"/>
+	</request>	
+	
+</requests>

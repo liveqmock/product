@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--changes made to this file need to restart the web application or request the "refresh" of the web application -->
+<blcontext name="hr">
+	<!--system parameters-->
+	<system>
+		<!-- if debug is set to 1, then access to the system is not checked-->
+		<debug>1</debug>
+		<!--whether to call BL method using reflection,using proxy instead of reflection may improve the performance-->
+		<reflection>1</reflection>
+		<!--if reflection is set to 0,then proxy_class_path must be set,use "${" and "}" to reference system property-->
+		<proxy_class_path>${catalina.home}/webapps/WebApp/WEB-INF/classes</proxy_class_path>
+		<proxy_compile_classpath>${catalina.home}/webapps/WebApp/WEB-INF/classes</proxy_compile_classpath>
+		<charset>GBK</charset>
+		<dateformat>yyyy-MM-dd</dateformat>
+		<timeformat>yyyy-MM-dd HH:mm:ss</timeformat>
+		<!--CURRENTLY NOT USED!!!!!!-->
+		<adminUser>divine</adminUser>
+		<adminPassword>truman</adminPassword>
+		<!--whether need to create a scoket server-->
+		<socketServer>false</socketServer>
+		<!--mask string for those fields hidden from a role-->
+		<hiddenFieldMask>{******}</hiddenFieldMask>
+	</system>
+	<!--daos definition-->
+	<daos>
+		<dao>
+			<!--name of the DAO object-->
+			<name>core</name>
+			<!--database type, one of the oracle, sql, mysql-->
+			<dbType>oracle</dbType>
+			
+			<!--<dbUser>core</dbUser>
+			<dbPassword>core</dbPassword>
+			<dbUser>infoxweb</dbUser>
+			<dbPassword>infoxweb</dbPassword>-->
+			
+			<dbUser>core</dbUser>
+			<dbPassword>core</dbPassword>
+			
+			<!--datasource xa="fasle" overrideUser="false">java:comp/env/jdbc/dream</datasource-->
+			<!-- <dbURL>jdbc:mysql://localhost:3306/trm?characterEncoding=GBK</dbURL> -->
+			
+			<dbURL>jdbc:oracle:thin:@127.0.0.1:1521:orcl</dbURL>
+			<!-- <dbURL>jdbc:oracle:thin:@192.168.1.168:1521:orcl</dbURL> -->
+			<!-- <dbURL>jdbc:oracle:thin:@218.94.15.58:1521:orcl</dbURL> -->
+			<driver>oracle.jdbc.driver.OracleDriver</driver>
+			<dbConnections>1</dbConnections><!-- 设置异步调用连接数 -->
+			<initialSize>5</initialSize><!-- 初始化时获取的连接数，取值应在minPoolSize与maxPoolSize之间。Default: 3  -->
+			<minPoolSize>3</minPoolSize><!-- 池最小连接数 -->
+			<maxPoolSize>10</maxPoolSize><!-- 池最大连接数 -->
+			<maxStatements>0</maxStatements><!--JDBC的标准参数，用以控制数据源内加载的PreparedStatements数量。但由于预缓存的statements   属于单个connection而不是整个连接池。所以设置这个参数需要考虑到多方面的因素。   如果maxStatements与maxStatementsPerConnection均为0，则缓存被关闭。Default: 0  -->
+			<maxIdleTime>5000</maxIdleTime><!-- 最大空闲时间 ，超过的将被丢弃，0为永不丢弃-->
+		</dao>
+	</daos>
+	<!--
+		begin configuraiuons section. Each config value belongs to  a group.
+		Users can  call the getConfigValue(String groupName,String key) to get 
+		a config value in this config.xml file.
+		For example, to get the logFilePath in the log configuration group, one can
+		make the following call: context.getConfigValue("log","logFilePath"),here 
+		the context is an object of BLContext class.
+	-->
+	<UserTransaction>
+		<initial-factory></initial-factory>
+		<url></url>
+		<jndiName>UserTransaction</jndiName>
+		<enabled>true</enabled>
+	</UserTransaction>
+	<!--mail proxy configuration,system sends mail via this mail settings-->
+	<mailproxy>
+		<!--user name of the system mail proxy-->
+		<smtpUser>solentsoft</smtpUser>
+		<!--user password of the system mail proxy-->
+		<smtpPassword>solentsoft</smtpPassword>
+		<!--mail proxy's mail server-->
+		<smtpServer>192.168.1.9</smtpServer>
+		<smtpPort>25</smtpPort>
+		<pop3Server>192.168.1.9</pop3Server>
+		<pop3Port>110</pop3Port>
+		<!--mail proxy's mail account-->
+		<mailAccount>solentsoft@gmail.com</mailAccount>
+		<accountName>solentsoft</accountName>
+	</mailproxy>
+	<fax>
+		<fromNumber>1111111</fromNumber>
+		<!--com1,com2,com3....-->
+		<port>COM3</port>
+		<bitRate>9600</bitRate>
+		<!--fax modem initial String-->
+		<initialString/>
+		<!--class1,class2,class2.0-->
+		<modelClass>class1</modelClass>
+		<!--flow control should be set to RtsCts/XonXOff/none-->
+		<flowControl>RtsCts</flowControl>
+		<!--flow control should be set to -RtsCts-/AT+FLO=2/AT&amp;K3/AT&amp;\Q3\-XonXoff-\AT+FLO=1\AT&amp;K4/-->
+		<flowControlCommand>AT+FLO=1</flowControlCommand>
+		<!--dialing should be set to tone,or pulse-->
+		<dialing>tone</dialing>
+	</fax>
+	<!--begin file upload settings-->
+	<fileUpload>
+		<defVirPath>/files</defVirPath>
+		<createPathIfNotExists>0</createPathIfNotExists>
+		<maxFileSize>0</maxFileSize>
+		<log>1</log>
+		<fileIDAsName>0</fileIDAsName>
+		<overwrite>1</overwrite>
+	</fileUpload>
+	<!--end file upload settings-->
+	<!--
+		Application specific configuration values can be set here,note that these values must be 
+		divided into groups.
+	-->
+	<!--if the cipher setting is not set properly,then the BizData class will not encrypt or decrypt rightly which means the Values will remain unchanged-->
+	<cipher>
+		<algorithm>DES</algorithm>
+		<key>rO0ABXNyAB5jb20uc3VuLmNyeXB0by5wcm92aWRlci5ERVNLZXlrNJw12hVomAIAAVsAA2tleXQAAltCeHB1cgACW0Ks8xf4BghU4AIAAHhwAAAACAjQQ/d5g8TH</key>
+	</cipher>
+	<!--if the digest setting is not set properly,then the BizData class will not digest rightly which means the Values will remain unchanged-->
+	<digest>
+		<algorithm>MD5</algorithm>
+	</digest>
+	<!--application can override those pages-->
+	<systemDispatches>
+		<!--redirect only-->
+		<noPage>%ContextPath%/html/noPage.html</noPage>
+		<!--forward only-->
+		<errorPage>/jsp/error.jsp</errorPage>
+		<!--this is a redirect type -->
+		<loginPage>%ContextPath%/login/login.jsp</loginPage>
+	</systemDispatches>
+	<asynCall>
+		<!-- count of workers  for asyn call-->
+		<workers>20</workers>
+	</asynCall>
+</blcontext>

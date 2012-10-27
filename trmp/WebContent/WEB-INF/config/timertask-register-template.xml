@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="GB2312"?>
+<tasks>
+	<task name="testTask1">
+		<type>bl</type>
+		<run>
+			<className>test.TestTimedTask</className>
+			<methodName>writeFile</methodName>
+		</run>
+		<params>
+			<!--			<data name="" field="" row="" attr="" value=""/>-->
+		</params>
+		<timer>
+			<year/>
+			<month/>
+			<day/>
+			<hour/>
+			<minute/>
+			<second/>
+			<isPeriodical>false</isPeriodical>
+			<!--in milliseconds if  isPeriodical equals to fixed-->
+			<period/>
+			<!-- the expires time of this timed task if it is a periodical task-->
+			<expiresTime/>
+			<!--system generated node valid for perodical tasks-->
+			<lastRunTime/>
+			<!--This node is first set by user, then system will regenerat this node,format must matches the application configurated  time format-->
+			<nextRunTime>2004-7-22 09:00:00</nextRunTime>
+		</timer>
+	</task>
+	<task name="testTask2">
+		<type>generic</type>
+		<run>
+			<className>test.TestTimedTask</className>
+		</run>
+		<params>
+			<!--			<data name="" field="" row="" attr="" value=""/>-->
+		</params>
+		<timer>
+			<year/>
+			<month/>
+			<day/>
+			<hour/>
+			<minute/>
+			<second/>
+			<isPeriodical>false</isPeriodical>
+			<!--in milliseconds if  isPeriodical equals to fixed-->
+			<period/>
+			<!-- the expires time of this timed task if it is a periodical task-->
+			<expiresTime/>
+			<!--system generated node valid for perodical tasks-->
+			<lastRunTime/>
+			<!--This node is first set by user, then system will regenerat this node,format must matches the application configurated  time format-->
+			<nextRunTime>2004-7-22 09:00:00</nextRunTime>
+		</timer>
+	</task>
+</tasks>

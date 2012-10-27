@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="GBK"?>
+<requests>
+	<request>
+		<desc>线路列表(线路管理)</desc>
+		<name>djListLineByAll</name>
+		<model name="com.trmdj.lineRelease.DjLineMngBLC.djListLineByCreater"/>
+		<model name="com.trm.util.DMSMBLC.loadDMSM"/>
+		<dispatch url="/maindj/businessPlan/groupMng/selectLine.jsp" type="forward" on="" default="true"/>
+	</request>
+	
+	<request>
+		<desc>线路列表(产品库)</desc>
+		<name>lineList4PO</name>
+		<model name="com.trmdj.lineRelease.DjLineMngBLC.lineList4PO"/>
+		<model name="com.trm.util.DMSMBLC.loadDMSM"/>
+		<dispatch url="/maindj/businessPlan/groupMng/productList.jsp" type="forward" on="" default="true"/>
+	</request>
+	
+	<request>
+		<desc>初始化创建新团(从全国大散线路列表过来)</desc>
+		<name>djInitNewGroup</name>
+		<model name="com.trmdj.businessPlan.groupMng.DjGroupMngBLC.djInitNewGroupByLine"/>
+		<model name="com.trmdj.lineRelease.DjLineMngBLC.queryLineDetail"/>
+		<model name="com.trm.util.DMSMBLC.loadDMSM"/>
+		<dispatch url="/maindj/businessPlan/groupMng/newGroup.jsp" type="forward" on="" default="true"/>
+	</request>
+	<request>
+		<desc>创建新团</desc>
+		<name>djAddNewGroup</name>
+		<model name="com.trmdj.businessPlan.groupMng.DjGroupMngBLC.insertGroup"/>
+		<dispatch url="%ContextPath%/maindj/businessPlan/groupMng/djGroupLists.?yw=%yw%&amp;pageNO=1&amp;pageSize=10" type="redirect" on="" default="true"/>
+	</request>
+	<request>
+		<desc>全国大散团队列表</desc>
+		<name>djQueryGroupList</name>
+		<model name="com.trmdj.businessPlan.groupMng.DjGroupMngBLC.scattered4GroupList"/>
+		<model name="com.trm.util.DMSMBLC.loadDMSM"/>
+		<dispatch url="/maindj/businessPlan/groupMng/listScatteredGroup.jsp" type="forward" on="" default="true"/>
+	</request>
+
+	<request>
+		<desc>修改团信息</desc>
+		<name>djUpdateGroupInfo</name>
+		<model name="com.trmdj.businessPlan.groupMng.DjGroupMngBLC.updateGroupInfo"/>
+		<dispatch url="%ContextPath%/maindj/businessPlan/groupMng/djGroupLists.?yw=%yw%&amp;pageNO=1&amp;pageSize=10" type="redirect" on="" default="true"/>
+	</request>
+	
+	<request>
+		<desc>初始化单个组团社的确认件管理页面</desc>
+		<name>initConfirmForZTS</name>
+		<model name="com.trmdj.businessPlan.groupMng.DJConfirmBLC.queryConfirm"/>
+		<dispatch url="/maindj/businessPlan/groupMng/confirm.jsp" type="forward" on="" default="true"/>
+	</request>
+	
+	<request>
+		<desc>上传确认件</desc>
+		<name>addConfirm</name>
+		<model name="com.trmdj.businessPlan.groupMng.DJConfirmBLC.addConfirm"/>
+		<dispatch url="/maindj/businessPlan/groupMng/confirm.jsp" type="forward" on="" default="true"/>
+	</request>
+	
+	<request>
+		<desc>初始化确认件查看页面</desc>
+		<name>viewConfirmByZTS</name>
+		<model name="com.trmdj.businessPlan.groupMng.DJConfirmBLC.query"/>
+		<dispatch url="/maindj/businessPlan/groupMng/showConfirm.jsp" type="forward" on="" default="true"/>
+	</request>
+	
+	<request>
+		<desc>查看确认件0</desc>
+		<name>queryConfirm0</name>
+		<model name="com.trmdj.businessPlan.groupMng.DJConfirmBLC.query"/>
+		<dispatch url="/maindj/businessPlan/groupMng/viewConfirm0.jsp" type="forward" on="" default="true"/>
+	</request>
+	
+	<request>
+		<desc>查看确认件1</desc>
+		<name>queryConfirm1</name>
+		<model name="com.trmdj.businessPlan.groupMng.DJConfirmBLC.query"/>
+		<dispatch url="/maindj/businessPlan/groupMng/viewConfirm1.jsp" type="forward" on="" default="true"/>
+	</request>
+	
+	<request>
+		<desc>查看确认件2</desc>
+		<name>queryConfirm2</name>
+		<model name="com.trmdj.businessPlan.groupMng.DJConfirmBLC.query"/>
+		<dispatch url="/maindj/businessPlan/groupMng/viewConfirm2.jsp" type="forward" on="" default="true"/>
+	</request>
+	
+	<request>
+		<desc>团队管理列表（仅团队列表，不含计调内容）</desc>
+		<name>djGroupLists</name>
+		<model name="com.trmdj.businessPlan.groupMng.DjGroupMngBLC.djGroupLists"/>
+		<dispatch url="/maindj/businessPlan/groupMng/allGroup4List.jsp" type="forward" on="" default="true"/>
+	</request>
+	<request>
+		<desc>团队管理列表（直接创建团）</desc>
+		<name>djQueryAllGroupList</name>
+		<model name="com.trmdj.businessPlan.groupMng.DjGroupMngBLC.initAllGroupList"/>
+		<model name="com.trm.util.DMSMBLC.loadDMSM"/>
+		<dispatch url="/maindj/businessPlan/groupMng/listAllGroup.jsp" type="forward" on="" default="true"/>
+	</request>
+	<request>
+		<desc>初始化直接创建新团</desc>
+		<name>djInitAddGroup</name>
+		<model name="com.trmdj.businessPlan.groupMng.DjGroupMngBLC.djInitAddGroup"/>
+		<model name="com.trm.util.DMSMBLC.loadDMSM"/>
+		<dispatch url="/maindj/businessPlan/groupMng/addGroup.jsp" type="forward" on="" default="true"/>
+	</request>
+	<request>
+		<desc>初始化修改直接创建团信息</desc>
+		<name>djInitUpdateGroup</name>
+		<model name="com.trmdj.businessPlan.groupMng.DjGroupMngBLC.djInitUpdateGroup"/>
+		<!-- <model name="com.trmdj.businessPlan.groupMng.DjGroupMngBLC.query"/> -->
+		<!-- <model name="com.trmdj.businessPlan.groupMng.DjGroupMngBLC.queryGroupDetail"/> -->
+		<!-- <model name="com.trmdj.businessPlan.groupMng.DjGroupTztsBLC.query"/> -->
+		<model name="com.trm.util.DMSMBLC.loadDMSM"/>
+		<!-- <model name="com.trmdj.util.XzqhMngBLC.query"/> -->
+		<dispatch url="/maindj/businessPlan/groupMng/editGroup.jsp" type="forward" on="" default="true"/>
+	</request>
+		<request>
+		<desc>查看团信息</desc>
+		<name>djViewGroup</name>
+		<model name="com.trmdj.businessPlan.groupMng.DjGroupMngBLC.query"/>
+		<model name="com.trmdj.businessPlan.groupMng.DjGroupPriceBLC.query"/>
+		<model name="com.trmdj.businessPlan.groupMng.DjGroupTztsBLC.query"/>
+		<model name="com.trmdj.businessPlan.groupMng.DjLINEDETAILTD.query"/>
+		<model name="com.trmdj.util.XzqhMngBLC.query"/>
+		<model name="com.trm.util.DMSMBLC.loadDMSM"/>
+		<dispatch url="/maindj/businessPlan/groupMng/viewGroup.jsp" type="forward" on="" default="true"/>
+	</request>
+</requests>

@@ -1,0 +1,169 @@
+10
+
+dir
+4453
+svn://192.168.1.221/root/trmp/src/com/dream/bizsdk/common
+svn://192.168.1.221/root
+
+
+
+2011-07-26T15:20:01.437500Z
+4453
+hj
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+56d56699-c90c-2943-bd84-3b6033690789
+
+timer
+dir
+
+event
+dir
+
+smtp
+dir
+
+databus
+dir
+
+exp
+dir
+
+vssver.scc
+file
+
+
+
+
+2012-10-13T08:02:20.834737Z
+fadacbbba977b995b7c163d179e41551
+2011-07-26T15:20:01.437500Z
+4453
+hj
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+64
+
+blc
+dir
+
+database
+dir
+
+SysVar.java
+file
+
+
+
+
+2012-10-13T08:02:20.834737Z
+c4143b89a2a0c934458e5492874f9347
+2011-07-26T15:20:01.437500Z
+4453
+hj
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2446
+
+SysError.java
+file
+
+
+
+
+2012-10-13T08:02:20.834737Z
+cb33cea6041579f49169264020a24bbf
+2011-07-26T15:20:01.437500Z
+4453
+hj
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2137
+
+pool
+dir
+
+workflow
+dir
+
+asyn
+dir
+
+report
+dir
+
+util
+dir
+
+fax
+dir
+

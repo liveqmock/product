@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="GBK"?>
+<requests>
+	
+	<request>
+		<desc>线路信息列表</desc>
+		<name>listLineByCreater</name>
+		<model name="com.trm.lineMng.LineMngBLC.listLineByCreater"/>
+		<dispatch url="/main/lineMng/listLines.jsp" type="forward" on="" default="true"/>
+	</request>
+	<request>
+		<desc>删除线路</desc>
+		<name>delLine</name>
+		<model name="com.trm.lineMng.LineMngBLC.delLine"/>
+		<dispatch url="%ContextPath%/lineMng/listLineByCreater.?type=%type%&amp;msg=%msg%&amp;pageNO=1&amp;pageSize=10" type="redirect" on="" default="true"/>
+	</request>
+	
+	<request>
+		<desc>查询所有线路供发布时选择</desc>
+		<name>showAllLine</name>
+		<model name="com.trm.lineMng.LineMngBLC.queryPage"/>
+		<dispatch url="/main/lineMng/allLines.jsp" type="forward" on="" default="true"/>
+	</request>
+	
+	<request>
+		<desc>初始化添加线路信息页面的数据</desc>
+		<name>initLineInfo</name>
+		<model name="com.trm.lineMng.LineMngBLC.initLineInfo"/>
+		<model name="com.trmdj.util.XzqhMngBLC.query"/>
+		<model name="com.trm.util.DMSMBLC.loadDMSM"/>
+		<model name="com.baseMng.GatherHisBLC.query"/>
+		<model name="com.baseMng.InsuranceFileBLC.query"/>
+		<dispatch url="/main/lineMng/addLineInfoLong.jsp" type="forward" on="" default="true"/>
+	</request>
+	
+	<request>
+		<name>insertLine</name>
+		<desc>添加新线路</desc>
+		<model name="com.trm.lineMng.LineMngBLC.insert"/>
+		<!-- <dispatch url="%ContextPath%/main/lineMng/editInit.?DMSM/JGLX=4&amp;DMSM/fbjh=1&amp;DMSM/jtgj=2&amp;DMSM/xlzt=5&amp;DMSM/xllx=3&amp;TA_ZT_LINEDETAIL/lineid=%lineid%&amp;TA_ZT_LINEMNG/LINE_ID=%lineID%&amp;TA_ZT_FBJH_TMP/line_id=%lineID%&amp;TA_ZT_LINE_PRICES/LINE_ID=%lineID%&amp;TA_ZT_LINE_PRICES/ORGID=%ORGID%&amp;TA_ZT_GATHER/LINE_ID=%lineID%&amp;TA_ZT_GATHER_HIS/GATHER_ID=&amp;TA_ZT_LINEDETAIL@orderBy=rq" type="redirect" on="" default="true"/> -->
+		<!-- <dispatch url="%ContextPath%/main/lineMng/editInit.?DMSM/JGLX=4&amp;DMSM/fbjh=1&amp;DMSM/jtgj=2&amp;DMSM/xlzt=5&amp;DMSM/xllx=3&amp;TA_ZT_LINEDETAIL/lineid=%lineid%&amp;TA_ZT_LINEDETAIL/ORGID=%ORGID%&amp;TA_ZT_LINEMNG/LINE_ID=%lineID%&amp;TA_ZT_LINEMNG/ORGID=%ORGID%&amp;TA_ZT_FBJH_TMP/line_id=%lineID%&amp;TA_ZT_FBJH_TMP/ORGID=%ORGID%&amp;TA_ZT_LINE_PRICES/LINE_ID=%lineID%&amp;TA_ZT_LINE_PRICES/ORGID=%ORGID%&amp;TA_ZT_GATHER/LINE_ID=%lineID%&amp;TA_ZT_GATHER/ORGID=%ORGID%&amp;TA_ZT_GATHER_HIS/GATHER_ID=&amp;TA_ZT_GATHER_HIS/ORGID=%ORGID%&amp;TA_ZT_LINEDETAIL@orderBy=rq" type="redirect" on="" default="true"/> -->
+		<dispatch url="%ContextPath%/lineMng/listLineByCreater.?type=%type%&amp;msg=%msg%&amp;pageNO=1&amp;pageSize=10" type="redirect" on="" default="true"/>
+	</request>
+	
+	<request>
+		<name>editInit</name>
+		<desc>修改线路初始化数据</desc>
+		<model name="com.trm.lineMng.LineMngBLC.query"/>
+		<model name="com.trmdj.util.XzqhMngBLC.query"/>
+		<model name="com.trm.util.DMSMBLC.loadDMSM"/>
+		<model name="com.trm.lineMng.LinePriceBLC.query"/>
+		<model name="com.trm.lineMng.PlanOfLineTmpBLC.query"/>
+		<model name="com.trm.lineMng.LineDetailBLC.queryLineBlob"/>
+		<model name="com.trm.lineMng.LineGatherBLC.query"/>
+		<model name="com.trm.lineMng.LineMngBlobBLC.query"/>
+		<model name="com.baseMng.GatherHisBLC.query"/>
+		<model name="com.baseMng.InsuranceFileBLC.query"/>
+		<model name="com.baseMng.LineAndInsuranceFileBLC.query"/>
+		<dispatch url="/main/lineMng/editLineInfoLong.jsp" type="forward" on="" default="true"/>
+	</request>
+	
+	<request>
+		<name>searchByLine</name>
+		<desc>线路发布历史，选择后填充新增页面</desc>
+		<model name="com.trm.lineMng.LineMngBLC.query"/>
+		<model name="com.trm.util.DMSMBLC.loadDMSM"/>
+		<model name="com.trm.lineMng.LinePriceBLC.query"/>
+		<model name="com.baseMng.GatherHisBLC.query"/>
+		<dispatch url="/main/lineMng/addLineInfoLong.jsp" type="forward" on="" default="true"/>
+	</request>
+	
+	<request>
+		<name>update</name>
+		<desc>修改线路</desc>
+		<model name="com.trm.lineMng.LineMngBLC.update"/>
+		<dispatch url="%ContextPath%/listLineByCreater.?pageNO=1&amp;pageSize=10" type="redirect" on="" default="true"/>
+	</request>
+	
+	<request>
+		<name>showLineDetail</name>
+		<desc>显示线路行程明细</desc>
+		<model name="com.trm.lineMng.LineDetailBLC.query"/>
+		<dispatch url="/main/lineMng/lineDetail.jsp" type="forward" on="" default="true"/>
+	</request>
+	
+</requests>

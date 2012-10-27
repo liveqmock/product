@@ -1,0 +1,37 @@
+.tr_formtop{
+	background-image:url(../images/1.jpg);
+	height:30px;
+}
+.text_formcolor{
+	color:#2F4C76; 
+	font-weight:bold; 
+	font-size:14px;
+}
+.text_formtable{
+	color:#2F4C76;  
+	font-size:12px;
+	border:#A4B9CA solid 1px;
+}
+.text_formtable tr{height: 25px;}
+.textformcolor{
+	color:#FF9900;}
+.text_formbnt{ 
+	color:#144067;
+	background-image:url(../images/bnt.jpg); 
+	border:solid  #CCCCCC 1px;
+	height:25px;
+}
+
+.tr_textalign{ 
+	text-align:right;
+}
+.tr_bgphotos{ 
+	background-color:#E8F2FB;
+}
+
+.fontsizediv{
+	margin-top:8px;
+ 	margin-bottom:8px;
+	font-size:5px;
+	font-weight:bold;
+}

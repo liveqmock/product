@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="GBK"?>
+<requests>
+	<request>
+		<desc>团队列表</desc>
+		<name>groupLists</name>
+		<model name="com.trm.ztdt.GroupBLC.groupLists"/>
+		<model name="com.trm.util.DMSMBLC.loadDMSM"/>
+		<dispatch url="/main/group/groupLists.jsp" type="forward" on="" default="true"/>
+	</request>
+	<request>
+		<desc>团队列表</desc>
+		<name>groupLineAreaLists</name>
+		<model name="com.trm.ztdt.GroupBLC.groupLineAreaLists"/>
+		<model name="com.trm.util.DMSMBLC.loadDMSM"/>
+		<dispatch url="/main/group/groupLists.jsp" type="forward" on="" default="true"/>
+	</request>
+	<request>
+		<desc>团修改初始化</desc>
+		<name>editGroupInit</name>
+		<model name="com.trm.ztdt.GroupBLC.query"/>
+		<model name="com.trm.lineMng.LineMngBLC.query"/>
+		<model name="com.trm.ztdt.GroupPriceBLC.query"/>
+		<model name="com.trm.ztdt.GroupLineDetailBLC.query"/>
+		<model name="com.baseMng.GatherHisBLC.query"/>
+		<model name="com.trm.lineMng.LineGatherBLC.query"/>
+		<model name="com.trm.util.DMSMBLC.loadDMSM"/>
+		<dispatch url="/main/group/editGroup.jsp" type="forward" on="" default="true"/>
+	</request>
+	<request>
+		<name>editGroup</name>
+		<model name="com.trm.ztdt.GroupBLC.editGroup"/>
+		<dispatch url="%ContextPath%/main/sellerMng/listAllLines.?state=ztdt&amp;pageNO=1&amp;pageSize=10" type="redirect" on="" default="true"/>
+	</request>
+	<request>
+		<name>print_getAllGroup</name>
+		<model name="com.trm.ztdt.GroupBLC.getAllPlan"/>
+		<dispatch url="/main/Plan/print_planList.jsp" type="forward" on="" default="true"/>
+	</request>
+	<request>
+		<name>print_getAllGroup_like</name>
+		<model name="com.trm.ztdt.GroupBLC.plan_findByLike"/>
+		<dispatch url="/main/Plan/print_planList.jsp" type="forward" on="" default="true"/>
+	</request>
+	<request>
+		<name>print_showPlanInfo</name>
+		<model name="com.trm.ztdt.GroupBLC.print_getPlanInfo"/>
+		<dispatch url="/main/Plan/print_showPlan.jsp" type="forward" on="" default="true"/>
+	</request>
+	<request>
+		<name>doPrint</name>
+		<model name="com.trm.ztdt.GroupBLC.doPrint"></model>
+		<dispatch url="/main/Plan/print_showPlan.jsp" type="forward" on="" default="true"/>
+	</request>
+	<request>
+		<name>zwfx_getAllGroup</name>
+		<desc>团队账务分析列表</desc>
+		<model name="com.trm.ztdt.GroupBLC.zwfx_getAllGroup"></model>
+		<dispatch url="/main/cwfx/tdzwfx/zwfxList.jsp" type="forward" on="" default="true"/>
+	</request>
+	<request>
+		<name>to_showTDZW</name>
+		<desc>团队账务明细</desc>
+		<model name="com.trm.ztdt.GroupBLC.to_showTDZW"></model>
+		<dispatch url="/main/cwfx/tdzwfx/show_tdzwfx.jsp" type="forward" on="" default="true"/>
+	</request>
+	<request>
+		<name>print_showXCMX</name>
+		<desc>行程明细</desc>
+		<model name="com.trm.ztdt.GroupBLC.print_showXCMX"></model>
+		<dispatch url="/main/Plan/print_xcmx.jsp" type="forward" on="" default="true"/>
+	</request>
+	<request>
+		<name>print_showYKXX</name>
+		<desc>游客信息</desc>
+		<model name="com.trm.ztdt.GroupBLC.print_showYKXX"></model>
+		<dispatch url="/main/Plan/print_ykxx.jsp" type="forward" on="" default="true"/>
+	</request>
+	<request>
+		<name>djyfzk_getAllGroup</name>
+		<desc>地接应付账款</desc>
+		<model name="com.trm.ztdt.GroupBLC.djyfzktj"></model>
+		<dispatch url="/main/cwfx/djyfzk/dj_List.jsp" type="forward" on="" default="true"/>
+	</request>
+	<request>
+		<name>hotel_yfzk</name>
+		<desc>酒店应付账款</desc>
+		<model name="com.trm.ztdt.GroupBLC.hotel_yfzk"></model>
+		<dispatch url="/main/cwfx/hotel/cw_hotelList.jsp" type="forward" on="" default="true"/>
+	</request>
+	<request>
+		<name>scenery_yfzk</name>
+		<desc>景点应付账款</desc>
+		<model name="com.trm.ztdt.GroupBLC.scenery_yfzk"></model>
+		<dispatch url="/main/cwfx/scenery/cw_sceneryList.jsp" type="forward" on="" default="true"/>
+	</request>
+	<request>
+		<name>dinner_yfzk</name>
+		<desc>餐厅应付账款</desc>
+		<model name="com.trm.ztdt.GroupBLC.dinner_yfzk"></model>
+		<dispatch url="/main/cwfx/dinner/cw_dinnerList.jsp" type="forward" on="" default="true"/>
+	</request>
+	<request>
+		<name>ticket_yfzk</name>
+		<desc>票务应付账款</desc>
+		<model name="com.trm.ztdt.GroupBLC.ticket_yfzk"></model>
+		<dispatch url="/main/cwfx/ticket/cw_ticketList.jsp" type="forward" on="" default="true"/>
+	</request>
+	<request>
+		<name>cw_jdfyfx</name>
+		<desc>加点费用分析</desc>
+		<model name="com.trm.ztdt.GroupBLC.jdfyfx"></model>
+		<dispatch url="/main/cwfx/jdfyfx/cw_jdfyfx.jsp" type="forward" on="" default="true"/>
+	</request>
+	<request>
+		<name>cw_gwdfyfx</name>
+		<desc>购物费用分析</desc>
+		<model name="com.trm.ztdt.GroupBLC.cw_gwdfyfx"></model>
+		<dispatch url="/main/cwfx/shop/cw_gwdfyfx.jsp" type="forward" on="" default="true"/>
+	</request>
+</requests>

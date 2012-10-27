@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="GBK"?>
+<requests>
+   <request>
+		<desc>初始化酒店报销页面</desc>
+		<name>ztinitDjHotelBx</name>
+		<model name="com.trm.ztbx.ZtHotelBxBLC.queryHotelBxList"/>
+		<model name="com.trm.zttdMng.ZtGroupMngBLC.query"/>
+		<dispatch url="/main/ztbx/bxHotel/bxEditHotel.jsp" type="forward" on="" default="true"/>
+	</request>
+	
+	<request>
+		<desc>返回初始化酒店报销页面</desc>
+		<name>ztreturnInitDjHotelBx</name>
+		<model name="com.trm.ztbx.ZtHotelBxBLC.queryHotelBxList"/>
+		<model name="com.trm.zttdMng.ZtGroupMngBLC.query"/>
+		<dispatch url="/main/ztbx/bxHotel/returnBxEditHotel.jsp" type="forward" on="" default="true"/>
+	</request>
+	
+	<request>
+		<desc>编辑酒店报销</desc>
+		<name>zteditDjHotelBx</name>
+		<model name="com.trm.ztbx.ZtHotelBxBLC.editHotelBx"/>
+		<dispatch url="/main/ztbx/bxHotel/bxEditHotel.jsp" type="forward" on="" default="true"/>
+	</request>
+	
+	<request>
+		<desc>获取酒店计划信息</desc>
+		<name>ztGetHotelBxInfo</name>
+		<model name="com.trm.ztbx.ZtHotelBxBLC.getHotelInfo"/>
+		<dispatch url="/main/ztbx/bxHotel/bxHotelInfo.jsp" type="forward" on="" default="true"/>
+	</request>
+</requests>

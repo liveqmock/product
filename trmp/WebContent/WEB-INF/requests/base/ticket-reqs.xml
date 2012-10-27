@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="GB2312"?>
+<requests>
+	<request>
+		<name>getAllTicket</name>
+		<model name="com.baseMng.TicketBLC.getAllTicket"/>
+		<dispatch url="/baseMng/ticket/ticketList.jsp" type="forward" on="" default="true"/>
+	</request>
+	<request>
+		<name>to_addTicket</name>
+		<model name="com.trm.util.DMSMBLC.loadDMSM"/>
+		<dispatch url="/baseMng/ticket/addTicket.jsp" type="forward" on="" default="true"/>
+	</request>	
+	<request>
+		<name>getTicketById</name>
+		<model name="com.baseMng.TicketBLC.getTicketById"/>
+		<model name="com.trm.util.DMSMBLC.loadDMSM"/>
+		<dispatch url="/baseMng/ticket/updateTicket.jsp" type="forward" on="" default="true"/>
+	</request>
+	<request>
+		<name>addTicket</name>
+		<model name="com.baseMng.TicketBLC.addTicket"/>
+		<dispatch url="%ContextPath%/getAllTicket.?TA_TICKET@pageNO=1&amp;TA_TICKET@pageSize=10" type="redirect" on="" default="false"/>
+	</request>
+	<request>
+		<name>updateTicket</name>
+		<model name="com.baseMng.TicketBLC.updateTicket"/>
+		<dispatch url="%ContextPath%/getAllTicket.?TA_TICKET@pageNO=1&amp;TA_TICKET@pageSize=10" type="redirect" on="" default="false"/>
+	</request>
+	<request>
+		<name>delTicket</name>
+		<model name="com.baseMng.TicketBLC.delTicket"/>
+		<dispatch url="%ContextPath%/getAllTicket.?TA_TICKET@pageNO=1&amp;TA_TICKET@pageSize=10" type="redirect" on="" default="true"/>
+	</request>	
+	<request>
+		<name>batchDelTicket</name>
+		<model name="com.baseMng.TicketBLC.batchDelTicket"/>
+		<dispatch url="%ContextPath%/getAllTicket.?TA_TICKET@pageNO=1&amp;TA_TICKET@pageSize=10" type="redirect" on="" default="true"/>
+	</request>
+	<request>
+		<name>getTicketByName</name>
+		<model name="com.baseMng.TicketBLC.getTicketByName"/>
+		<dispatch url="/baseMng/ticket/ticketList.jsp" type="forward" on="" default="true"/>
+	</request>
+</requests>

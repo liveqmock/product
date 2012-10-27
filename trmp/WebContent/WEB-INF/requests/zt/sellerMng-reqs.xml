@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="GBK"?>
+<requests>
+	<request>
+		<desc>线路信息列表</desc>
+		<name>listAllLines</name>
+		<model name="com.trm.sellerMng.SellerMngBLC.listAllLines"/>
+		<dispatch url="/main/sellerMng/sellerList.jsp" type="forward" on="" default="true"/>
+	</request>
+	
+	<request>
+		<desc>根据线路ID查询该线路的所有发班计划，显示在日程表中</desc>
+		<name>queryByLineID</name>
+		<model name="com.trm.sellerMng.SellerMngBLC.queryByLineID"/>
+		<dispatch url="/main/sellerMng/sellerCalendar.jsp" type="forward" on="s%action%=&quot;baoming&quot;" default="true"/>
+	</request>
+	
+	<request>
+		<desc>前台收客报名页面数据初始化</desc>
+		<name>initSignUp</name>
+		<model name="com.trm.sellerMng.SellerMngBLC.initSignUp"/>
+		<model name="com.trm.sellerMng.SellerMngBLC.queryByLineID"/>
+		<model name="com.trm.util.DMSMBLC.loadDMSM"/>
+		<model name="com.baseMng.InsuranceFileBLC.queryInsurance"/>
+		<dispatch url="/main/sellerMng/signUp.jsp" type="forward" on="s%state%=&quot;baoming&quot;" default="true"/>
+		<!-- <dispatch url="/main/group/editGroup.jsp" type="forward" on="s%state%=&quot;ztdt&quot;" default="true"/> -->
+	</request>
+	
+	<request>
+		<desc>提交报名信息</desc>
+		<name>signUpInsert</name>
+		<model name="com.trm.sellerMng.SellerMngBLC.insert"/>
+		<dispatch url="%ContextPath%/main/sellerMng/listAllLines.?action=baoming&amp;pageNO=1&amp;pageSize=10" type="redirect" on="" default="true"/>
+	</request>
+	
+	<request>
+		<desc>线路订单列表</desc>
+		<name>signUpOfLines</name>
+		<model name="com.trm.sellerMng.SellerMngBLC.signUpOfLines"/>
+		<model name="com.trm.sellerMng.SellerMngBLC.queryAllOrderState"/><!-- 统计已退团订单、已成功订单及未确认订单 -->
+		<dispatch url="/main/sellerMng/ddList.jsp" type="forward" on="" default="true"/>
+	</request>
+	
+	<request>
+		<desc>订单确认列表</desc>
+		<name>orderNOConfirm</name>
+		<model name="com.trm.sellerMng.SellerMngBLC.queryAllOrderNOs"/>
+		<dispatch url="/main/sellerMng/ddConfirmList.jsp" type="forward" on="" default="true"/>
+	</request>
+	
+	<request>
+		<desc>线路订单列表</desc>
+		<name>wtgDzOfLines</name>
+		<model name="com.trm.sellerMng.SellerMngBLC.signUpOfLines"/>
+		<model name="com.trm.sellerMng.SellerMngBLC.queryAllOrderState"/>
+		<dispatch url="/main/moneyMng/account/wtgDzList.jsp" type="forward" on="" default="true"/>
+	</request>
+	<request>
+		<desc>根据订单号查询该订单的人员信息</desc>
+		<name>queryByDDH</name>
+		<model name="com.trm.sellerMng.TA_VISITORBLC.query"/>
+		<dispatch url="/main/sellerMng/viewVisitorByOrderNO.jsp" type="forward" on="" default="true"/>
+	</request>
+	
+	<request>
+		<desc>根据订单号查询团、线路信息</desc>
+		<name>queryByDDHForAll</name>
+		<!-- <model name="com.trm.sellerMng.SellerMngBLC.queryByDDHForAll"/> -->
+		<model name="com.trm.sellerMng.SellerMngBLC.queryLineDetail"/>
+		<model name="com.trm.util.DMSMBLC.loadDMSM"/>
+		<dispatch url="/main/sellerMng/viewLineAndGroupInfo.jsp" type="forward" on="" default="true"/>
+	</request>
+	
+	<request>
+		<desc>列表中查看功能</desc>
+		<name>queryForView</name>
+		<model name="com.trm.sellerMng.SellerMngBLC.queryForView"/>
+		<dispatch url="/main/sellerMng/queryForView.jsp" type="forward" on="" default="true"/>
+	</request>
+	
+	<request>
+		<desc>报名信息修改初始化</desc>
+		<name>signUpEditIint</name>
+		<model name="com.trm.sellerMng.SellerMngBLC.signUpEditIint"/>
+		<model name="com.baseMng.GatherBLC.query"/>
+		<model name="com.trm.util.DMSMBLC.loadDMSM"/>
+		<dispatch url="/main/sellerMng/signUpEdit.jsp" type="forward" on="" default="true"/>
+	</request>
+
+	<request>
+		<desc>修改订单信息</desc>
+		<name>updateOrder</name>
+		<model name="com.trm.sellerMng.SellerMngBLC.updateOrder"/>
+		<dispatch url="%ContextPath%/main/sellerMng/signUpOfLines.?flag=$%flag%$&amp;pageNO=1&amp;pageSize=10" type="redirect" on="s%wtgDz%=&quot;N&quot;" default="true"/>
+		<dispatch url="%ContextPath%/main/moneyMng/account/wtgDzOfLines.?dzzt=2&amp;pageSize=10&amp;pageNO=10" type="forward" on="s%wtgDz%=&quot;Y&quot;" default="true"/>
+	</request>
+	
+	<request>
+		<desc>订单确认</desc>
+		<name>confirmOrderNo</name>
+		<model name="com.trm.sellerMng.SellerMngBLC.confirmOrderNo"/>
+		<dispatch url="%ContextPath%/main/sellerMng/orderNOConfirm.?pageNO=1&amp;pageSize=10" type="redirect" on="" default="true"/>
+	</request>
+	
+	<request>
+		<desc>报名确认单</desc>
+		<name>viewConfirmRegedit</name>
+		<model name="com.trm.sellerMng.SellerMngBLC.viewConfirmRegedit"/>
+		<model name="com.trm.util.DMSMBLC.loadDMSM"/>
+		<dispatch url="/main/sellerMng/viewBMQRD.jsp" type="forward" on="" default="true"/>
+	</request>
+	
+	<request>
+		<desc>报名确认单--导出到word</desc>
+		<name>expWordForConfirm</name>
+		<model name="com.trm.sellerMng.SellerMngBLC.viewConfirmRegedit"/>
+		<model name="com.trm.util.DMSMBLC.loadDMSM"/>
+		<dispatch url="/main/sellerMng/expWordForConfirm.jsp" type="forward" on="" default="true"/>
+	</request>
+	
+	<request>
+		<desc>报名行程单</desc>
+		<name>viewJourney</name>
+		<model name="com.trm.sellerMng.SellerMngBLC.viewConfirmRegedit"/>
+		<model name="com.trm.util.DMSMBLC.loadDMSM"/>
+		<dispatch url="/main/sellerMng/viewJourney.jsp" type="forward" on="" default="true"/>
+	</request>
+	<request>
+		<desc>行程单</desc>
+		<name>viewTravelList</name>
+		<model name="com.trm.ztdt.GroupLineDetailBLC.queryLineGroupBlobs"/>
+		<dispatch url="/main/sellerMng/printTravelList.jsp" type="forward" on="" default="true"/>
+	</request>
+	<request>
+		<desc>报名行程单--导出到word</desc>
+		<name>expWordForJourney</name>
+		<model name="com.trm.sellerMng.SellerMngBLC.viewConfirmRegedit"/>
+		<model name="com.trm.util.DMSMBLC.loadDMSM"/>
+		<dispatch url="/main/sellerMng/expWordForJourney.jsp" type="forward" on="" default="true"/>
+	</request>
+	
+	<request>
+		<desc>出团通知单</desc>
+		<name>viewInform</name>
+		<model name="com.trm.sellerMng.SellerMngBLC.viewConfirmRegedit"/>
+		<model name="com.trm.util.DMSMBLC.loadDMSM"/>
+		<dispatch url="/main/sellerMng/viewInform.jsp" type="forward" on="" default="true"/>
+	</request>
+	
+	<request>
+		<desc>出团通知单--导出到word</desc>
+		<name>expWordForInform</name>
+		<model name="com.trm.sellerMng.SellerMngBLC.viewConfirmRegedit"/>
+		<model name="com.trm.util.DMSMBLC.loadDMSM"/>
+		<dispatch url="/main/sellerMng/expWordForInform.jsp" type="forward" on="" default="true"/>
+	</request>
+	
+	<request>
+		<desc>游客收款列表</desc>
+		<name>listVisitorMoney</name>
+		<model name="com.trm.sellerMng.SellerMngBLC.listVisitorMoney"/>
+		<dispatch url="/main/sellerMng/visitorMoney/visitorList.jsp" type="forward" on="" default="true"/>
+	</request>
+	
+	<request>
+		<desc>初始化游客收款</desc>
+		<name>OpMoneyInit</name>
+		<model name="com.trm.sellerMng.SellerMngBLC.OpMoneyInit"/>
+		<dispatch url="/main/sellerMng/visitorMoney/addMoney.jsp" type="forward" on="s%action%=&quot;add&quot;" default="true"/>
+		<dispatch url="/main/sellerMng/visitorMoney/backMoney.jsp" type="forward" on="s%action%=&quot;back&quot;" default="true"/>
+	</request>
+	
+	<request>
+		<desc>游客收退款</desc>
+		<name>updateMoney</name>
+		<model name="com.trm.sellerMng.SellerMngBLC.cancelOrderAndMoney"/>
+		<dispatch url="/main/sellerMng/visitorMoney/backMoney.jsp" type="forward" on="" default="true"/>
+	</request>
+	
+	<request>
+		<desc>订单统计</desc>
+		<name>countOrders</name>
+		<model name="com.trm.sellerMng.SellerMngBLC.countOrders"/>
+		<model name="com.dream.app.hr.org.Organization.query"/>
+		<dispatch url="/main/sellerMng/countOrders/listCountOrders.jsp" type="forward" on="" default="true"/>
+	</request>
+	<request>
+		<desc>散客登记表</desc>
+		<name>getAllSKDJ</name>
+		<model name="com.trm.sellerMng.SellerMngBLC.getAllSKDJ"/>
+		<dispatch url="/main/sellerMng/skdj/skdjList.jsp" type="forward" on="" default="true"/>
+	</request>
+
+	<request>
+		<desc>打印退款单</desc>
+		<name>printBackMoeny</name>
+		<model name="com.trm.sellerMng.SellerMngBLC.printBackMoeny"/>
+		<dispatch url="/main/sellerMng/printBackMoney.jsp" type="forward" on="" default="true"/>
+	</request>
+	<request>
+		<desc>打印游客名单</desc>
+		<name>printYkmd</name>
+		<model name="com.trm.sellerMng.SellerMngBLC.printYkmd"/>
+		<dispatch url="/main/sellerMng/printYkmd.jsp" type="forward" on="" default="true"/>
+	</request>
+</requests>

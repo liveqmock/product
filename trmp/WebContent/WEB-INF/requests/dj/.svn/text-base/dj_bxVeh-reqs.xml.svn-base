@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="GBK"?>
+<requests>
+	<request>
+		<desc>AJAX初始化车辆信息</desc>
+		<name>djAjaxCarPlanInfo</name>
+		<model name="com.trmdj.bx.DjVehBxBLC.djAjaxCarInfo"/>
+		<model name="com.trm.util.DMSMBLC.loadDMSM"/><!-- 加载代码值 -->
+		<dispatch url="/maindj/bx/initPage4Ajax/initCarsPage.jsp" type="forward" on="" default="true"/>
+	</request>
+	<request>
+		<desc>新增车辆信息</desc>
+		<name>djFrmInsertBxCar</name>
+		<model name="com.trmdj.bx.DjVehBxBLC.insertCar"/>
+		<dispatch url="/maindj/businessPlan/planSuccess.jsp" type="forward" on="" default="true"/>
+	</request>
+
+</requests>

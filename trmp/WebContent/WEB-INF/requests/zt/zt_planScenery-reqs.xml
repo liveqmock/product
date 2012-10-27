@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="GBK"?>
+<requests>
+	<request>
+		<desc>初始化制定景点计划页面</desc>
+		<name>ztInitSceneryPlan</name>
+		<model name="com.trm.ztPlan.ZtSeneryPlanBLC.initSceneryEdit"/>
+		<model name="com.trm.ztPlan.ZtSeneryPlanBLC.query"/>
+		<model name="com.trm.ztPlan.ZtJDXXZJBBLC.query"/><!-- 团队计划信息合计表 -->
+		<dispatch url="/main/ztPlans/sceneryPlan/doSceneryGeneral.jsp" type="forward" on="" default="true"/>
+	</request>
+	<request>
+		<desc>AJAX加载所在城市景点列表</desc>
+		<name>ztInitSceneryList</name>
+		<model name="com.baseMng.SceneryBLC.query"/>
+		<dispatch url="/main/ztPlans/sceneryPlan/allSceneryByCity.jsp" type="forward" on="" default="true"/>
+	</request>
+	<request>
+		<desc>AJAX加载景点价格列表</desc>
+		<name>ztInitSceneryPriceList</name>
+		<model name="com.trm.ztPlan.ZtSeneryPlanBLC.initSceneryPrice"/>
+		<dispatch url="/main/ztPlans/sceneryPlan/priceByScenery.jsp" type="forward" on="" default="true"/>
+	</request>
+	<request>
+		<desc>景点计划增加 修改</desc>
+		<name>ztSceneryGeneral</name>
+		<model name="com.trm.ztPlan.ZtSeneryPlanBLC.scenryGeneral"/>
+		<dispatch url="%ContextPath%/main/ztPlans/ztInitMasterPlan.?TA_ZT_GROUP/ID=%groupId%&amp;TA_ZT_JHHOTEL/TID=%groupId%&amp;TA_TDJDXXZJB_ZT/TID=%groupId%&amp;TA_ZT_JHCT/TID=%groupId%&amp;TA_ZT_JH/TID=%groupId%&amp;TA_ZT_JHPW/TID=%groupId%&amp;TA_ZT_JHCL/TID=%groupId%&amp;TA_ZT_JHJD/TID=%groupId%&amp;TA_ZT_JHDJ/TID=%groupId%&amp;TA_ZT_JHGW/TID=%groupId%&amp;TA_ZT_JHJIAD/TID=%groupId%&amp;TA_ZT_JHDY/TID=%groupId%&amp;isCheck=Y&amp;mklb=1;" type="redirect" on="" default="true"/>
+	</request>
+</requests>

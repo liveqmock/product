@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="GBK"?>
+<requests>
+   <request>
+		<desc>查询所有要报销的团</desc>
+		<name>bxPrintList</name>
+		<model name="com.trmdj.bx.DjCWJSBLC.initGroupPrintList"/>
+		<dispatch url="/maindj/bx/printCwjsd/listCwjsd.jsp" type="forward" on="" default="true"/>
+	</request>
+	<request>
+		<desc>查询要报销的团</desc>
+		<name>showBxGroupPrint</name>
+		<model name="com.trmdj.bx.DjCWJSBLC.initGroupPrint"/>
+		<model name="com.trmdj.bx.DjShBxBLC.submitBxBJ"/>
+		<dispatch url="/maindj/bx/printCwjsd/printCwjsd.jsp" type="forward" on="" default="true"/>
+	</request>
+	<request>
+		<desc>查询要报销的团</desc>
+		<name>expWordCwjsd</name>
+		<model name="com.trmdj.bx.DjCWJSBLC.initGroupPrint"/>
+		<dispatch url="/maindj/bx/printCwjsd/expWordCwjsd.jsp" type="forward" on="" default="true"/>
+	</request>
+</requests>

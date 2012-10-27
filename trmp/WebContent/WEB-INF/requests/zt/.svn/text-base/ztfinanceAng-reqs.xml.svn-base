@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="GBK"?>
+<requests>
+   <request>
+		<desc>查询签单列表</desc>
+		<name>ztBusinessName</name>
+		<model name="com.trm.ztfinanceAng.Zt_BusinessAnalysisMngBLC.getztBusinessName"/>
+		<dispatch url="/main/ztfinanceAng/ztbusinessAnalysis.jsp" type="forward" on="" default="true"/>
+	</request>			  
+</requests>

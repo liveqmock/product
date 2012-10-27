@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="GBK"?>
+<requests>
+	<request>
+		<desc>初始化制定地接计划页面</desc>
+		<name>ztInitPlusPlan</name>
+		<model name="com.trm.ztPlan.ZtPlusPlanBLC.queryJDByTID"/>
+		<dispatch url="/main/ztPlans/plusPlan/addPlusPlan.jsp" type="forward" on="" default="true"/>
+	</request>
+	<request>
+		<desc>查询city下的所有景点（AJAX调用）</desc>
+		<name>ztQueryScenery4AJAX</name>
+		<model name="com.baseMng.SceneryBLC.query"/>
+		<dispatch url="/main/ztPlans/plusPlan/allSceneryByCity.jsp" type="forward" on="" default="true"/>
+	</request>
+	<request>
+		<desc>添加加点计划信息</desc>
+		<name>ztAddPlusPlan</name>
+		<model name="com.trm.ztPlan.ZtPlusPlanBLC.insertPlusPanInfo"/>
+		<dispatch url="%ContextPath%/main/ztPlans/ztInitMasterPlan.?TA_ZT_GROUP/ID=%groupId%&amp;TA_ZT_JHHOTEL/TID=%groupId%&amp;TA_TDJDXXZJB_ZT/TID=%groupId%&amp;TA_ZT_JHCT/TID=%groupId%&amp;TA_ZT_JH/TID=%groupId%&amp;TA_ZT_JHPW/TID=%groupId%&amp;TA_ZT_JHCL/TID=%groupId%&amp;TA_ZT_JHJD/TID=%groupId%&amp;TA_ZT_JHDJ/TID=%groupId%&amp;TA_ZT_JHGW/TID=%groupId%&amp;TA_ZT_JHJIAD/TID=%groupId%&amp;TA_ZT_JHDY/TID=%groupId%&amp;isCheck=Y&amp;mklb=1;" type="redirect" on="" default="true"/>
+	</request>
+	
+	<request>
+		<desc>初始化修改加点计划页面</desc>
+		<name>ztInitNewScenery4Edit</name>
+		<model name="com.trm.ztPlan.ZtPlusPlanBLC.query4Init"/>
+		<dispatch url="/main/ztPlans/plusPlan/updatePlusplan.jsp" type="forward" on="" default="true"/>
+	</request>
+	
+</requests>

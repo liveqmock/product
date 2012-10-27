@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="GBK"?>
+<requests>
+	<request>
+		<name>getAllScenery</name>
+		<model name="com.baseMng.SceneryBLC.getAllScenery"/>
+		<dispatch url="/baseMng/scenery/sceneryList.jsp" type="forward" on="" default="true"/>
+	</request>
+	<request>
+		<name>to_addScenery</name>
+		<model name="com.trm.util.DMSMBLC.loadDMSM"/>
+		<dispatch url="/baseMng/scenery/addScenery.jsp" type="forward" on="" default="true"/>
+	</request>
+	<request>
+		<name>getSceneryByName</name>
+		<model name="com.baseMng.SceneryBLC.getSceneryByName"/>
+		<dispatch url="/baseMng/scenery/sceneryList.jsp" type="forward" on="" default="true"/>
+	</request>
+	<request>
+		<name>addScenery</name>
+		<model name="com.baseMng.SceneryBLC.addScenery"/>
+		<dispatch url="%ContextPath%/getAllScenery.?TA_SCENERY_POINT@pageNO=1&amp;TA_SCENERY_POINT@pageSize=10" type="redirect" on="" default="true"/>
+	</request>
+	<request>
+		<name>getSceneryById</name>
+		<model name="com.baseMng.SceneryBLC.getSceneryById"/>
+		<model name="com.trm.util.DMSMBLC.loadDMSM"/>
+		<dispatch url="/baseMng/scenery/upScenery.jsp" type="forward" on="" default="true"/>
+	</request>
+	<request>
+		<name>upScenery</name>
+		<model name="com.baseMng.SceneryBLC.upScenery"/>
+    	<dispatch url="%ContextPath%/getAllScenery.?TA_SCENERY_POINT@pageNO=1&amp;TA_SCENERY_POINT@pageSize=10" type="redirect" on="" default="false"/>
+	</request>
+		<request>
+		<name>delScenery</name>
+		<model name="com.baseMng.SceneryBLC.delScenery"/>
+    	<dispatch url="%ContextPath%/getAllScenery.?TA_SCENERY_POINT@pageNO=1&amp;TA_SCENERY_POINT@pageSize=10" type="redirect" on="" default="true"/>
+	</request>
+		<request>
+		<name>batchDelScenery</name>
+		<model name="com.baseMng.SceneryBLC.batchDelScenery"/>
+    	<dispatch url="%ContextPath%/getAllScenery.?TA_SCENERY_POINT@pageNO=1&amp;TA_SCENERY_POINT@pageSize=10" type="redirect" on="" default="true"/>
+	</request>
+	<request>
+		<name>sceneryXML</name>
+		<model name="com.trm.util.CreateXML.SceneryXML"/>
+    	<dispatch url="/baseMng/scenery/sceneryList.jsp" type="forward" on="" default="true"/>
+	</request>
+	
+	<!-- 
+	<request>
+		<desc>景点管理的树</desc>
+		<name>showTree4Scenery</name>
+		<model name="com.trm.comm.XZQHBLC.query" on=""/>
+		<dispatch url="/baseMng/scenery/leftScenery.jsp" type="forward" on="" default="true"/>
+	</request>
+	 -->	
+</requests>

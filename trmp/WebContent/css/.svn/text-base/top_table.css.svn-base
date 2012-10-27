@@ -1,0 +1,41 @@
+.top_table{
+	width:100%;
+	color:#004779; 
+	background-color:#3399CC;
+}
+.toptable_td1{
+	background-image:url(../images/top_title.jpg);
+	height:35px;
+}
+
+.toptable_pingpu{ 
+	background-image:url(../images/top_hengpu.jpg);
+}
+.td_font-weight{
+	font-weight:bold;
+}
+.td_font{
+	color:005791;
+}
+.tr_color{
+	background-color:#FFFFFF;
+	height:23px; 
+}
+.tr_color2{
+	background-color:#D4E7F6;
+	height:23px; 
+}
+.tr_rd{
+	background-image:url(../images/top_rd.jpg);
+	height:32px;
+}
+.tr_chaxun{
+	background-image:url(../images/top_chaxun.jpg); 
+}
+.top_div{ 
+	color:#10416C;  
+	padding-left:35px;
+ 	padding-top:16px;
+	font-weight:bold;
+	font-size:14px;
+}

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="GBK"?>
+<requests>
+   <request>
+		<desc>AJAX初始化餐厅信息</desc>
+		<name>djAjaxDinnerPlanInfo</name>
+		<model name="com.trmdj.bx.DjDinnerBxBLC.djAjaxDinnerInfo"/>
+		<dispatch url="/maindj/bx/initPage4Ajax/initDinnerPage.jsp" type="forward" on="" default="true"/>
+	</request>
+	<request>
+		<desc>新增餐厅信息</desc>
+		<name>djFrmInsertBxDinner</name>
+		<model name="com.trmdj.bx.DjDinnerBxBLC.insertDinner"/>
+		<dispatch url="/maindj/businessPlan/planSuccess.jsp" type="forward" on="" default="true"/>
+	</request>
+	
+</requests>

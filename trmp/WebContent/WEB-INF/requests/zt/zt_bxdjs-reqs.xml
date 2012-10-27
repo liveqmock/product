@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="GBK"?>
+<requests>
+	<request>
+		<desc>初始化地接社报销</desc>
+		<name>ztInitdjsInfo</name>
+		<model name="com.trm.ztbx.ZtDjsbxBLC.query"/>
+		<model name="com.trm.ztbx.ZtDjsbxBLC.queryDjsMng"/>
+		<dispatch url="/main/ztbx/bxGoundTrave/bxEditDjs.jsp" type="forward"  default="true"/>
+	</request>
+	<request>
+		<desc>保存修改提交地接报销</desc>
+		<name>ztEditDjsBx</name>
+		<model name="com.trm.ztbx.ZtDjsbxBLC.updatDjsInfo"/>
+		<dispatch url="/main/ztbx/bxGoundTrave/bxEditDjs.jsp" type="forward"  default="true"/>
+	</request>
+</requests>

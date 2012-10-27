@@ -1,0 +1,150 @@
+body { 
+	margin:0px; 
+	font-size:12px; 
+	font-family:"宋体"; 
+	color: #3399FF;
+	background-color: #F2F9FD;
+}
+
+.mian{ 
+ border:#5BA8DE solid 1px;
+ margin-left:40px;
+ margin-top:10px; 
+ width:90%;
+}
+
+.mian_left{ 
+text-align:left;
+border:solid 1px #3399FF; 
+margin-bottom:25px;
+}
+.mian_left tr{ height:30px;}
+.toptable{ 
+background:url(../images/main_r2_c11.jpg); 
+width:100%; 
+color: #333333;
+}
+
+.addRow tr td input{border:0px; border-bottom: #6699FF solid 1px; height:15px;width:100px}
+.addRow tr td select{width:120px;}
+
+.tr1{
+border: #CCCCCC solid 1px; 
+}
+.bt_1{ 
+background:url(../images/bn.jpg); text-align:center;
+}
+
+.bt_2{ 
+ background-image:url(../images/bn.jpg);
+ background-color:#666666;
+ line-height: 15px;
+ height: 20px;
+ width: 60px;
+ margin: 10px 0 0 20px; /*margin-top 和 margin-left 一句就可以实现了 */
+ border: none; /* border-top\left\right\bottom 也可以缩到一句 */
+}
+
+.baoxiaotable{
+ border: #5BA8DE solid 1px;
+ width:80%;
+ margin-left:60px;
+ margin-top:10px;
+}
+.table1{
+border: #5BA8DE solid 1px;
+width:70%
+}
+.listTable{
+text-align:center;
+background-color:#59929D;;
+}
+/*横线样式*/
+.input1{
+ border:0px;
+ border-bottom: #6699FF solid 1px;
+ width:80px
+ 
+}
+.input4{
+ border:0px;
+ border-bottom: #6699FF solid 1px;
+ width:120px
+ 
+}
+/*预算页面input  缩短Input4文本框大小*/
+.input5{  
+ border:0px;
+ border-bottom: #6699FF solid 1px; height:15px;
+ width:100px
+}
+.input6{  
+ border:0px;
+ border-bottom: #6699FF solid 1px; height:15px;
+ width:65px
+}
+/*酒店星级样式,下拉菜单*/
+.xingji{ width:120px;}
+.input{
+ border:0px;
+ border-bottom:#000000 solid 1px;
+}
+.input2{
+ border-bottom-color:#FFFFFF;
+ border-bottom-style: 0px solid ;
+}
+.biaoti{
+font-weight: bold; 
+text-align:left;
+}
+.text1{
+text-align:right;}
+.text2{
+text-align:left;}
+
+.bg1{ text-align:right
+}
+.text1{
+text-align:center; }
+.mytable tr td{text-align:center;}
+.mytable tr td input{border:0px;border-bottom: #6699FF solid 1px;width:80px;}
+
+.bg2{
+ text-align:center;
+ background-color:#DDEFFD}
+.toptr{
+background-color:#353C44; color:#E1E2E3;
+height:20px; font-size:12px;
+}
+
+.toptd{ color:#344B50;}
+
+
+.tdrd{ margin-top:0px; margin-left:0px; 
+
+
+text-align:left;}
+
+
+.tablemain{ 
+width:98%; 
+border:#5BA8DE solid 1px}
+
+/*采购申请页面样式*/
+.sqr tr{height:30px;}
+.sqr tr td select{width:135px;}
+.txtArea{width:438px;}
+
+.sqnr tr td input{width:100px;}
+.sqnr tr td{ text-align:center; }
+
+.sq tr{height:30px;}
+
+.unInput_Bottom{
+	text-decoration:underline
+}
+.roleListDiv{
+	text-align: left;
+	margin-left: 50px; 
+	margin-top: 30px;
+}

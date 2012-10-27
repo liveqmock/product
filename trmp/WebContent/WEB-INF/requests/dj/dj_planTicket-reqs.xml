@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="GBK"?>
+<requests>
+	<request>
+		<desc>AJAX初始化票务信息</desc>
+		<name>djAjaxTicketInfo</name>
+		<model name="com.trmdj.businessPlan.plan.DjTicketPlanBLC.djAjaxTicketInfo"/>
+		<dispatch url="/maindj/businessPlan/initPage4Ajax/initTicketPage.jsp" type="forward" on="" default="true"/>
+	</request>
+	<request>
+		<desc>新增票务信息</desc>
+		<name>djFrmInsertTicket</name>
+		<model name="com.trmdj.businessPlan.plan.DjTicketPlanBLC.insertTicket"/>
+		<dispatch url="/maindj/businessPlan/planSuccess.jsp" type="forward" on="" default="true"/>
+	</request>
+</requests>

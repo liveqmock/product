@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="GBK"?>
+<requests>
+	<request>
+		<desc>组团团队管理列表</desc>
+		<name>ztQueryAllGroup</name>
+		<model name="com.trm.zttdMng.ZtGroupMngBLC.queryZtGroupList"/>
+		<dispatch url="/main/ztGroupMng/ztGroupList.jsp" type="forward" on="" default="true"/>
+	</request>
+	<request>
+		<desc>初始化单个组团社的确认件管理页面</desc>
+		<name>ztinitConfirmForZTS</name>
+		<model name="com.baseMng.TravelAgcBLC.query"/>
+		<model name="com.trm.zttdMng.ZtConfirmBLC.queryConfirm"/>
+		<dispatch url="/main/ztGroupMng/confirm.jsp" type="forward" on="" default="true"/>
+	</request>
+	
+	<request>
+		<desc>单团登记表</desc>
+		<name>organizeRegisterForm</name>
+		<model name="com.trm.zttdMng.ZtGroupMngBLC.queryAllTrave"/>
+		<model name="com.trmdj.util.XzqhMngBLC.query"/>
+		<model name="com.trm.util.DMSMBLC.loadDMSM"/>
+		<model name="com.trm.zttdMng.ZtRigesterForm.rigesterForm"/>
+		<dispatch url="/main/group/addSingleGroup.jsp" type="forward" on="" default="true"/>
+	</request>
+	
+	<request>
+		<desc>提交单团信息</desc>
+		<name>ztAddNewGroup</name>
+		<model name="com.trm.zttdMng.ZtRigesterForm.submitForm"></model>
+		<dispatch url="/main/group/addSingleGroup.jsp"></dispatch>
+	</request>
+	
+	<request>
+		<desc>上传确认件</desc>
+		<name>ztaddConfirm</name>
+		<model name="com.trm.zttdMng.ZtConfirmBLC.addConfirm"/>
+		<dispatch url="/main/ztGroupMng/confirm.jsp" type="forward" on="" default="true"/>
+	</request>
+	
+	<request>
+		<desc>初始化确认件查看页面</desc>
+		<name>ztviewConfirmByZTS</name>
+		<model name="com.trm.zttdMng.ZtConfirmBLC.query"/>
+		<dispatch url="/main/ztGroupMng/showConfirm.jsp" type="forward" on="" default="true"/>
+	</request>
+	
+	<request>
+		<desc>查看确认件0</desc>
+		<name>ztqueryConfirm0</name>
+		<model name="com.trm.zttdMng.ZtConfirmBLC.query"/>
+		<dispatch url="/main/ztGroupMng/viewConfirm0.jsp" type="forward" on="" default="true"/>
+	</request>
+	
+	<request>
+		<desc>查看确认件1</desc>
+		<name>ztqueryConfirm1</name>
+		<model name="com.trm.zttdMng.ZtConfirmBLC.query"/>
+		<dispatch url="/main/ztGroupMng/viewConfirm1.jsp" type="forward" on="" default="true"/>
+	</request>
+	
+	<request>
+		<desc>查看确认件2</desc>
+		<name>ztqueryConfirm2</name>
+		<model name="com.trm.zttdMng.ZtConfirmBLC.query"/>
+		<dispatch url="/main/ztGroupMng/viewConfirm2.jsp" type="forward" on="" default="true"/>
+	</request>
+	<request>
+		<name>showGroupDetail</name>
+		<desc>显示团队订单成员明细</desc>
+		<model name="com.trm.zttdMng.ZtGroupMngBLC.showGroupDetailList"/>
+		<dispatch url="/main/ztGroupMng/showGroupDetailList.jsp" type="forward" on="" default="true"/>
+	</request>
+	<request>
+		<name>showPeopleList</name>
+		<desc>显示团队订单成员明细</desc>
+		<model name="com.trm.zttdMng.ZtGroupMngBLC.showPeopleList"/>
+		<dispatch url="/main/ztGroupMng/showPeopleList.jsp" type="forward" on="" default="true"/>
+	</request>
+</requests>

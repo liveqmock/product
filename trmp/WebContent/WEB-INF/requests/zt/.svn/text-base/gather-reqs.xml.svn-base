@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="GB2312"?>
+<requests>
+	<request>
+		<name>getAllGather</name>
+		<model name="com.baseMng.GatherHisBLC.getAllGather"/>
+		<dispatch url="/baseMng/gather_address/gatherList.jsp" type="forward" on="" default="true"/>
+	</request>
+	<request>
+		<name>getGatherByName</name>
+		<model name="com.baseMng.GatherHisBLC.getGatherByName"/>
+		<dispatch url="/baseMng/gather_address/gatherList.jsp" type="forward" on="" default="true"/>
+	</request>
+	<request>
+		<name>getGatherById</name>
+		<model name="com.baseMng.GatherHisBLC.getGatherById"/>
+		<dispatch url="/baseMng/gather_address/upgather.jsp" type="forward" on="" default="true"/>
+	</request>
+	<request>
+		<name>addGather</name>
+		<model name="com.baseMng.GatherHisBLC.addGather"/>
+		<dispatch url="%ContextPath%/getAllGather.?TA_ZT_GATHER_HIS@pageNO=1&amp;TA_ZT_GATHER_HIS@pageSize=10&amp;TA_ZT_GATHER_HIS/GATHER_ID=" type="redirect" on="" default="true"/>
+	</request>
+	<request>
+		<name>delGather</name>
+		<model name="com.baseMng.GatherHisBLC.delGather"/>
+		<dispatch url="%ContextPath%/getAllGather.?TA_ZT_GATHER_HIS@pageNO=1&amp;TA_ZT_GATHER_HIS@pageSize=10&amp;TA_ZT_GATHER_HIS/GATHER_ID=" type="redirect" on="" default="true"/>
+	</request>
+	<request>
+		<name>batchDelGather</name>
+		<model name="com.baseMng.GatherHisBLC.batchDelGather"/>
+		<dispatch url="%ContextPath%/getAllGather.?TA_ZT_GATHER_HIS@pageNO=1&amp;TA_ZT_GATHER_HIS@pageSize=10&amp;TA_ZT_GATHER_HIS/GATHER_ID=" type="redirect" on="" default="true"/>
+	</request>
+		<request>
+		<name>upGather</name>
+		<model name="com.baseMng.GatherHisBLC.upGather"/>
+		<dispatch url="%ContextPath%/getAllGather.?TA_ZT_GATHER_HIS@pageNO=1&amp;TA_ZT_GATHER_HIS@pageSize=10&amp;TA_ZT_GATHER_HIS/GATHER_ID=" type="redirect" on="" default="true"/>
+	</request>
+</requests>

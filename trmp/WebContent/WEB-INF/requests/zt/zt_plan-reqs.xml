@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="GBK"?>
+<requests>
+	<request>
+		<desc>初始化制定地接计划页面</desc>
+		<name>ztInitMasterPlan</name>
+		
+		<model name="com.trm.ztPlan.ZtHotelPlanBLC.query"/><!-- 酒店计划表 -->
+		<model name="com.trm.ztPlan.ZtDinnerPlanBLC.query"/><!-- 餐厅计划表 -->
+		<model name="com.trm.ztPlan.ZtTicketPlanBLC.query"/><!-- 票务计划表 -->
+		<model name="com.trm.ztPlan.ZtVehPlanBLC.query"/><!-- 车辆计划表 -->
+		<model name="com.trm.ztPlan.ZtSeneryPlanBLC.query"/><!-- 景点计划表 -->
+		<model name="com.trm.ztPlan.ZtTravePlanBLC.query"/><!-- 地接计划表 -->
+		<model name="com.trm.ztPlan.ZtShoppingPlanBLC.query"/><!-- 购物计划表 -->
+		<model name="com.trm.ztPlan.ZtPlusPlanBLC.query"/><!-- 加点计划表 -->
+		<model name="com.trm.ztPlan.ZtGuidePlanBLC.query"/><!-- 导游计划表 -->
+		<model name="com.trm.ztPlan.ZtJDXXZJBBLC.query"/><!-- 团队计划信息合计表 -->
+		<model name="com.trm.ztPlan.ZtPlusPlanBLC.query4Init"/><!-- 查询加点名称 -->
+		<model name="com.trm.ztPlan.ZtTravePlanBLC.initGroundTrave"/><!-- 查询所有地接社信息 -->
+		<model name="com.trm.zttdMng.ZtConfirmBLC.queryZTS"/><!-- 查询组团社信息 -->
+		<model name="com.trm.zttdMng.ZtGroupMngBLC.query"/><!-- 组团团表 -->
+		<model name="com.trm.zttdMng.ZtGroupMngBLC.querySPYJInfo"/><!-- 查询审批意见 -->
+		<dispatch url="/main/ztPlans/ztAllPlanPage.jsp" type="forward" on="" default="true"/>
+	</request>
+	
+		<request>
+		<desc>初始化制定导游计划页面</desc>
+		<name>ztInitGuidePlan</name>
+		<model name="com.trm.ztPlan.ZtGuidePlanBLC.query"/>
+		<model name="com.trm.ztPlan.ZtGuidePlanBLC.selectAllGuide"/>
+		<dispatch url="/main/ztPlans/guidePlan/addGuidePlan.jsp" type="forward" on="" default="true"/>
+	</request>
+	<request>
+		<desc>制定导游计划</desc>
+		<name>ztAddGuidePlan</name>
+		<model name="com.trm.ztPlan.ZtGuidePlanBLC.updateGuidePlan"/>
+		<dispatch url="/main/ztPlans/guidePlan/addGuidePlan.jsp" type="forward" on="" default="true"/>
+	</request>
+	<request>
+		<desc>初始化编辑导游计划页面</desc>
+		<name>ztInitEditGuidePlan</name>
+		<model name="com.trm.ztPlan.ZtGuidePlanBLC.query"/>
+		<model name="com.trm.ztPlan.ZtGuidePlanBLC.selectAllGuide"/>
+		<dispatch url="/main/ztPlans/guidePlan/updateGuidePlan.jsp" type="forward" on="s%action%=&quot;edit&quot;" default="true"/>
+		<dispatch url="/main/ztPlans/guidePlan/selectGuidePlan.jsp" type="forward" on="s%action%=&quot;view&quot;" default="true"/>
+	</request>
+	<request>
+		<desc>提交编辑后的导游计划</desc>
+		<name>ztEditGuidePlan</name>
+		<model name="com.trm.ztPlan.ZtGuidePlanBLC.updateGuidePlan"/>
+		<dispatch url="/main/ztPlans/guidePlan/updateGuidePlan.jsp" type="forward" on="" default="true"/>
+	</request>
+	<request>
+		<desc>删除组团计划信息表</desc>
+		<name>deleteTabName</name>
+		<model name="com.trm.util.DeleteTableBLC.deleteZtTables"/>
+		<dispatch url="%ContextPath%/main/ztPlans/ztInitMasterPlan.?TA_ZT_GROUP/ID=%groupId%&amp;TA_ZT_JHHOTEL/TID=%groupId%&amp;TA_TDJDXXZJB_ZT/TID=%groupId%&amp;TA_ZT_JHCT/TID=%groupId%&amp;TA_ZT_JH/TID=%groupId%&amp;TA_ZT_JHPW/TID=%groupId%&amp;TA_ZT_JHCL/TID=%groupId%&amp;TA_ZT_JHJD/TID=%groupId%&amp;TA_ZT_JHDJ/TID=%groupId%&amp;TA_ZT_JHGW/TID=%groupId%&amp;TA_ZT_JHJIAD/TID=%groupId%&amp;TA_ZT_JHDY/TID=%groupId%&amp;isCheck=Y&amp;mklb=1;" type="redirect" on="" default="true"/>
+	</request>
+</requests>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="GBK"?>
+<requests>
+	<request>
+		<desc>提交制定报账</desc>
+		<name>ztBxBJ</name>
+		<model name="com.trm.ztbx.ZtShBxBLC.submitBxBJ"/>
+		<dispatch url="/main/ztbx/bxBJ.jsp" type="forward" on="" default="true"/>
+	</request>
+	<request>
+		<desc>提交制定报账</desc>
+		<name>ztInitShBxList</name>
+		<model name="com.trm.ztbx.ZtShBxBLC.submitBx"/>
+		<dispatch url="%ContextPath%/main/ztbx/ztbxGuideAllList.?pageNO=1&amp;pageSize=10" type="redirect" on="" default="true"/>
+	</request>
+	
+	<request>
+		<desc>查询待报账审核状态的团信息</desc>
+		<name>ztQueryShBxList</name>
+		<model name="com.trm.ztbx.ZtShBxBLC.querySpBxInfo"/>
+		<dispatch url="/main/ztbx/shBxList.jsp" type="forward" on="" default="true"/>
+	</request>
+	
+	<request>
+		<desc>初始化团报账审核</desc>
+		<name>ztInitAllSHBx</name>
+		<model name="com.trm.ztbx.ZtDjsbxBLC.query"/>
+		<model name="com.trm.ztbx.ZtDjsbxBLC.queryDjsInfo"/>
+		<model name="com.trm.ztbx.ZtGuidebxBLC.query"/>
+		<model name="com.trm.zttdMng.ZtGroupMngBLC.queryBxGuideInfo"/>
+		<model name="com.trm.ztbx.ZtHotelBxBLC.query"/>
+		<model name="com.trm.ztbx.ZtDinnerBxBLC.query"/>
+		<model name="com.trm.ztbx.ZtSceneryBxBLC.query"/>
+		<model name="com.trm.ztbx.ZtTicketBxBLC.query"/>
+		<model name="com.trm.ztbx.ZtVehBxBLC.query"/>
+		<model name="com.trm.ztbx.ZtShopBxMngBLC.query"/>
+		<model name="com.trm.ztbx.ZtPlusBxBLC.query"/>
+		<model name="com.trm.ztbx.ZtPlusBxBLC.queryPlusInfo"/>
+		<model name="com.trm.ztbx.ZtShBxBLC.query"/>
+		<model name="com.trm.ztbx.ZtShBxBLC.querySpBxInfo"/>
+		<model name="com.trm.ztbx.ZtTDBXZJXXBBLC.query"/><!-- 团队计划信息合计表 -->
+		<model name="com.trm.zttdMng.ZtGroupMngBLC.query"/>
+		<dispatch url="/main/ztbx/bxSh/authorizeBx.jsp" type="forward" on="s%action%=&quot;authorize&quot;" default="true"/>
+		<dispatch url="/main/ztbx/bxEdit.jsp" type="forward" on="s%action%=&quot;view&quot;" default="true"/>
+	</request>
+	
+	<request>
+		<desc>提交报账审核</desc>
+		<name>ztaddShBx</name>
+		<model name="com.trm.ztbx.ZtShBxBLC.authorizeBx"/>
+		<dispatch url="/main/ztbx/shBxList.jsp" type="forward" on="" default="true"/>
+	</request>
+</requests>

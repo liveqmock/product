@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<requests>
+	<request>
+		<name>loadDMLB</name>
+		<desc>加载所有代码类别</desc> 
+		<model name="com.trm.comm.DmlbBLC.loadDMLB"></model>
+		<dispatch url="/main/zdwh/zdwh_Main.jsp" type="forward" default="true" on=""></dispatch>
+	</request>
+	<request>
+		<name>queryZd</name>
+		<model name="com.trm.comm.DmlbBLC.queryZd"></model>
+		<dispatch url="/main/zdwh/zdwh_left.jsp" type="forward" 
+			default="true" on="">
+		</dispatch>
+	</request>
+	
+	<request>
+		<name>getMaxId</name>
+		<desc>获得最大ID</desc> 
+		<model name="com.trm.comm.DmlbBLC.getMaxId"></model>
+		<dispatch url="/main/zdwh/zdwh_right.jsp" type="forward" 
+			default="true" on="">
+		</dispatch>
+	</request>
+	 
+	<request>
+		<name>queryById</name>
+		<desc>根据ID查询详细信息</desc> 
+		<model name="com.trm.comm.DmlbBLC.queryById"></model>
+		<model name="com.trm.comm.DmsmBLC.queryDmsm"></model>
+		<dispatch url="/main/zdwh/zdwh_right.jsp" type="forward" 
+			default="true" on="">
+		</dispatch>
+	</request>
+	<request>
+		<name>newDMLB</name>
+		<desc>增加代码类别</desc> 
+		<model name="com.trm.comm.DmlbBLC.newDMLB"></model>
+		<dispatch url="queryById.?DMLB/DMLB=%DMLB/DMLB%&amp;DMSM/DMLB=%DMLB/DMLB%&amp;dispMod=update" type="forward" default="true" on="" />
+	</request>
+	
+   <request>
+	  <name>deleteDMLB</name> 
+	  <desc>删除代码类别</desc> 
+	  <model name="com.trm.comm.DmlbBLC.deleteDMLB" /> 
+	  <dispatch url="/main/zdwh/zdwh_right.jsp" type="forward" on="" default="true" />
+  </request>
+  <request>
+	  <name>updateDMLB</name> 
+	  <desc>更新代码类别</desc> 
+	  <model name="com.trm.comm.DmlbBLC.updateDMLB" /> 
+	  <dispatch url="queryById.?DMLB/DMLB=%DMLB/DMLB%&amp;DMSM/DMLB=%DMLB/DMLB%&amp;dispMod=update" type="redirect" on="" default="true" /> 
+  </request>
+
+	
+	
+	<request>
+		<name>loadDMSM</name>
+		<desc>查询代码说明</desc> 
+		<model name="com.trm.comm.DmlbBLC.expand"></model>
+		<model name="com.trm.comm.DmsmBLC.queryDmsm"></model>
+		<dispatch url="/main/zdwh/dmwh.jsp" type="forward" default="true" on=""></dispatch>
+	</request>
+	
+ <request>
+	  <name>modifyDMSM</name> 
+	  <desc>更新代码说明</desc> 
+	  <model name="com.trm.comm.DmsmBLC.updateDMSM" /> 
+	  <dispatch url="loadDMSM.?DMLB/DMLB=%DMLB/DMLB%&amp;DMSM/DMLB=%DMLB/DMLB%" type="redirect" on="" default="true" ></dispatch>
+  </request>
+  
+ <request>
+	  <name>initXML</name> 
+	  <desc>生成XML</desc> 
+	  <model name="com.workflow.util.AreaBLC.initXML" /> 
+	  <dispatch url="/jsp/success.jsp" type="forward" on="" default="true" ></dispatch>
+  </request>
+
+</requests>

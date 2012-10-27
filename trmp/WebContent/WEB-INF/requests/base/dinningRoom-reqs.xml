@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="GBK"?>
+<requests>
+	<request>
+		<desc>餐厅列表</desc>
+		<name>getAlldinningRoom</name>
+		<model name="com.baseMng.DinningRoomBLC.getAlldinningRoom"/>
+		<dispatch url="/baseMng/dinningRoom/dr_list.jsp" type="forward" on="" default="true"/>
+	</request>
+	<request>
+		<name>to_addDR</name>
+		<desc>添加餐厅信息</desc>
+		<model name="com.trm.util.DMSMBLC.loadDMSM"/>
+		<dispatch url="/baseMng/dinningRoom/addDR.jsp" type="forward" on="" default="true"/>
+	</request>
+	<request>
+		<name>getDrByName</name>
+		<model name="com.baseMng.DinningRoomBLC.getDrByName"/>
+		<dispatch url="/baseMng/dinningRoom/dr_list.jsp" type="forward" on="" default="true"/>
+	</request>
+	<request>
+		<name>addDR</name>
+		<desc>提交餐厅信息</desc>
+		<model name="com.baseMng.DinningRoomBLC.addDR"/>
+		<dispatch url="%ContextPath%/getAlldinningRoom.?TA_DINING_ROOM@pageNO=1&amp;TA_DINING_ROOM@pageSize=10" type="redirect" on="" default="true"/>
+	</request>
+	<request>
+		<name>getDRById</name>
+		<desc>修改餐厅信息</desc>
+		<model name="com.baseMng.DinningRoomBLC.getDRById"/>
+		<model name="com.trm.util.DMSMBLC.loadDMSM"/>
+		<dispatch url="/baseMng/dinningRoom/updateDR.jsp" type="forward" on="" default="true"/>
+	</request>
+	<request>
+		<name>updateDR</name>
+		<model name="com.baseMng.DinningRoomBLC.updateDR"/>
+		<dispatch url="%ContextPath%/getAlldinningRoom.?TA_DINING_ROOM@pageNO=1&amp;TA_DINING_ROOM@pageSize=10" type="redirect" on="" default="true"/>
+	</request>
+	<request>
+		<name>deleteDR</name>
+		<model name="com.baseMng.DinningRoomBLC.deleteDR"/>
+		<dispatch url="%ContextPath%/getAlldinningRoom.?TA_DINING_ROOM@pageNO=1&amp;TA_DINING_ROOM@pageSize=10" type="redirect" on="" default="true"/>
+	</request>
+	<request>
+		<name>batchDelDR</name>
+		<model name="com.baseMng.DinningRoomBLC.batchDelDR"/>
+		<dispatch url="%ContextPath%/getAlldinningRoom.?TA_DINING_ROOM@pageNO=1&amp;TA_DINING_ROOM@pageSize=10" type="redirect" on="" default="true"/>
+	</request>
+	
+</requests>

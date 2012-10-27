@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="GB2312"?>
+<requests>
+	<!--Clients' login request is different from this login request.
+	login is a special request. The system will first process clients' login request and then redirect to this request-->
+	<request>
+		<name>queryAllTables</name>
+		<model name="com.dream.app.sys.Table.queryAll"/>
+		<dispatch url="/jsp/sys/tablesList.jsp" type="forward" default="true" on=""/>
+	</request>
+	<request>
+		<name>queryTable</name>
+		<model name="com.dream.app.sys.Table.queryTable"/>
+		<dispatch url="/jsp/sys/tableDef.jsp" type="forward" default="true" on=""/>
+	</request>
+	<request>
+		<name>listDAOs</name>
+		<model name="com.dream.app.sys.Table.getDAONames"/>
+		<dispatch url="/jsp/sys/daosList.jsp" type="forward" default="true" on=""/>
+	</request>
+	<request>
+		<name>makeDict</name>
+		<model name="com.dream.app.sys.Table.createDict"/>
+		<dispatch url="/jsp/success.jsp" type="forward" default="true" on=""/>
+	</request>
+	<request>
+		<name>updateDict</name>
+		<model name="com.dream.app.sys.Table.updateDict"/>
+		<dispatch url="/jsp/success.jsp" type="forward" default="true" on=""/>
+	</request>
+	<request>
+		<name>deleteTableFromDict</name>
+		<model name="com.dream.app.sys.Table.deleteTableFromDict"/>
+		<dispatch url="queryAllTables.?daoName=%daoName%" type="redirect" default="true" on=""/>
+	</request>
+	<request>
+		<name>updateTabUsrInfo</name>
+		<model name="com.dream.app.sys.Table.updateTabUsrInfo"/>
+		<dispatch url="/jsp/success.jsp" type="forward" default="true" on=""/>
+	</request>
+	<request>
+		<name>makeJSP</name>
+		<model name="com.dream.app.sys.Table.makeJSP"/>
+		<dispatch url="/jsp/success.jsp" type="forward" default="true" on=""/>
+	</request>
+	<request>
+		<name>saveBDC</name>
+		<model name="com.dream.app.sys.BDC.save"/>
+		<dispatch url="%ContextPath%/jsp/sys/queryBDC.?DRMBizDataDict/tableName=%DRMBizDataDict/tableName%&amp;DRMBizDataDict/colName=%DRMBizDataDict/colName%&amp;DRMBizDataDict@orderBy=%orderBy%" type="redirect" default="true" on=""/>
+	</request>
+	<request>
+		<name>queryBDC</name>
+		<model name="com.dream.app.sys.BDC.query" on="i%DRMBizDataDict/tableName[0]@_len%>0"/>
+		<dispatch url="/jsp/sys/bdc.jsp" type="forward" default="true" on=""/>
+	</request>
+	<request>
+		<name>queryError</name>
+		<model name="com.dream.app.sys.DRMError.expand"/>
+		<dispatch url="/jsp/sys/err_inf.jsp" type="forward" default="true" on=""/>
+	</request>
+	<request>
+		<name>saveError</name>
+		<model name="com.dream.app.sys.DRMError.save"/>
+		<dispatch url="%ContextPath%/jsp/sys/err_inf.jsp" type="redirect" default="true" on=""/>
+	</request>
+	<request>
+		<name>rewriteReq</name>
+		<model name="com.dream.app.sys.Function.rewrite"/>
+		<dispatch url="/jsp/success.jsp" type="forward" default="true" on=""/>
+	</request>
+	<request>
+		<name>installDB</name>
+		<model name="com.dream.bizsdk.util.script.ScriptEngine.exec"/>
+		<dispatch url="/jsp/success.jsp" type="forward" default="true" on=""/>
+	</request>
+	<request>
+		<name>refresh</name>
+		<model name="com.dream.bizsdk.common.util.COTSFrame.refresh"/>
+		<dispatch url="/jsp/success.jsp" type="forward" default="true" on=""/>
+	</request>
+	<request>
+		<name>install</name>
+		<model name="com.dream.app.sys.Application.install"/>
+		<dispatch url="/jsp/success.jsp" type="forward" default="true" on=""/>
+	</request>
+	<request>
+		<name>queryAllTablesInDAO</name>
+		<model name="com.dream.app.sys.Table.getAllTablesInDAO"/>
+		<dispatch url="/jsp/sys/buildScript.jsp" type="forward" default="true" on=""/>
+	</request>
+	<request>
+		<name>buildScript</name>
+		<model name="com.dream.app.sys.Table.makeTableDataScript"/>
+		<dispatch url="/jsp/success.jsp" type="forward" default="true" on=""/>
+	</request>
+	<request>
+		<name>queryRoleDataPrivil</name>
+		<filter>
+			<data name="roleID"/>
+			<data name="daoName"/>
+			<data name="tableName"/>
+		</filter>
+		<model name="com.dream.app.sys.Role.queryAll"/>
+		<model name="com.dream.app.sys.Role.queryRowPrivil" on="i%roleID@_len%>0"/>
+		<model name="com.dream.app.sys.Role.queryColPrivil" on="i%roleID@_len%>0"/>
+		<dispatch url="/jsp/sys/dataPrivil.jsp" type="forward" default="true" on=""/>
+	</request>
+	<request>
+		<name>saveRoleDataPrivil</name>
+		<model name="com.dream.app.sys.Role.saveRowPrivil"/>
+		<model name="com.dream.app.sys.Role.saveColPrivil"/>
+		<dispatch url="queryRoleDataPrivil.?roleID=%roleID%&amp;tableName=%tableName%&amp;daoName=%daoName%" type="redirect" default="true" on=""/>
+	</request>
+	<modelsBeforeRequest>
+		<request startsWith="" endsWith="" contains="">
+			<model on="" asyn="" name=""/>
+		</request>
+		<request startsWith="" endsWith="" contains="">
+			<model on="" asyn="" name=""/>
+		</request>
+	</modelsBeforeRequest>
+	<modelsAfterRequest>
+		<request startsWith="" endsWith="" contains="">
+			<model on="" asyn="" name=""/>
+		</request>
+		<request startsWith="" endsWith="" contains="">
+			<model on="" asyn="" name=""/>
+		</request>
+	</modelsAfterRequest>
+	<beforeDispatchInclude>
+		<request startsWith="" endsWith="" contains="exception">
+			<dispatch on="" url="/head.jsp"/>
+		</request>
+	</beforeDispatchInclude>
+	<afterDispatchInclude>
+		<request startsWith="" endsWith="" contains="exception">
+			<dispatch on="" url="/tail.jsp"/>
+		</request>
+	</afterDispatchInclude>
+</requests>

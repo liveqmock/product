@@ -1,0 +1,183 @@
+10
+
+dir
+4438
+svn://192.168.1.221/root/trmp/WebContent
+svn://192.168.1.221/root
+
+
+
+2012-05-11T05:51:22.546875Z
+4438
+hj
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+56d56699-c90c-2943-bd84-3b6033690789
+
+jquery
+dir
+
+greybox
+dir
+
+common.jsp
+file
+
+
+
+
+2012-05-11T06:06:29.421875Z
+6b7c18c607f8c305766e863b811e46c5
+2012-03-09T03:26:30.609375Z
+3708
+hj
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+695
+
+demo
+dir
+
+main
+dir
+
+platform
+dir
+
+DB
+dir
+
+WEB-INF
+dir
+
+css
+dir
+
+ocx
+dir
+
+jsp
+dir
+
+META-INF
+dir
+
+files
+dir
+
+maindj
+dir
+
+success.jsp
+file
+4451
+
+
+
+2012-05-11T06:05:43.265000Z
+d8dce4c7676e9393abd61aabcf7aa246
+2011-07-23T01:56:39.140625Z
+4451
+hj
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1082
+
+ckeditor
+dir
+
+logs
+dir
+
+sysManager.jsp
+file
+4448
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+deleted
+
+images
+dir
+
+login
+dir
+
+sysPage
+dir
+
+js
+dir
+
+baseMng
+dir
+
+jqueryui
+dir
+

@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="GBK"?>
+<requests>
+	<!-- 餐厅 -->
+   	<request>
+		<desc>查询签单列表</desc>
+		<name>AllCTQiandanList</name>
+		<model name="com.trm.ztfinanceMng.Zt_RestaurantMngBLC.allCTList"/>
+		<dispatch url="/main/ztfinanceMng/ztsign.jsp?target=3" type="forward" on="" default="true"/>
+	</request>
+	<request>
+		<desc>据团ID，餐厅ID得到餐订签单信息</desc>
+		<name>getBXCTByTid</name>
+		<model name="com.trm.ztfinanceMng.Zt_RestaurantMngBLC.getBXCTByTid"/>
+		<dispatch url="/main/ztfinanceMng/ztRestaurant/addRestaurant.jsp" type="forward" on="" default="true"/>
+	</request>
+	
+	<request>
+		<desc>添加清单还款信息</desc>
+		<name>addCTqingdan</name>
+		<model name="com.trm.ztfinanceMng.Zt_RestaurantMngBLC.addCTqingdan"/>
+		<dispatch url="/maindj/financeMng/ztsign.jsp?target=3" type="forward" on="" default="true"/>
+	</request>
+		<request>
+		<desc>查看清单还款信息</desc>
+		<name>queryCTlist</name>
+		<model name="com.trm.ztfinanceMng.Zt_RestaurantMngBLC.queryCTlist"/>
+		<dispatch url="/main/ztfinanceMng/ztRestaurant/viewRestaurant.jsp" type="forward" on="" default="true"/>
+	</request>
+	
+	<!-- 车辆 -->
+	<request>
+		<desc>查询车辆签单列表</desc>
+		<name>AllCDList</name>
+		<model name="com.trm.ztfinanceMng.Zt_FleetMngBLC.allCDList"/>
+		<dispatch url="/main/ztfinanceMng/ztsign.jsp?target=1" type="forward" on="" default="true"/>
+	</request>
+	<request>
+		<desc>据团ID，餐厅ID得到车队签单信息</desc>
+		<name>getBXCDByTid</name>
+		<model name="com.trm.ztfinanceMng.Zt_FleetMngBLC.getBXCDByTid"/>
+		<dispatch url="/main/ztfinanceMng/ztFleet/addFleetQD.jsp" type="forward" on="" default="true"/>
+	</request>
+	
+	<request>
+		<desc>添加清单还款信息</desc>
+		<name>addCDqingdan</name>
+		<model name="com.trm.ztfinanceMng.Zt_FleetMngBLC.addCDqingdan"/>
+		<dispatch url="/main/ztfinanceMng/ztsign.jsp?target=1" type="forward" on="" default="true"/>
+	</request>
+		<request>
+		<desc>查看清单还款信息</desc>
+		<name>queryCDlist</name>
+		<model name="com.trm.ztfinanceMng.Zt_FleetMngBLC.queryCDlist"/>
+		<dispatch url="/main/ztfinanceMng/ztFleet/viewFleetQD.jsp" type="forward" on="" default="true"/>
+	</request>
+	
+	<!-- 酒店 -->
+	<request>
+		<desc>查询签单列表</desc>
+		<name>AllQiandanList</name>
+		<model name="com.trm.ztfinanceMng.Zt_HotelQDMngBLC.AllQdList"/>
+		<dispatch url="/main/ztfinanceMng/ztsign.jsp?target=0" type="forward" on="" default="true"/>
+	</request>
+	  <request>
+		<desc>根据团ID结算签单</desc>
+		<name>jsJDqingdan</name>
+		<model name="com.trm.ztfinanceMng.Zt_HotelQDMngBLC.getBXhotelByTid"/>
+		<dispatch url="/main/ztfinanceMng/ztHotel/addHotelQD.jsp" type="forward" on="" default="true"/>
+	</request>
+	   <request>
+		<desc>提交结算酒店签单</desc>
+		<name>addJDqingdan</name>
+		<model name="com.trm.ztfinanceMng.Zt_HotelQDMngBLC.addJDqingdan"/>
+		<dispatch url="/main/ztfinanceMng/ztsign.jsp?target=0" type="forward" on="" default="true"/>
+	</request>
+		<request>
+		<desc>查看还款列表</desc>
+		<name>queryQDlist</name>
+		<model name="com.trm.ztfinanceMng.Zt_HotelQDMngBLC.queryQDlist"/>
+		<dispatch url="/main/ztfinanceMng/ztHotel/viewHotelQD.jsp" type="forward" on="" default="true"/>
+	</request>
+	<!-- 景点 -->
+	<request>
+		<desc>查询景点签单列表</desc>
+		<name>AllJingDList</name>
+		<model name="com.trm.ztfinanceMng.Zt_scenicMngBLC.AllJingDList"/>
+		<dispatch url="/main/ztfinanceMng/ztsign.jsp?target=4" type="forward" on="" default="true"/>
+	</request>
+	<request>
+		<desc>据团ID，餐厅ID得到景点签单信息</desc>
+		<name>getBXJingDByTid</name>
+		<model name="com.trm.ztfinanceMng.Zt_scenicMngBLC.getBXJingDByTid"/>
+		<dispatch url="/main/ztfinanceMng/ztScenic/addScenicQD.jsp" type="forward" on="" default="true"/>
+	</request>
+	
+	<request>
+		<desc>添加清单还款信息</desc>
+		<name>addJingDqingdan</name>
+		<model name="com.trm.ztfinanceMng.Zt_scenicMngBLC.addJingDqingdan"/>
+		<dispatch url="/main/ztfinanceMng/ztsign.jsp?target=4" type="forward" on="" default="true"/>
+	</request>
+		<request>
+		<desc>查看清单还款信息</desc>
+		<name>queryJingDlist</name>
+		<model name="com.trm.ztfinanceMng.Zt_scenicMngBLC.queryJingDlist"/>
+		<dispatch url="/main/ztfinanceMng/ztScenic/viewScenicQD.jsp" type="forward" on="" default="true"/>
+	</request>
+	<!-- 票务 -->
+	<request>
+		<desc>查询票务签单列表</desc>
+		<name>AllPWList</name>
+		<model name="com.trm.ztfinanceMng.Zt_TicketMngBLC.AllPWList"/>
+		<dispatch url="/main/ztfinanceMng/ztsign.jsp?target=2" type="forward" on="" default="true"/>
+	</request>
+	<request>
+		<desc>据团ID，代购ID得到票务签单信息</desc>
+		<name>getBXPWByTid</name>
+		<model name="com.trm.ztfinanceMng.Zt_TicketMngBLC.getBXPWByTid"/>
+		<dispatch url="/main/ztfinanceMng/ztTicket/addTicketQD.jsp" type="forward" on="" default="true"/>
+	</request>
+	
+	<request>
+		<desc>添加清单还款信息</desc>
+		<name>addPWqingdan</name>
+		<model name="com.trm.ztfinanceMng.Zt_TicketMngBLC.addPWqingdan"/>
+		<dispatch url="/main/ztfinanceMng/ztsign.jsp?target=2" type="forward" on="" default="true"/>
+	</request>
+		<request>
+		<desc>查看清单还款信息</desc>
+		<name>queryPWlist</name>
+		<model name="com.trm.ztfinanceMng.Zt_TicketMngBLC.queryPWlist"/>
+		<dispatch url="/main/ztfinanceMng/ztTicket/viewTicket.jsp" type="forward" on="" default="true"/>
+	</request>
+	<!-- 地接 -->
+	<request>
+		<desc>查询签单列表</desc>
+		<name>AllTRList</name>
+		<model name="com.trm.ztfinanceMng.Zt_TravelnetMngBLC.AllTRList"/>
+		<dispatch url="/main/ztfinanceMng/ztsign.jsp?target=5" type="forward" on="" default="true"/>
+	</request>
+	  <request>
+		<desc>根据团ID结算签单</desc>
+		<name>getBXTRByTid</name>
+		<model name="com.trm.ztfinanceMng.Zt_TravelnetMngBLC.getBXTRByTid"/>
+		<dispatch url="/main/ztfinanceMng/ztTravelnet/addTravelnetQD.jsp" type="forward" on="" default="true"/>
+	</request>
+	   <request>
+		<desc>提交结算酒店签单</desc>
+		<name>addTRqingdan</name>
+		<model name="com.trm.ztfinanceMng.Zt_TravelnetMngBLC.addTRqingdan"/>
+		<dispatch url="/main/ztfinanceMng/ztsign.jsp?target=5" type="forward" on="" default="true"/>
+	</request>
+	<request>
+		<desc>查看还款列表</desc>
+		<name>queryTRlist</name>
+		<model name="com.trm.ztfinanceMng.Zt_TravelnetMngBLC.queryTRlist"/>
+		<dispatch url="/main/ztfinanceMng/ztTravelnet/viewTravelnetQD.jsp" type="forward" on="" default="true"/>
+	</request>
+	<!-- 留存-->
+   <request>
+		<desc>查询签单列表</desc>
+		<name>AllLCshopList</name>
+		<model name="com.trm.ztfinanceMng.Zt_RetainedMngBLC.allLCLshopList"/>
+		<model name="com.trm.ztfinanceMng.Zt_RetainedMngBLC.selectAllshoppoint"/>
+		<dispatch url="/main/ztfinanceMng/shoppingRetained/retainedList.jsp" type="forward" on="" default="true"></dispatch>
+	</request>
+	  <request>
+		<desc>根据团ID结算签单</desc>
+		<name>getLcShopByTid</name>
+		<model name="com.trm.ztfinanceMng.Zt_RetainedMngBLC.getLcShopByTid"/>
+		<dispatch url="/main/ztfinanceMng/shoppingRetained/addRetained.jsp" type="forward" on="" default="true"/>
+	</request>
+	   <request>
+		<desc>提交结算签单</desc>
+		<name>addLcShop</name>
+		<model name="com.trm.ztfinanceMng.Zt_RetainedMngBLC.addLCshop"/>
+		<dispatch url="/main/ztfinanceMng/shoppingRetained/retainedList.jsp" type="forward" on="" default="true"/>
+	</request>
+		<request>
+		<desc>查看还款列表</desc>
+		<name>queryLCshoplist</name>
+		<model name="com.trm.ztfinanceMng.Zt_RetainedMngBLC.queryLCshoplist"/>
+		<dispatch url="/main/ztfinanceMng/shoppingRetained/viewRetained.jsp" type="forward" on="" default="true"/>
+	</request>
+	
+	<!-- 营收 -->
+	<request>
+		<desc>营收列表</desc>
+		<name>businessEarningList</name>
+		<model name="com.trmdj.financeMng.BusinessEaningMngBLC.businessEarningList"/>
+		<dispatch url="/maindj/financeMng/businessEarning/businessEarningList.jsp" type="forward" on="" default="true"/>
+	</request>
+	
+	<request>
+		<desc>初始化修改营收款</desc>
+		<name>beInit4Update</name>
+		<model name="com.trmdj.financeMng.BusinessEaningMngBLC.beInit4Update"/>
+		<dispatch url="/maindj/financeMng/businessEarning/businessEarning.jsp" type="forward" on="" default="true"/>
+	</request>
+	
+	<request>
+		<desc>修改营收款</desc>
+		<name>updateBE</name>
+		<model name="com.trmdj.financeMng.BusinessEaningMngBLC.update"/>
+		<dispatch url="%ContextPath%/maindj/financeMng/businessEarning/beInit4Update.?id=%id%" type="redirect" on="" default="true"/>
+	</request>
+</requests>

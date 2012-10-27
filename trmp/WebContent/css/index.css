@@ -1,0 +1,22 @@
+html, body {
+	font:normal 12px verdana;
+	margin:0;
+	padding:0;
+	border:0 none;
+	overflow: auto;
+	height:100%;
+	background-color: #CAE7E9;
+}
+#top_bg{background: url(../images/top-bg.gif) repeat-x;height:65px; text-align:left;}
+#login-info{height:24px;padding:6px 0pt 0pt 0;background: url(../images/main-toolbar-bg.gif) repeat-x left top;}
+#login-info div{float:right;margin:0pt;padding:0pt 5px 0px 10px; text-align:right;}
+*html #login-info div.login-user{padding-top:2px;}
+
+
+/*left“≥√Ê—˘ Ω*/
+#left-tree{background-color: #eeeeee;height: 100%}
+#tree-top-icon{height: 15px;position:0 180px;width: 15px;}
+#left-tree-top{overflow:auto;zoom:1;color:#fff;font:bold 11px tahoma,arial,verdana,sans-serif;padding:5px 3px 4px 5px;border:1px solid #76c6cc;line-height:15px;background:transparent url(../images/white-top-bottom.gif) repeat-x 0 -1px;}
+#left-tree-icon{width:15px;height:15px;float:right;background:url(../images/tool-sprites.gif) no-repeat;background-position: 0 -195px;}
+
+.left-tree-f{overflow:auto;zoom:1;color:#fff;font:bold 11px tahoma,arial,verdana,sans-serif;padding:5px 3px 4px 5px;border:1px solid #76c6cc;line-height:15px;background:transparent url(../images/top-bg.gif) repeat-x 0 -1px;}

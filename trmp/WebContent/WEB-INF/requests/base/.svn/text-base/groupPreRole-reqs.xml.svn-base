@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="GBK"?>
+<requests>
+
+	<request>
+		<name>listGroupPre</name>
+		<desc>团号列表</desc>
+		<model name="com.baseMng.GroupPrefixBLC.query"/>
+		<dispatch url="/baseMng/groupPrefix/listGroupPrefix.jsp" type="forward" on="" default="true"/>
+	</request>
+	
+	<request>
+		<name>saveGroupPre</name>
+		<desc>团号列表</desc>
+		<model name="com.baseMng.GroupPrefixBLC.insert"/>
+		<dispatch url="%ContextPath%/baseMng/groupPrefix/listGroupPre." type="redirect" on="" default="true"/>
+	</request>
+	
+	<request>
+		<name>initPrefix4Update</name>
+		<desc>初始化修改页面</desc>
+		<model name="com.baseMng.GroupPrefixBLC.query"/>
+		<dispatch url="/baseMng/groupPrefix/addGroupPrefix.jsp" type="forward" on="" default="true"/>
+	</request>
+	
+	<request>
+		<name>upDatePrefix4Group</name>
+		<desc>修改团号前缀</desc>
+		<model name="com.baseMng.GroupPrefixBLC.update"/>
+		<dispatch url="%ContextPath%/baseMng/groupPrefix/listGroupPre." type="redirect" on="" default="true"/>
+	</request>
+	
+	<request>
+		<name>deletePrefix4Group</name>
+		<desc>删除团号前缀</desc>
+		<model name="com.baseMng.GroupPrefixBLC.delete"/>
+		<dispatch url="%ContextPath%/baseMng/groupPrefix/listGroupPre." type="redirect" on="" default="true"/>
+	</request>
+	
+</requests>

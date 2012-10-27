@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="GBK"?>
+<requests>
+   <request>
+		<desc>初始化餐厅报销页面</desc>
+		<name>ztinitDjDinnerBx</name>
+		<model name="com.trm.ztbx.ZtDinnerBxBLC.queryDinnerBxList"/>
+		<model name="com.trm.zttdMng.ZtGroupMngBLC.query"/>
+		<dispatch url="/main/ztbx/bxRestaurant/bxEditDinner.jsp" type="forward" on="" default="true"/>
+	</request>
+	
+	<request>
+		<desc>编辑餐厅报销</desc>
+		<name>zteditDjDinnerBx</name>
+		<model name="com.trm.ztbx.ZtDinnerBxBLC.editDinnerBx"/>
+		<dispatch url="/main/ztbx/bxRestaurant/bxEditDinner.jsp" type="forward" on="" default="true"/>
+	</request>
+	
+</requests>

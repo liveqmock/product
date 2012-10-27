@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="GBK"?>
+<requests>
+	<request>
+		<desc>提交业务计调</desc>
+		<name>djInitShPlanList</name>
+		<model name="com.trmdj.businessPlan.plan.DjShPlanBLC.submitPlan"/>
+		<dispatch url="%ContextPath%/maindj/businessPlan/groupMng/djQueryAllGroupList.?DMSM/JDXJ=6&amp;pageNO=1&amp;pageSize=10" type="redirect" on="" default="true"/>
+	</request>
+	
+	<request>
+		<desc>查询待审核状态的团信息</desc>
+		<name>djQueryShPlanList</name>
+		<model name="com.trmdj.businessPlan.plan.DjShPlanBLC.querySpPlanInfo"/>
+		<dispatch url="/maindj/businessPlan/planAjaxPage/shPlanList.jsp" type="forward" on="" default="true"/>
+	</request>
+	
+	<request>
+		<desc>初始化团审核</desc>
+		<name>djInitAllSHPlan</name>
+		<model name="com.trmdj.businessPlan.groupMng.DjGroupDetailBLC.djInitAllSHPlan"/>
+		<model name="com.trm.util.DMSMBLC.loadDMSM"/><!-- 加载代码值 -->
+		<dispatch url="/maindj/businessPlan/planAjaxPage/shPlan/authorizePlan.jsp" type="forward" on="s%action%=&quot;authorize&quot;" default="true"/>
+		<dispatch url="/maindj/businessPlan/planAjaxPage/shPlan/viewPlan.jsp" type="forward" on="s%action%=&quot;view&quot;" default="true"/>
+	</request>
+	
+	<request>
+		<desc>提交审核</desc>
+		<name>djAuthorizePlan</name>
+		<model name="com.trmdj.businessPlan.plan.DjShPlanBLC.authorizePlan"/>
+		<dispatch url="%ContextPath%/maindj/businessPlan/plan/djQueryShPlanList.?pageNO=1&amp;pageSize=10" type="redirect" on="" default="true"/>
+	</request>
+</requests>

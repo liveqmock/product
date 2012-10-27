@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="GB2312"?>
+<requests>
+	<!--Clients' login request is different from this login request.
+	login is a special request. The system will first process clients' login request and then redirect to this request-->
+	
+	<request>
+		<name>deleteOrg</name>
+		<model name="com.dream.app.hr.org.Organization.delete" on=""/>
+		<dispatch url="%ContextPath%/sysPage/org/getSubOrgs.?HRORGANIZATION/ORGID=&amp;param=org&amp;target=orgRight" type="redirect" default="true" on=""/>
+	</request>
+	
+	
+	<request>
+		<name>selectOrg4UserAdd</name>
+		<model name="com.dream.app.hr.org.Organization.selectOrg4UserAdd" on=""/>
+		<dispatch url="/jsp/org/orgsTreeForEmpForUserAdd.jsp" type="forward" default="true" on=""/>
+	</request>
+	
+	<request>
+		<name>newOrg</name>
+		<model name="com.dream.app.hr.org.Organization.insert" on=""/>
+		<dispatch url="%ContextPath%/jsp/org/queryOrg.?DispMode=N&amp;parent_orgName=$%parent_orgName%$&amp;HROrganization/parent_orgID=%HROrganization/parent_orgID%" type="redirect" default="true" on=""/>
+	</request>
+	
+	
+	<!-- Organization begin -->
+	
+	<request>
+		<desc>机构信息查询，同时需要查询机构同名的部门信息。</desc>
+		<name>queryOrg</name>
+		<model name="com.dream.app.hr.org.Organization.query" on=""/>
+		<model name="com.dream.app.hr.org.Department.query" on=""/>
+		<dispatch url="/sysPage/org/orgInfoW.jsp" type="forward" default="true" on="s%fwd%=&quot;info&quot;"/>
+		<dispatch url="/sysPage/org/orgsTree.jsp" type="forward" default="true" on="s%fwd%=&quot;tree&quot;"/>
+		<dispatch url="/sysPage/org/empsHomeForUserAdd.jsp" type="forward" default="true" on="s%fwd%=&quot;org&quot;"/>
+	</request>
+	
+	<request>
+		<name>updateOrg</name>
+		<model name="com.dream.app.hr.org.Organization.update" on=""/>
+		<dispatch url="%ContextPath%/sysPage/org/queryOrg.?HROrganization/orgID=%HROrganization/orgID%&amp;HRDEPARTMENT/deptid=%HRDEPARTMENT/deptid%&amp;fwd=info&amp;msg=%msg%" type="redirect" default="true" on=""/>
+	</request>
+	
+	<request>
+		<name>updateOrg4Ajax</name>
+		<model name="com.dream.app.hr.org.Organization.update" on=""/>
+		<dispatch url="%ContextPath%/sysPage/org/queryOrg.?HRORGANIZATION/ORGID=%HROrganization/orgID%&amp;HRDEPARTMENT/ORGID=%HROrganization/orgID%&amp;fwd=tree" type="redirect" default="true" on=""/>
+	</request>
+	<!-- Organization end -->
+	
+	<!-- department begin -->
+	<request>
+		<desc>部门查询</desc>
+		<name>queryDept</name>
+		<model name="com.dream.app.hr.org.Department.query" on=""/>
+		<dispatch url="/sysPage/dept/deptInfo.jsp" type="forward" default="true"/>
+	</request>
+	
+	<request>
+		<desc>更新部门</desc>
+		<name>updateDept</name>
+		<model name="com.dream.app.hr.org.Department.update" on=""/>
+		<dispatch url="%ContextPath%/sysPage/dept/queryDept.?HRDepartment/deptid=%HRDepartment/deptid%" type="redirect" default="true" on="s%fwd%=&quot;info&quot;"/>
+		<dispatch url="%ContextPath%/sysPage/org/queryOrg.?HRORGANIZATION/ORGID=%HRDEPARTMENT/orgID%&amp;HRDEPARTMENT/ORGID=%HRDEPARTMENT/orgID%&amp;fwd=tree&amp;msg=%msg%" type="redirect" default="true" on="s%fwd%=&quot;tree&quot;"/>
+	</request>
+	
+	<request>
+		<desc>生成部门ID</desc>
+		<name>queryNextDeptId</name>
+		<model name="com.dream.app.hr.org.Department.queryMaxDeptID" on=""/>
+		<dispatch url="/sysPage/dept/deptIdFromAjax.jsp" type="forward" default="true"/>
+	</request>
+	<!-- department end   -->
+</requests>

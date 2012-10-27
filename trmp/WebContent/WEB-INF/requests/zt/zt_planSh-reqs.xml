@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="GBK"?>
+<requests>
+	<request>
+		<desc>提交业务计调</desc>
+		<name>ztInitShPlanList</name>
+		<model name="com.trm.ztPlan.ZtShPlanBLC.submitPlan"/>
+		<dispatch url="%ContextPath%/main/ztGroupMng/ztQueryShPlanList.?pageNO=1&amp;pageSize=10" type="redirect" on="" default="true"/>
+	</request>
+	
+	<request>
+		<desc>查询待审核状态的团信息</desc>
+		<name>ztQueryShPlanList</name>
+		<model name="com.trm.ztPlan.ZtShPlanBLC.querySpPlanInfo"/>
+		<dispatch url="/main/ztPlans/shPlanList.jsp" type="forward" on="" default="true"/>
+	</request>
+	
+	<request>
+		<desc>初始化团审核</desc>
+		<name>ztInitAllSHPlan</name>
+		<model name="com.trm.zttdMng.ZtGroupMngBLC.query"/>
+		<model name="com.trm.ztPlan.ZtHotelPlanBLC.query"/>
+		<model name="com.trm.ztPlan.ZtShPlanBLC.query"/>
+		<model name="com.trm.ztPlan.ZtShoppingPlanBLC.query"/>
+		<model name="com.trm.ztPlan.ZtJDXXZJBBLC.query"/><!-- 团队计划信息合计表 -->
+		<model name="com.trm.ztPlan.ZtPlusPlanBLC.query4Init"/>
+		<model name="com.trm.zttdMng.ZtGroupMngBLC.queryGuideInfo"/>
+		<model name="com.trm.ztPlan.ZtShPlanBLC.querySPYJInfo"/>
+		<dispatch url="/main/ztPlans/shPlan/authorizePlan.jsp" type="forward" on="s%action%=&quot;authorize&quot;" default="true"/>
+		<dispatch url="/main/ztPlans/shPlan/viewPlan.jsp" type="forward" on="s%action%=&quot;view&quot;" default="true"/>
+	</request>
+	
+	<request>
+		<desc>提交审核</desc>
+		<name>ztaddShPlan</name>
+		<model name="com.trm.ztPlan.ZtShPlanBLC.authorizePlan"/>
+		<dispatch url="%ContextPath%/main/ztPlans/ztQueryShPlanList.?pageNO=1&amp;pageSize=10" type="redirect" on="" default="true"/>
+	</request>
+</requests>

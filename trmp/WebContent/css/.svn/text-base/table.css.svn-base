@@ -1,0 +1,43 @@
+
+td{font-size: 12px;}
+
+.my_table{ border:1px solid #6699CC; border-collapse:collapse;}
+.my_table2 td{ height:22px; text-align:center;}
+.tr_bg{ background-color:#b5d6e6;}
+
+/*表格其他字体样式*/
+.STYLE3 {font-size: 12px; font-weight: bold; }
+.STYLE4 {
+	color: #03515d;
+	font-size: 12px;
+}
+/*表格表头样式*/
+.STYLE1 {font-size: 12px;background-image:url(../images/bg.gif); font-weight:bold; color: #333333;}
+/*表格行样式*/
+.STYLE19 {
+	color: #344b50;
+	font-size: 12px;
+	background-color:#FFFFFF;
+}
+.STYLE20 {
+	color: #344b50;
+	font-size: 12px;
+	background-color:#DDEFFD;
+}
+/*表格内按钮样式*/
+.btn1,.btn4,.btn5{
+	width:37px; height:15px; background-repeat:no-repeat;border:0px; float:left; cursor:pointer!important;
+	cursor:hand; display:inline;
+}
+.btn2,.btn3{
+	width:43px; height:15px; background-repeat:no-repeat;border:0px; float:left; cursor:pointer!important;
+	cursor:hand; display:inline;
+}
+.btn1{ background:url(../main/images/table/first.gif)}
+.btn2{ background:url(../main/images/table/back.gif)}
+.btn3{ background:url(../main/images/table/next.gif)}
+.btn4{ background:url(../main/images/table/last.gif)}
+.btn5{ background:url(../main/images/table/go.gif)}
+
+.btn{ width:71px; height:24px; background-image:url(../images/btn.gif); color:#fff; background-repeat:no-repeat;border:0px; cursor:pointer!important;cursor:hand; display:inline;}
+.btn_2{ width:71px; height:24px; background-image:url(../images/btn_2.gif); color:#fff; background-repeat:no-repeat;border:0px; cursor:pointer!important;cursor:hand; display:inline;}

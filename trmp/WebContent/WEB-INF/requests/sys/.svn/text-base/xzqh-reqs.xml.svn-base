@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="GBK"?>
+<requests>
+	<request>
+		<desc>行政区划的树</desc>
+		<name>showTree</name>
+		<model name="com.trm.comm.XZQHBLC.query" on=""/>
+		<dispatch url="/baseMng/xzqh/left.jsp" type="forward" on="" default="true"/>
+	</request>
+	
+	<request>
+		<name>listLandkreise</name>
+		<model name="com.trm.comm.XZQHBLC.queryPage"/>
+		<dispatch url="/baseMng/xzqh/listXZQH.jsp" type="forward" on="" default="true"/>
+	</request>
+	
+	<request>
+		<name>delLandkreise</name>
+		<model name="com.trm.comm.XZQHBLC.del"/>
+		<dispatch url="%ContextPath%/listLandkreise.?XZQH/PID=%PID%&amp;XZQH@pageSize=10&amp;XZQH@pageNO=1" type="redirect" on="" default="true"/>
+	</request>
+	
+	<request>
+		<name>initLandkreiseID</name>
+		<model name="com.trm.comm.XZQHBLC.initID"/>
+		<dispatch url="/baseMng/xzqh/add.jsp" type="forward" on="" default="true"/>
+	</request>
+	
+	<request>
+		<name>addLandkreise</name>
+		<model name="com.trm.comm.XZQHBLC.add"/>
+		<dispatch url="%ContextPath%/listLandkreise.?XZQH/PID=%PID%&amp;XZQH@pageSize=10&amp;XZQH@pageNO=1" type="redirect" on="" default="true"/>
+	</request>
+	<request>
+		<name>addPerFee</name>
+		<model name="com.trm.comm.XZQHBLC.addPerFee"/>
+		<dispatch url="%ContextPath%/listLandkreise.?XZQH/PID=%ID%&amp;XZQH@pageSize=10&amp;XZQH@pageNO=1" type="redirect" on="" default="true"/>
+	</request>
+	
+	<request>
+		<name>modifyLandkreise</name>
+		<model name="com.trm.comm.XZQHBLC.modify"/>
+		<dispatch url="%ContextPath%/listLandkreise.?XZQH/PID=%PID%&amp;XZQH@pageSize=10&amp;XZQH@pageNO=1" type="redirect" on="" default="true"/>
+	</request>
+	<request>
+		<name>getLandkreiseById</name>
+		<model name="com.trm.comm.XZQHBLC.getById"/>
+		<dispatch url="/baseMng/xzqh/modify.jsp" type="forward" on="" default="true"/>
+	</request>
+	<request>
+		<name>initLandkreiseID2</name>
+		<model name="com.trm.comm.XZQHBLC.initID"/>
+		<dispatch url="/baseMng/xzqh/addrentou.jsp" type="forward" on="" default="true"/>
+	</request>
+	<request>
+		<name>editRTS</name>
+		<model name="com.trm.comm.XZQHBLC.getById"/>
+		<dispatch url="/baseMng/xzqh/addrentou.jsp" type="forward" on="" default="true"/>
+	</request>
+	<request>
+		<name>selectDel</name>
+		<model name="com.trm.comm.XZQHBLC.selectDel"/>
+		<dispatch url="%ContextPath%/listLandkreise.?XZQH/PID=%PID%&amp;XZQH@pageSize=10&amp;XZQH@pageNO=1" type="redirect" on="" default="true"/>
+	</request>
+	
+	<request>
+		<desc>资源信息选择行政区划</desc>
+		<name>showXZQH4Base</name>
+		<model name="com.trm.comm.XZQHBLC.showXZQH4Base" on=""/>
+		<dispatch url="/baseMng/xzqh/xzqh4Base.jsp" type="forward" on="" default="true"/>
+	</request>
+	
+	<request>
+		<desc>公司选择行政区划</desc>
+		<name>showXZQH4Org</name>
+		<model name="com.trm.comm.XZQHBLC.showXZQH4Base" on=""/>
+		<dispatch url="/baseMng/xzqh/xzqh4Org.jsp" type="forward" on="" default="true"/>
+	</request>
+	
+	<request>
+		<desc>企业平台行政区划</desc>
+		<name>showXZQH4Platform</name>
+		<model name="com.trm.comm.XZQHBLC.showXZQH4Platform" on=""/>
+		<dispatch url="/baseMng/xzqh/xzqh4Org.jsp" type="forward" on="" default="true"/>
+	</request>
+</requests>

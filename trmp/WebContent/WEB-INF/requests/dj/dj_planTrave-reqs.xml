@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<requests>
+	<request>
+		<desc>地接计划保存</desc>
+		<name>djFrmInsertTravel</name>
+		<model name="com.trmdj.businessPlan.plan.DjTravePlanBLC.insert"/>
+		<dispatch url="/maindj/businessPlan/planSuccess.jsp" type="forward" on="" default="true"/>
+	</request>
+	
+	<request>
+		<desc>初始化地接计划</desc>
+		<name>djAjaxTravelInfo</name>
+		<model name="com.trmdj.businessPlan.plan.DjTravePlanBLC.djAjaxTravelInfo"/>
+		<dispatch url="/maindj/businessPlan/initPage4Ajax/initTravelPage.jsp" type="forward" on="" default="true"/>
+	</request>
+	
+</requests>

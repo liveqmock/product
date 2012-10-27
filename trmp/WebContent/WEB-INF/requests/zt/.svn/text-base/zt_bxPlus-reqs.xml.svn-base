@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="GBK"?>
+<requests>
+	<request>
+		<desc>初始化制定加点报销页面</desc>
+		<name>ztInitPlusRbt</name>
+		<model name="com.trm.ztbx.ZtPlusBxBLC.queryPlusMng"/>
+		<model name="com.trm.ztbx.ZtTDBXZJXXBBLC.query"/>
+		<dispatch url="/main/ztbx/bxPlus/bxPlus.jsp" type="forward" on="" default="true"/>
+	</request>
+	<request>
+		<desc>加点报销综合数据处理</desc>
+		<name>ztGeneralPlusRbt</name>
+		<model name="com.trm.ztbx.ZtPlusBxBLC.plusGeneralMng"/>
+		<dispatch url="/main/ztbx/bxEdit.jsp" type="forward" on="" default="true"/>
+	</request>
+</requests>

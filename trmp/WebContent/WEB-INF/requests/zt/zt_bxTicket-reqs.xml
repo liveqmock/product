@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="GBK"?>
+<requests>
+
+	<request>
+		<desc>初始化票务报销页面</desc>
+		<name>ztInitTicketBx</name>
+		<model name="com.trm.util.DMSMBLC.loadDMSM"/>
+		<model name="com.trm.ztbx.ZtTicketBxBLC.initTicketBxList"/>
+		<dispatch url="/main/ztbx/bxTicket/ticketBx.jsp" type="forward" on="" default="true"/>
+	</request>
+	
+	<request>
+		<desc>保存票务报销</desc>
+		<name>ztSaveTicketBx</name>
+		<model name="com.trm.ztbx.ZtTicketBxBLC.editTicketBx"/>
+		<dispatch url="/main/ztbx/bxTicket/ticketBx.jsp" type="forward" on="" default="true"/>
+	</request>
+
+</requests>

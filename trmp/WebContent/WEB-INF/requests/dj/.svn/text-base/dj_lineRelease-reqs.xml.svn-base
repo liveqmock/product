@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="GBK"?>
+<requests>
+	
+	<request>
+		<desc>初始化添加地接线路信息页面的数据</desc>
+		<name>djInitAddLine</name>
+		<model name="com.trmdj.lineRelease.DjLineMngBLC.djInitAddLine"/>
+		<model name="com.trm.util.DMSMBLC.loadDMSM"/>
+		<dispatch url="/maindj/lineRelease/djAddLine.jsp" type="forward" on="" default="true"/>
+	</request>
+	<request>
+		<desc>添加线路信息</desc>
+		<name>djAddLineBase</name>
+		<model name="com.trmdj.lineRelease.DjLineMngBLC.djInsert"/>
+		<dispatch url="%ContextPath%/maindj/lineRelease/djListLineByAll.?xzqh/layer=1&amp;TA_DJ_LINEMNG/XLMC=&amp;TA_DJ_LINEMNG@pageNO=1&amp;TA_DJ_LINEMNG@pageSize=10&amp;TA_DJ_LINEMNG@orderBy=XLID desc" type="redirect" on="" default="true"/>
+	</request>
+	
+	<request>
+		<desc>修改线路信息</desc>
+		<name>djEditLineBase</name>
+		<model name="com.trmdj.lineRelease.DjLineMngBLC.djEditLineBase"/>
+		<dispatch url="%ContextPath%/maindj/lineRelease/djListLineByAll.?xzqh/layer=1&amp;TA_DJ_LINEMNG/XLMC=&amp;TA_DJ_LINEMNG@pageNO=1&amp;TA_DJ_LINEMNG@pageSize=10&amp;TA_DJ_LINEMNG@orderBy=XLID desc" type="redirect" on="" default="true"/>
+	</request>
+	
+	<request>
+		<desc>删除线路信息</desc>
+		<name>djDeleteLine</name>
+		<model name="com.trmdj.lineRelease.DjLineMngBLC.delete"/>
+		<dispatch url="%ContextPath%/maindj/lineRelease/djListLineByAll.?xzqh/layer=1&amp;TA_DJ_LINEMNG/XLMC=&amp;TA_DJ_LINEMNG@pageNO=1&amp;TA_DJ_LINEMNG@pageSize=10&amp;TA_DJ_LINEMNG@orderBy=XLID desc" type="redirect" on="" default="true"/>
+	</request>
+	
+	<request>
+		<desc>初始化更新线路信息</desc>
+		<name>djEditInitLine</name>
+		<model name="com.trmdj.lineRelease.DjLineMngBLC.djEditInitLine"/>
+		<model name="com.trm.util.DMSMBLC.loadDMSM"/>
+		<dispatch url="/maindj/lineRelease/djAddLine.jsp" type="forward" on="" default="true"/>
+	</request>
+		<request>
+		<desc>查看线路信息</desc>
+		<name>viewDJLine</name>
+		<model name="com.trmdj.lineRelease.DjLineMngBLC.viewDJLine"/>
+		<model name="com.trm.util.DMSMBLC.loadDMSM"/>
+		<dispatch url="/maindj/lineRelease/viewLine.jsp" type="forward" on="" default="true"/>
+	</request>
+	
+	<request>
+		<name>djPrintLineXCDList</name>
+		<desc>显示线路行程明细</desc>
+		<model name="com.trmdj.lineRelease.DjLineMngBLC.djPrintLineXCDList"/>
+		<model name="com.trm.util.DMSMBLC.loadDMSM"/>
+		<dispatch url="/maindj/lineRelease/printLineXCDList.jsp" type="forward" on="" default="true"/>
+	</request>
+	<request>
+		<name>djPrintLineXCD</name>
+		<desc>打印线路行程明细</desc>
+		<model name="com.trmdj.lineRelease.DjLineMngBLC.djPrintLineXCD"/>
+		<dispatch url="/maindj/lineRelease/printLineXCD.jsp" type="forward" on="" default="true"/>
+	</request>
+	
+	<request>
+		<name>expWordForXCD</name>
+		<desc>打印线路行程明细</desc>
+		<model name="com.trmdj.lineRelease.DjLineMngBLC.expWordForXCD"/>
+		<model name="com.trm.util.DMSMBLC.loadDMSM"/>
+		<dispatch url="/maindj/lineRelease/expWordForXCD.jsp" type="forward" on="" default="true"/>
+	</request>
+</requests>

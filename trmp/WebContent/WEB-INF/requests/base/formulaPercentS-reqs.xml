@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="GBK"?>
+<requests>
+	<request>
+		<name>formulaOfPercent</name>
+		<desc>购物店返利公式</desc>
+		<model name="com.baseMng.formula.formulaOfShop.FormulaOfPSBLC.query"/>
+		<dispatch url="/baseMng/formulaOfShopPercent/formulaOfPercentShop.jsp" type="forward" on="" default="true"/>
+	</request>
+	
+	<request>
+		<name>saveShopPercent</name>
+		<desc>购物店返利公式</desc>
+		<model name="com.baseMng.formula.formulaOfShop.FormulaOfPSBLC.insert"/>
+		<dispatch url="%ContextPath%/baseMng/formulaOfShopPercent/formulaOfPercent." type="redirect" on="" default="true"/>
+	</request>
+	
+</requests>

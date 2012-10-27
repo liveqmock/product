@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="GBK"?>
+<requests>
+	<request>
+		<name>listTravelAgc</name>
+		<desc>旅行社列表</desc>
+		<model name="com.baseMng.TravelAgcBLC.queryPage"/>
+		<dispatch url="/baseMng/travelAgc/listTravelAgc.jsp" type="forward" on="" default="true"/>
+	</request>
+	
+	<request>
+		<name>listTravelAgcForUserAdd</name>
+		<model name="com.baseMng.TravelAgcBLC.queryPage"/>
+		<dispatch url="/baseMng/travelAgc/listTravelAgcForUserAdd.jsp" type="forward" on="" default="true"/>
+	</request>
+	
+	<request>
+		<name>deleteAll</name>
+		<desc>删除所有组团社信息</desc> 
+		<model name="com.baseMng.TravelAgcBLC.deleteAll"/>
+		<dispatch url="listTravelAgc.?TA_TRAVELAGENCY@pageNO=1&amp;TA_TRAVELAGENCY@pageSize=10" type="redirect" default="true" on=""/>
+	</request>
+	
+	<request>
+		<name>addTraAgcInfo</name>
+		<desc>添加组团社信息</desc> 
+		<model name="com.baseMng.TravelAgcBLC.addTravelagencyInfo"/>
+		<dispatch url="listTravelAgc.?TA_TRAVELAGENCY@pageNO=1&amp;TA_TRAVELAGENCY@pageSize=10" type="redirect" default="true" on=""/>
+	</request>
+	
+	<request>
+		<name>findTravelagencyById</name>
+		<desc>通过组团社编号查找</desc> 
+		<model name="com.baseMng.TravelAgcBLC.query"/>
+		<model name="com.baseMng.TaStoreBLC.query"/>
+		<dispatch url="/baseMng/travelAgc/editTraAgc.jsp" default="true" on="s%ac%=&quot;edit&quot;"/>
+		<dispatch url="/baseMng/travelAgc/viewTraAgc.jsp" default="true" on="s%ac%=&quot;view&quot;"/>
+	</request>
+	
+	<request>
+		<name>modifyTravelagencyInfo</name>
+		<desc>修改组团社信息</desc> 
+		<model name="com.baseMng.TravelAgcBLC.update"/>
+		<dispatch url="listTravelAgc.?TA_TRAVELAGENCY@pageNO=1&amp;TA_TRAVELAGENCY@pageSize=10" type="redirect" default="true" on=""/>
+	</request>
+</requests>

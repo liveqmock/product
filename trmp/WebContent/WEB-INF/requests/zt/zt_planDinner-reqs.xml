@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="GBK"?>
+<requests>
+	<request>
+		<desc>初始化添加餐厅计划信息</desc>
+		<name>ztInitAddDinnerPlan</name>
+		<model name="com.trm.ztPlan.ZtDinnerPlanBLC.queryDinnerPlanList"/>
+		<model name="com.trm.ztPlan.ZtDinnerPlanBLC.listDinnerPlan"/>
+		<model name="com.trm.zttdMng.ZtGroupMngBLC.query"/>
+		<dispatch url="/main/ztPlans/dinnerPlan/addDinnerPlan.jsp" type="forward" on="" default="true"/>
+	</request>
+	
+	<request>
+		<desc>添加餐厅计划信息</desc>
+		<name>ztAddDinnerPlan</name>
+		<model name="com.trm.ztPlan.ZtDinnerPlanBLC.editDinnerPlan"/>
+		<dispatch url="%ContextPath%/main/ztPlans/ztInitMasterPlan.?TA_ZT_GROUP/ID=%groupId%&amp;TA_ZT_JHHOTEL/TID=%groupId%&amp;TA_TDJDXXZJB_ZT/TID=%groupId%&amp;TA_ZT_JHCT/TID=%groupId%&amp;TA_ZT_JH/TID=%groupId%&amp;TA_ZT_JHPW/TID=%groupId%&amp;TA_ZT_JHCL/TID=%groupId%&amp;TA_ZT_JHJD/TID=%groupId%&amp;TA_ZT_JHDJ/TID=%groupId%&amp;TA_ZT_JHGW/TID=%groupId%&amp;TA_ZT_JHJIAD/TID=%groupId%&amp;TA_ZT_JHDY/TID=%groupId%&amp;isCheck=Y&amp;mklb=1;" type="redirect" on="" default="true"/>
+	</request>
+	
+	<request>
+		<desc>查询餐厅计划信息</desc>
+		<name>ztListDinnerPlan</name>
+		<model name="com.trm.ztPlan.ZtDinnerPlanBLC.listDinnerPlan"/>
+		<model name="com.trm.zttdMng.ZtGroupMngBLC.query"/>
+		<dispatch url="/main/ztPlans/dinnerPlan/listDinnerPlan.jsp" type="forward" on="" default="true"/>
+	</request>
+	
+	<request>
+		<desc>初始化修改餐厅计划信息</desc>
+		<name>ztInitUpdateDinnerPlan</name>
+		<model name="com.trm.ztPlan.ZtDinnerPlanBLC.listDinnerPlan"/>
+		<model name="com.trm.zttdMng.ZtGroupMngBLC.query"/>
+		<dispatch url="/main/ztPlans/dinnerPlan/updateDinnerPlan.jsp" type="forward" on="" default="true"/>
+	</request>
+	
+	<request>
+		<desc>修改餐厅计划信息</desc>
+		<name>ztUpdateDinnerPlan</name>
+		<model name="com.trm.ztPlan.ZtDinnerPlanBLC.editDinnerPlan"/>
+		<dispatch url="%ContextPath%/main/ztPlans/ztInitMasterPlan.?TA_ZT_GROUP/ID=%groupId%&amp;TA_ZT_JHHOTEL/TID=%groupId%&amp;TA_TDJDXXZJB_ZT/TID=%groupId%&amp;TA_ZT_JHCT/TID=%groupId%&amp;TA_ZT_JH/TID=%groupId%&amp;TA_ZT_JHPW/TID=%groupId%&amp;TA_ZT_JHCL/TID=%groupId%&amp;TA_ZT_JHJD/TID=%groupId%&amp;TA_ZT_JHDJ/TID=%groupId%&amp;TA_ZT_JHGW/TID=%groupId%&amp;TA_ZT_JHJIAD/TID=%groupId%&amp;TA_ZT_JHDY/TID=%groupId%&amp;isCheck=Y&amp;mklb=1;" type="redirect" on="" default="true"/>
+	</request>
+</requests>

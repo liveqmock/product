@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="GBK"?>
+<requests>
+	<request>
+		<desc>合作伙伴列表</desc>
+		<name>cooperateList</name>
+		<model name="com.platform.cooperate.CooperateRefBLC.cooperateList" on=""/>
+		<dispatch url="/platform/cooperate/listCooperateWith.jsp" type="forward" on="" default="true"/>
+	</request>
+	<request>
+		<desc>企业平台列表</desc>
+		<name>trasPlatform</name>
+		<model name="com.platform.cooperate.CooperateRefBLC.trasPlatformList" on=""/>
+		<model name="com.trm.comm.XZQHBLC.showXZQH4Platform" on=""/>
+		<dispatch url="/platform/cooperate/listAllTra4Platform.jsp" type="forward" on="" default="true"/>
+	</request>
+	<request>
+		<desc>企业信息</desc>
+		<name>traPlatQuery</name>
+		<model name="com.dream.app.hr.org.Organization.query" on=""/>
+		<model name="com.platform.cooperate.CooperateRefBLC.queryRelation" on=""/>
+		<dispatch url="/platform/cooperate/trasPlatQuery.jsp" type="forward" on="" default="true"/>
+	</request>
+	
+	<request>
+		<desc>加关注</desc>
+		<name>addAttention</name>
+		<model name="com.platform.cooperate.CooperateRefBLC.queryRelation" on=""/>
+		<model name="com.platform.cooperate.CooperateRefBLC.addAttention" on=""/>
+		<dispatch url="/success.jsp" type="forward" on="s%flag%=N" default="true"/>
+		<dispatch url="%ContextPath%/platform/cooperate/traPlatQuery.?hrorganization/orgid=%hrorganization/orgid%" type="redirect" on="s%flag%=Y" default="true"/>
+	</request>
+	
+	<request>
+		<desc>取消关注</desc>
+		<name>cancelAttention</name>
+		<model name="com.platform.cooperate.CooperateRefBLC.cancelAttention" on=""/>
+		<dispatch url="%ContextPath%/platform/cooperate/traPlatQuery.?hrorganization/orgid=%hrorganization/orgid%" type="redirect" on="" default="true"/>
+	</request>
+</requests>

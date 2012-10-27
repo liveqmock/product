@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="GBK"?>
+<requests>
+	<request>
+		<desc>AJAX初始化加点信息</desc>
+		<name>djAjaxPlusInfo</name>
+		<model name="com.trmdj.businessPlan.plan.DJPlusPlanBLC.djAjaxPlusInfo"/>
+		<dispatch url="/maindj/businessPlan/initPage4Ajax/initPlusPage.jsp" type="forward" on="" default="true"/>
+	</request>
+	<request>
+		<desc>新增加点信息</desc>
+		<name>djFrmInsertPlus</name>
+		<model name="com.trmdj.businessPlan.plan.DJPlusPlanBLC.insertPlus"/>
+		<dispatch url="/maindj/businessPlan/planSuccess.jsp" type="forward" on="" default="true"/>
+	</request>
+</requests>

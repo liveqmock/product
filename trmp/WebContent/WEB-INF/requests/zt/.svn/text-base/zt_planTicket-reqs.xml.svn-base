@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="GBK"?>
+<requests>
+	<request>
+		<desc>初始化票务页面</desc>
+		<name>ztInitTicketP</name>
+		<model name="com.trm.util.DMSMBLC.loadDMSM"/>
+		<model name="com.trm.ztPlan.ZtTicketPlanBLC.queryTicketPlan"/>
+		<model name="com.trm.ztPlan.ZtTicketDetailPlanBLC.query"/>
+		<model name="com.trm.ztPlan.ZtJDXXZJBBLC.query"/><!-- 团队计划信息合计表 -->
+		<dispatch url="/main/ztPlans/ticketPlan/ticketPlan.jsp" type="forward" on="" default="true"/>
+	</request>
+	
+	<request>
+		<desc>更新票务计调</desc>
+		<name>ztSaveTicket</name>
+		<model name="com.trm.ztPlan.ZtTicketPlanBLC.saveTicket"/>
+		<dispatch url="%ContextPath%/main/ztPlans/ztInitMasterPlan.?TA_ZT_GROUP/ID=%groupId%&amp;TA_ZT_JHHOTEL/TID=%groupId%&amp;TA_TDJDXXZJB_ZT/TID=%groupId%&amp;TA_ZT_JHCT/TID=%groupId%&amp;TA_ZT_JH/TID=%groupId%&amp;TA_ZT_JHPW/TID=%groupId%&amp;TA_ZT_JHCL/TID=%groupId%&amp;TA_ZT_JHJD/TID=%groupId%&amp;TA_ZT_JHDJ/TID=%groupId%&amp;TA_ZT_JHGW/TID=%groupId%&amp;TA_ZT_JHJIAD/TID=%groupId%&amp;TA_ZT_JHDY/TID=%groupId%&amp;isCheck=Y&amp;mklb=1;" type="redirect" on="" default="true"/>
+	</request>
+	
+	<request>
+		<desc>查询票务公司联系人</desc>
+		<name>ztQueryLXRByID</name>
+		<model name="com.baseMng.TicketBLC.query"/>
+		<dispatch url="/main/ztPlans/ticketPlan/ajaxPage4TicketLXR.jsp" type="forward" on="" default="true"/>
+	</request>
+</requests>

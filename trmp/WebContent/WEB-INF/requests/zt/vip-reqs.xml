@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="GBK"?>
+<requests>
+	<request>
+		<name>getAllVipInfo</name>
+		<model name="com.baseMng.VipBLC.getAllVipInfo"/>
+		<dispatch url="/baseMng/vip/vipList.jsp" type="forward" on="" default="true"/>
+	</request>
+	<request>
+		<name>addVip</name>
+		<model name="com.baseMng.VipBLC.addVip"/>
+		<dispatch url="%ContextPath%/getAllVipInfo.?TA_VIP_INFO@pageNO=1&amp;TA_VIP_INFO@pageSize=10&amp;TA_VIP_INFO/ID=" type="redirect" on="" default="true"/>
+	</request>
+	<request>
+		<name>getVipById</name>
+		<model name="com.baseMng.VipBLC.getVipById"/>
+		<dispatch url="/baseMng/vip/updateVip.jsp" type="forward" on="" default="true"/>
+	</request>
+	<request>
+		<name>updateVip</name>
+		<model name="com.baseMng.VipBLC.updateVip"/>
+		<dispatch url="%ContextPath%/getAllVipInfo.?TA_VIP_INFO@pageNO=1&amp;TA_VIP_INFO@pageSize=10&amp;TA_VIP_INFO/ID=" type="redirect" on="" default="true"/>
+	</request>	
+	<request>
+		<name>delVip</name>
+		<model name="com.baseMng.VipBLC.delVip"/>
+		<dispatch url="%ContextPath%/getAllVipInfo.?TA_VIP_INFO@pageNO=1&amp;TA_VIP_INFO@pageSize=10&amp;TA_VIP_INFO/ID=" type="redirect" on="" default="true"/>
+	</request>
+	<request>
+		<name>getVipBylike</name>
+		<model name="com.baseMng.VipBLC.getVipBylike"/>
+		<dispatch url="/baseMng/vip/vipList.jsp" type="forward" on="" default="true"/>
+	</request>			
+</requests>

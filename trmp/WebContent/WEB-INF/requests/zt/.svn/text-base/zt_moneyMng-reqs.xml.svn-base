@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="GBK"?>
+<requests>
+
+<!-- 应付账单对账     begin -->
+	<request>
+		<name>initOrderNoList4Sub</name>
+		<desc>发起对账申请--符合条件的未对账账单列表</desc>
+		<model name="com.trm.moneyMng.ZtCWDZBLC.notConfirmBill"/>
+		<dispatch url="/main/moneyMng/account/ordersList4Sub.jsp?target=0" type="forward" on="" default="true"/>
+	</request>
+	<request>
+		<name>notConfirmBillDetail</name>
+		<desc>显示团队订单成员明细--未对账</desc>
+		<model name="com.trm.moneyMng.ZtCWDZBLC.notConfirmBillDetail"/>
+		<dispatch url="/main/moneyMng/account/notConfirmBillDetail.jsp" type="forward" on="" default="true"/>
+	</request>
+	<request>
+		<desc>提交对账账单</desc>
+		<name>submitBill</name>
+		<model name="com.trm.moneyMng.ZtCWDZBLC.submitBill"/>
+		<dispatch url="%ContextPath%/main/moneyMng/account/initOrderNoList4Sub.?state=0&amp;target=0&amp;pageNO=1&amp;pageSize=10" type="redirect" on="" default="true"/>
+	</request>
+	
+	<request>
+		<name>confirmingBillList</name>
+		<desc>对账中账单列表</desc>
+		<model name="com.trm.moneyMng.ZtCWDZBLC.confirmingBillList"/>
+		<dispatch url="/main/moneyMng/account/ordersList4Sub.jsp?target=1" type="forward" on="" default="true"/>
+	</request>
+	
+	<request>
+		<name>confirmingBillDetail</name>
+		<desc>显示团队订单成员明细--对账中</desc>
+		<model name="com.trm.moneyMng.ZtCWDZBLC.confirmingBillDetail"/>
+		<model name="com.trm.moneyMng.ZtCWDZBLC.querySPYJInfo"/>
+		<dispatch url="/main/moneyMng/account/confirmingBillDetail.jsp" type="forward" on="" default="true"/>
+	</request>
+	
+	<request>
+		<name>successBillList</name>
+		<desc>已出账单列表</desc>
+		<model name="com.trm.moneyMng.ZtCWDZBLC.successBillList"/>
+		<dispatch url="/main/moneyMng/account/ordersList4Sub.jsp?target=2" type="forward" on="" default="true"/>
+	</request>
+	
+	<request>
+		<name>successBillDetail</name>
+		<desc>显示团队订单成员明细--已出账单</desc>
+		<model name="com.trm.moneyMng.ZtCWDZBLC.successBillDetail"/>
+		<model name="com.trm.moneyMng.ZtCWDZBLC.querySPYJInfo"/>
+		<dispatch url="/main/moneyMng/account/successBillDetail.jsp" type="forward" on="" default="true"/>
+	</request>
+
+	<request>
+		<name>moneyClear1</name>
+		<model name="com.trm.moneyMng.MoneyClearBLC.moneyClearList"/>
+		<dispatch url="/main/moneyMng/reconciliationClear.jsp?target=0" type="forward" on="" default="true"/>
+	</request>
+	<request>
+		<name>moneyClear2</name>
+		<model name="com.trm.moneyMng.MoneyClearBLC.moneyClearList"/>
+		<dispatch url="/main/moneyMng/reconciliationClear.jsp?target=1" type="forward" on="" default="true"/>
+	</request>
+		<request>
+		<name>addMoneyClear</name>
+		<model name="com.trm.moneyMng.MoneyClearBLC.addMoneyClear"/>
+		<dispatch url="/main/moneyMng/reconciliationClear.jsp?target=0" type="forward" on="" default="true"/>
+	</request>
+	
+	<request>
+		<name>CwdzInfo1</name>
+		<desc>未对账账单</desc>
+		<model name="com.trm.moneyMng.ZtCWDZBLC.notConfirmBill"/>
+		<dispatch url="/main/moneyMng/account/cwdz.jsp?target=0" type="forward" on="" default="true"/>
+	</request>
+	<request>
+		<name>CwdzInfo2</name>
+		<desc>财务对账-对账中</desc>
+		<model name="com.trm.moneyMng.ZtCWDZBLC.confirmingBillList"/>
+		<dispatch url="/main/moneyMng/account/cwdz.jsp?target=1" type="forward" on="" default="true"/>
+	</request>
+	<request>
+		<name>CwdzInfo3</name>
+		<model name="com.trm.moneyMng.ZtCWDZBLC.searchCwdz"/>
+		<dispatch url="/main/moneyMng/account/cwdz.jsp?target=2" type="forward" on="" default="true"/>
+	</request>
+	<request>
+		<name>CwdzSubmit2</name>
+		<desc>对账审批</desc>
+		<model name="com.trm.moneyMng.ZtCWDZBLC.authorizeBx"/>
+		<dispatch url="/main/moneyMng/account/cwdz.jsp?target=1" type="forward" on="" default="true"/>
+	</request>
+	<request>
+		<name>showYkorderWdzzdList</name>
+		<desc>显示团队订单成员明细</desc>
+		<model name="com.trm.moneyMng.ZtCWDZBLC.notConfirmBillDetail"/>
+		<dispatch url="/main/moneyMng/account/showYkorderWdzdList.jsp" type="forward" on="" default="true"/>
+	</request>
+	<request>
+		<name>showYkorderDzzdList</name>
+		<desc>显示团队订单成员明细</desc>
+		<model name="com.trm.moneyMng.ZtCWDZBLC.confirmingBillDetail"/>
+		<model name="com.trm.moneyMng.ZtCWDZBLC.querySPYJInfo"/>
+		<dispatch url="/main/moneyMng/account/showYkorderList.jsp" type="forward" on="" default="true"/>
+	</request>
+	<request>
+		<name>showYkorderYczdList</name>
+		<desc>显示团队订单成员明细</desc>
+		<model name="com.trm.moneyMng.ZtCWDZBLC.successBillDetail"/>
+		<model name="com.trm.moneyMng.ZtCWDZBLC.querySPYJInfo"/>
+		<dispatch url="/main/moneyMng/account/successBillDetail.jsp" type="forward" on="" default="true"/>
+	</request>
+
+<!-- 应付账单对账     end -->
+
+
+<!-- 应收账款对账    begin -->
+	<request>
+		<name>myBillList</name>
+		<desc>未对账的应收款账单列表</desc>
+		<model name="com.trm.moneyMng.ZtCWDZBLC.myBillList"/>
+		<dispatch url="/main/moneyMng/account/myBillList.jsp" type="forward" on="" default="true"/>
+	</request>
+	
+	<request>
+		<name>myBillListDetail</name>
+		<desc>未对账的应收款账单明细列表</desc>
+		<model name="com.trm.moneyMng.ZtCWDZBLC.myBillListDetail"/>
+		<dispatch url="/main/moneyMng/account/myBillListDetail.jsp" type="forward" on="" default="true"/>
+	</request>
+	
+	<request>
+		<name>updateConfirmState</name>
+		<desc>未对账的应收款账单明细列表</desc>
+		<model name="com.trm.moneyMng.ZtCWDZBLC.update"/>
+		<dispatch url="%ContextPath%/main/moneyMng/account/myBillList.?target=0&amp;state=0&amp;pageNO=1&amp;pageSize=10" type="redirect" on="" default="true"/>
+	</request>
+	
+	
+<!-- 应收账单对账     end -->
+</requests>

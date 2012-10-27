@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="GBK"?>
+<requests>
+	<request>
+		<desc>AJAX初始化其他信息</desc>
+		<name>djAjaxOtherInfo</name>
+		<model name="com.trmdj.businessPlan.plan.DjOtherPlanBLC.djAjaxOtherInfo"/>
+		<dispatch url="/maindj/businessPlan/initPage4Ajax/initOtherPage.jsp" type="forward" on="" default="true"/>
+	</request>
+	<request>
+		<desc>新增其他信息</desc>
+		<name>djFrmInsertOther</name>
+		<model name="com.trmdj.businessPlan.plan.DjOtherPlanBLC.insert"/>
+		<dispatch url="/maindj/businessPlan/planSuccess.jsp" type="forward" on="" default="false"/>
+	</request>
+</requests>

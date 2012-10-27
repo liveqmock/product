@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="GB2312"?>
+<requests>
+	<!--Begin User management requests-->
+	<request>
+		<name>alterMyPassword</name>
+		<model name="com.dream.app.sys.User.modifyMyPassword"/>
+		<dispatch url="%ContextPath%/jsp/success.jsp" type="redirect" on="" default="true"/>
+	</request>
+	<request>
+		<name>alterUserPassword</name>
+		<model name="com.dream.app.sys.User.modifyUserPassword"/>
+		<dispatch url="%ContextPath%/jsp/success.jsp" type="redirect" on="" default="true"/>
+	</request>
+	<request>
+		<name>newUser</name>
+		<desc>添加用户</desc>
+		<model name="com.dream.app.sys.User.insert"/>
+		<dispatch url="%ContextPath%/sysPage/user/queryUsers.?DRMUser/userID=&amp;DRMUser@pageSize=10&amp;DRMUser@pageNO=1&amp;drmuser@orderby=userno" type="redirect" on="" default="true"/>
+	</request>
+	<request>
+		<name>updateUser</name>
+		<model name="com.dream.app.sys.User.update"/>
+		<dispatch url="%ContextPath%/sysPage/user/queryUsers.?DRMUser/userID=&amp;DRMUser@pageSize=10&amp;DRMUser@pageNO=1&amp;drmuser@orderby=userno" type="redirect" on="" default="true"/>
+	</request>
+	<request>
+		<name>lockUsers</name>
+		<model name="com.dream.app.sys.User.lockUsers"/>
+		<dispatch url="%ContextPath%/sysPage/user/queryUsers.?DRMUser/userID=&amp;DRMUser@pageSize=10&amp;DRMUser@pageNO=1&amp;drmuser@orderby=userno" type="redirect" on="" default="true"/>
+	</request>
+	<request>
+		<name>unlockUsers</name>
+		<model name="com.dream.app.sys.User.unlockUsers"/>
+		<dispatch url="%ContextPath%/sysPage/user/queryUsers.?DRMUser/userID=&amp;DRMUser@pageSize=10&amp;DRMUser@pageNO=1&amp;drmuser@orderby=userno" type="redirect" on="" default="true"/>
+	</request>
+	<request>
+		<desc>用户查询--用户来源机构初始化</desc>
+		<name>initQueryUsers</name>
+		<model name="com.dream.app.sys.User.initQueryUsers"/>
+		<dispatch url="/sysPage/user/UsersList.jsp" type="forward" on="" default="true"/>
+	</request>
+	<request>
+		<name>queryUsers</name>
+		<model name="com.dream.app.sys.User.queryByOrgID"/>
+		<dispatch url="/sysPage/user/UsersList.jsp" type="forward" on="" default="true"/>
+	</request>
+	<request>
+		<name>queryUser</name>
+		<model name="com.dream.app.sys.User.expand" on="s%DispMode%=&quot;U&quot;"/>
+		<model name="com.dream.app.sys.User.queryUserRoles" on="s%DispMode%=&quot;U&quot;"/>
+		<model name="com.dream.app.sys.Role.queryAllByWhere"/>
+		<model name="com.dream.app.hr.org.Department.query" on="s%DispMode%=&quot;U&quot;"/>
+		<model name="com.dream.app.sys.User.queryMaxUserNo" on="s%DispMode%=&quot;N&quot;"/>
+		<model name="com.dream.app.sys.User.queryUserids"/>
+		<dispatch url="/sysPage/user/UserInfo.jsp" type="forward" default="true"/>
+	</request>
+	<!--END User management requests-->
+	<!--Begin role management requests-->
+	<request>
+		<desc>角色信息列表</desc>
+		<name>queryRoles</name>
+		<model name="com.dream.app.sys.Role.queryAllByWhere"/>
+		<!-- <dispatch url="/sysPage/user/rolesList.jsp" type="include" on="" default="true"/> -->
+		<dispatch url="/sysPage/user/rolesList.jsp" type="forward" on="" default="true"/>
+	</request>
+	
+	<request>
+		<name>initRoleInfo</name>
+		<desc>角色信息初始化</desc>
+		<model name="com.dream.app.sys.Role.initRoleInfo"/>
+		<dispatch url="/sysPage/user/addRoleInfo.jsp" type="forward" on="" default="true"/>
+	</request>
+	
+	<request>
+		<name>newRole</name>
+		<desc>添加角色</desc>
+		<model name="com.dream.app.sys.Role.insertInfo"/>
+		<dispatch url="%ContextPath%/sysPage/user/queryRole.?DispMode=U&amp;DRMRole/roleID=$%DRMRole/roleID%$" type="redirect" on="" default="true"/>
+	</request>
+	<request>
+		<name>queryRole</name>
+		<desc>查询角色信息</desc>
+		<model name="com.dream.app.sys.Role.expand" on="s%DispMode%=&quot;U&quot;"/>
+		<model name="com.dream.app.sys.Role.queryRoleFuncs" on="s%DispMode%=&quot;U&quot;"/>
+		<dispatch url="/sysPage/user/roleInfo.jsp" type="forward" on="" default="true"/>
+	</request>
+	<request>
+		<name>deleteRoles</name>
+		<model name="com.dream.app.sys.Role.delete" on=""/>
+		<dispatch url="%ContextPath%/sysPage/user/queryRoles." type="redirect" on="" default="true"/>
+	</request>
+	<request>
+		<name>updateRole</name>
+		<model name="com.dream.app.sys.Role.update" on=""/>
+		<dispatch url="%ContextPath%/sysPage/user/queryRoles." type="redirect" on="" default="true"/>
+	</request>
+	<request>
+		<name>addFuncs2Role</name>
+		<model name="com.dream.app.sys.Role.addFuncs2Role"/>
+		<dispatch url="%ContextPath%/jsp/user/queryRole.?DispMode=U&amp;DRMRole/roleID=$%DRMRole/roleID%$" type="redirect" on="" default="true"/>
+	</request>
+	<request>
+		<name>deleteFuncsFromRole</name>
+		<model name="com.dream.app.sys.Role.deleteFuncsFromRole"/>
+		<dispatch url="%ContextPath%/jsp/user/queryRole.?DispMode=U&amp;DRMRole/roleID=$%DRMRole/roleID%$" type="redirect" on="" default="true"/>
+	</request>
+	<request>
+		<name>queryFuncsNotAdded2Role</name>
+		<model name="com.dream.app.sys.Role.queryFuncsNotAdded2Role"/>
+		<dispatch url="/jsp/user/funcsList.jsp" type="forward" on="" default="true"/>
+	</request>
+	<!--END of  role management requests-->
+	
+	
+	<!--begin menu management -->
+	<request>
+		<name>queryMenuList</name>
+		<model name="com.dream.app.sys.Menu.query"/>
+		<dispatch url="/sysPage/sys/menuList.jsp" type="forward" on="" default="true"/>
+	</request>
+	<request>
+		<name>querySameLevelMenu</name>
+		<model name="com.dream.app.sys.Menu.querySameLevelMenu"/>
+		<dispatch url="/sysPage/sys/menuList.jsp" type="forward" on="" default="true"/>
+	</request>
+	<request>
+		<name>queryMenu</name>
+		<model name="com.dream.app.sys.Menu.expand" on="s%DispMode%=U"/>
+		<dispatch url="/sysPage/sys/menu_inf_u.jsp" type="forward" on="s%DispMode%=&quot;U&quot;" default="false"/>
+		<dispatch url="/sysPage/sys/menu_inf_n.jsp" type="forward" on="s%DispMode%!=&quot;U&quot;" default="true"/>
+	</request>
+	<request>
+		<name>newMenu</name>
+		<model name="com.dream.app.sys.Menu.insert"/>
+		<dispatch url="%ContextPath%/sysPage/sys/queryMenu.?DispMode=N&amp;parentMenuName=%DRMMenu/parentMenuName%&amp;menuLevel=%DRMMENU/menuLevel%" type="redirect"/>
+	</request>
+	<request>
+		<name>updateMenu</name>
+		<model name="com.dream.app.sys.Menu.update"/>
+		<dispatch url="%ContextPath%/sysPage/sys/queryMenu.?DispMode=U&amp;DRMMenu/menuName=%DRMMENU/menuName%" type="redirect"/>
+	</request>
+	<request>
+		<name>deleteMenu</name>
+		<model name="com.dream.app.sys.Menu.delete"/>
+		<dispatch url="%ContextPath%/sysPage/sys/queryMenuList.?DRMMenu/parentMenuName=%PARENTMENUNAME%&amp;MODULETYPE=%MODULETYPE%&amp;MENULEVEL=%MENULEVEL%" type="redirect"/>
+	</request>
+	<request>
+		<name>queryRoleMenuForUpdate</name>
+		<desc>配置角色菜单初始化</desc>
+		<model name="com.dream.app.sys.Menu.queryRoleMenuForUpdate"/>
+		<dispatch url="/sysPage/user/roleMenu.jsp" type="forward"/>
+	</request>
+	<request>
+		<name>updateRoleMenu</name>
+		<model name="com.dream.app.sys.Menu.updateRoleMenu"/>
+		<dispatch url="%ContextPath%/sysPage/user/queryRoleMenuForUpdate.?DRMRole/roleID=%DRMRole/roleID%&amp;DRMRole/orgID=%DRMRole/orgID%" type="redirect"/>
+	</request>
+	<!--END of  Menu-->
+	
+	<request>
+		<name>getMenu</name>
+		<desc>获取菜单</desc>
+		<model name="com.dream.app.sys.Menu.getMenu" />
+		<!-- <dispatch url="/main/v_menu/v_menu.jsp" type="forward" on="" default="true" /> -->
+		<dispatch url="/main/middleLeft.jsp" type="forward" on="" default="true" />
+	</request>
+	
+	<request>
+		<name>getMaxTravelagencyID</name>
+		<desc>获取最大Id</desc>
+		<model name="com.dream.app.sys.User.getMaxTravelagencyID" />
+		<dispatch url="/jsp/user/IDAjax.jsp" type="forward" on="" default="true" />
+	</request>
+</requests>

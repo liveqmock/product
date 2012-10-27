@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="GBK"?>
+<requests>
+	<request>
+		<desc>保存景点计划</desc>
+		<name>djFrmInsertScenery</name>
+		<model name="com.trmdj.businessPlan.plan.DjSeneryPlanBLC.insert"/>
+		<dispatch url="/maindj/businessPlan/planSuccess.jsp" type="forward" on="" default="true"/>
+	</request>
+	
+	<request>
+		<desc>初始化景点计划</desc>
+		<name>djAjaxSceneryInfo</name>
+		<model name="com.trmdj.businessPlan.plan.DjSeneryPlanBLC.djAjaxSceneryInfo"/>
+		<dispatch url="/maindj/businessPlan/initPage4Ajax/initSceneryPage.jsp" type="forward" on="" default="true"/>
+	</request>
+	
+</requests>

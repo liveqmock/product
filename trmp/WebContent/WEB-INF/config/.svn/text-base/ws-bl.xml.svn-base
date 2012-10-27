@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	if includeAll is set to be true, then all bl in that range(blcontext,pkg,blc) will be publised.
+	If a bl is not specified in this file, then it is not publised.
+-->
+<ws-bl blcontext="">
+	<publish includeAll="true">
+		<blc name="" includeAll="true">
+				<bl name=""/>
+		</blc>
+	</publish>
+	<user>
+		<name>admin</name>
+		<password>pass101</password>
+	</user>
+</ws-bl>

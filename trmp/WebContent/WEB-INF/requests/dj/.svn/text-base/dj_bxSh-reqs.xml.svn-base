@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="GBK"?>
+<requests>
+	<request>
+		<desc>提交制定报账</desc>
+		<name>djBxBJ</name>
+		<model name="com.trmdj.bx.DjShBxBLC.submitBxBJ"/>
+		<dispatch url="/maindj/bx/bxBJ.jsp" type="forward" on="" default="true"/>
+	</request>
+	<request>
+		<desc>提交制定报账</desc>
+		<name>djInitShBxList</name>
+		<model name="com.trmdj.bx.DjShBxBLC.submitBx"/>
+		<dispatch url="%ContextPath%/maindj/bx/bxGuideAllList.?pageNO=1&amp;pageSize=10" type="redirect" on="" default="true"/>
+	</request>
+	
+	<request>
+		<desc>查询待报账审核状态的团信息</desc>
+		<name>djQueryShBxList</name>
+		<model name="com.trmdj.bx.DjShBxBLC.querySpBxInfo"/>
+		<dispatch url="/maindj/bx/shBxList.jsp" type="forward" on="" default="true"/>
+	</request>
+	
+	<request>
+		<desc>初始化团报账审核</desc>
+		<name>djInitAllSHBx</name>
+		<model name="com.trmdj.businessPlan.groupMng.DjGroupDetailBLC.djInitAllSHBx"/>
+		<model name="com.trm.util.DMSMBLC.loadDMSM"/><!-- 加载代码值 -->
+		<dispatch url="/maindj/bx/bxSh/authorizeBx.jsp" type="forward" on="s%action%=&quot;authorize&quot;" default="true"/>
+		<dispatch url="/maindj/bx/bxSh/viewBx.jsp" type="forward" on="s%action%=&quot;view&quot;" default="true"/>
+	</request>
+	
+	<request>
+		<desc>提交报账审核</desc>
+		<name>djAuthorizeBx</name>
+		<model name="com.trmdj.bx.DjShBxBLC.authorizeBx"/>
+		<dispatch url="%ContextPath%/maindj/bx/djQueryShBxList.?pageNO=1&amp;pageSize=10" type="redirect" on="" default="true"/>
+	</request>
+</requests>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<events>
+	<event name="customerCreated">
+		<listeners>
+			<listener name="" class=""/>
+		</listeners>
+		<actions>
+			<action class="test.TestTimedTask" method="writeFile"/>
+		</actions>
+	</event>
+</events>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="GBK"?>
+<requests>
+	<request>
+		<desc>AJAX初始化购物信息</desc>
+		<name>djAjaxShopPlanInfo</name>
+		<model name="com.trmdj.bx.DjShopBxMngBLC.djAjaxShopInfo"/>
+		<dispatch url="/maindj/bx/initPage4Ajax/initShopPage.jsp" type="forward" on="" default="true"/>
+	</request>
+	<request>
+		<desc>新增购物信息</desc>
+		<name>djFrmInsertBxShop</name>
+		<model name="com.trmdj.bx.DjShopBxMngBLC.insertShop"/>
+		<dispatch url="/maindj/businessPlan/planSuccess.jsp" type="forward" on="" default="true"/>
+	</request>
+	
+</requests>

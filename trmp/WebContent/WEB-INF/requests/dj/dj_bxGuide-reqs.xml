@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="GBK"?>
+<requests>
+	<request>
+		<desc>AJAX初始化导游信息</desc>
+		<name>djAjaxGuidePlanInfo</name>
+		<model name="com.trmdj.bx.DjGuidebxBLC.djAjaxGuideInfo"/>
+		<dispatch url="/maindj/bx/initPage4Ajax/initGuidePage.jsp" type="forward" on="" default="true"/>
+	</request>
+	<request>
+		<desc>新增导游信息</desc>
+		<name>djFrmInsertBxGuide</name>
+		<model name="com.trmdj.bx.DjGuidebxBLC.insertGuide"/>
+		<dispatch url="/maindj/businessPlan/planSuccess.jsp" type="forward" on="" default="true"/>
+	</request>
+</requests>

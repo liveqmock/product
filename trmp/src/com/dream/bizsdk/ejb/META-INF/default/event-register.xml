@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<events>
+    <event name="report_built">
+        <actions>
+            <action class="test.Test1" method="sendReport"/>
+        </actions>
+    </event>
+</events>

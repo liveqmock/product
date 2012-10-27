@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="GBK"?>
+<requests>
+	<request>
+		<name>getAllHotel</name>
+		<model name="com.baseMng.HotelBLC.getAllHotel"/>
+		<dispatch url="/baseMng/hotel/hotel_list.jsp" type="forward" on="" default="true"/>
+	</request>
+	<request>
+		<name>getHotelById</name>
+		<model name="com.baseMng.HotelBLC.getHotelById"/>
+		<model name="com.trm.util.DMSMBLC.loadDMSM"/>
+		<dispatch url="/baseMng/hotel/upHotel.jsp" type="forward" on="" default="true"/>
+	</request>
+	<request> 
+		<name>to_addJsp</name>
+		<model name="com.trm.util.DMSMBLC.loadDMSM"/>
+		<dispatch url="/baseMng/hotel/add_Hotel.jsp?area_id=%area_id%" type="forward" on="" default="true"/>
+	</request>
+	<request>
+		<name>addHotel</name>
+		<model name="com.baseMng.HotelBLC.addHotel"/>
+		<dispatch url="%ContextPath%/getAllHotel.?TA_HOTEL/AREA_ID=%area_id%&amp;TA_HOTEL@pageNO=1&amp;TA_HOTEL@pageSize=10" type="redirect" on="" default="false"/>
+	</request>
+	<request>
+		<name>upHotel</name>
+		<model name="com.baseMng.HotelBLC.upHotel"/>
+		<dispatch url="%ContextPath%/getAllHotel.?TA_HOTEL@pageNO=1&amp;TA_HOTEL@pageSize=10&amp;TA_HOTEL/AREA_ID=%area_id%" type="redirect" on="" default="false"/>
+	</request>
+	<request>
+		<name>delHotel</name>
+		<model name="com.baseMng.HotelBLC.delHotel"/>
+		<dispatch url="%ContextPath%/getAllHotel.?TA_HOTEL@pageNO=1&amp;TA_HOTEL@pageSize=10&amp;TA_HOTEL/AREA_ID=%area_id%" type="redirect" on="" default="false"/>
+	</request>
+	<request>
+		<name>batchDelHotel</name>
+		<model name="com.baseMng.HotelBLC.batchDelHotel"/>
+		<dispatch url="%ContextPath%/getAllHotel.?TA_HOTEL@pageNO=1&amp;TA_HOTEL@pageSize=10&amp;TA_HOTEL/AREA_ID=%area_id%" type="redirect" on="" default="true"/>
+	</request>
+	<request>
+		<name>delImg</name>
+		<model name="com.baseMng.HotelBLC.delImg"/>
+		<dispatch url="%ContextPath%/getAllHotel.?TA_HOTEL@pageNO=1&amp;TA_HOTEL@pageSize=10&amp;TA_HOTEL/AREA_ID=%area_id%" type="redirect" on="" default="true"/>
+	</request>
+	<request>
+		<name>getHotelByName</name>
+		<model name="com.baseMng.HotelBLC.getHotelByName"/>
+		<dispatch url="/baseMng/hotel/hotel_list.jsp" type="forward" on="" default="true"/>
+	</request>
+	<request>
+		<desc>酒店管理的树</desc>
+		<name>showTree4Hotel</name>
+		<model name="com.trm.comm.XZQHBLC.query" on=""/>
+		<dispatch url="/baseMng/hotel/leftHotel.jsp" type="forward" on="" default="true"/>
+	</request>
+</requests>

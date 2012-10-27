@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="GBK"?>
+<requests>
+   <request>
+		<desc>查询所有要报销的团</desc>
+		<name>ztbxPrintList</name>
+		<model name="com.trm.ztbx.ZtCWJSBLC.initGroupPrintList"/>
+		<dispatch url="/main/ztbx/printCwjsd/listCwjsd.jsp" type="forward" on="" default="true"/>
+	</request>
+	<request>
+		<desc>查看并打印报销后的团</desc>
+		<name>ztshowBxGroupPrint</name>
+		<model name="com.trm.ztbx.ZtCWJSBLC.initGroupPrint"/>
+		<model name="com.trm.ztbx.ZtShBxBLC.submitBxBJ"/>
+		<dispatch url="/main/ztbx/printCwjsd/printCwjsd.jsp" type="forward" on="" default="true"/>
+	</request>
+	<request>
+		<desc>导出Word文档</desc>
+		<name>ztexpWordCwjsd</name>
+		<model name="com.trm.ztbx.ZtCWJSBLC.initGroupPrint"/>
+		<dispatch url="/main/ztbx/printCwjsd/expWordCwjsd.jsp" type="forward" on="" default="true"/>
+	</request>
+</requests>

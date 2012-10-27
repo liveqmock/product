@@ -1,0 +1,103 @@
+@charset "utf-8";
+/* CSS Document */
+a{text-decoration:none; 
+color:#004779}
+body{
+	font-size:12px;
+	background-color:#F4F9FD;
+}
+.bnt{ 
+	background-image:url(../images/bnt.jpg); 
+	border:solid  #CCCCCC 1px;
+	color:#5B8DB2; 
+    line-height: 15px;
+
+}
+
+.bnt{ 
+	background-image:url(../images/bnt.jpg); 
+	border:solid  #CCCCCC 1px;
+	color:#144067; 
+    line-height: 15px;
+
+}
+.text_algin{
+	text-align:right;
+}
+.text_center{ 
+	text-align:center;
+}
+.text_input{
+	border:#91C0E3 1px solid;
+	width:130px;
+}
+.text_input1{
+	border:#91C0E3 1px solid;
+	width:60px;
+}
+.text_input_duan{
+    border:#91C0E3 1px solid;
+	width:80px;
+}
+.text_input_duan2{
+    border:#91C0E3 1px solid;
+	width:50px;
+}
+.text_color{
+	color:#004779;
+}
+
+.text_textarea{
+	border:#91C0E3 1px solid;
+	width:300px;	
+}
+.bn_login{
+	background-image:url(../../../login/images/login1.jpg);
+}
+
+.bt_2{  
+ color:red; 
+ font-weight:bold;
+ background-color:#DAE5E9; 
+ line-height: 15px;
+ height: 15px;
+ width: 20px;
+ /*margin-top 和 margin-left 一句就可以实现了 */
+ border: none; /* border-top\left\right\bottom 也可以缩到一句 */
+}
+.bt_1{  
+ color:#5B8DB2; 
+ font-weight:bold;
+ background-color:#DAE5E9;
+ line-height: 15px;
+ height: 15px;
+ width: 30px;
+ /*margin-top 和 margin-left 一句就可以实现了 */
+ border: none; /* border-top\left\right\bottom 也可以缩到一句 */
+}
+.bt_3{  
+ color:#004779; 
+ background-color:#DAE5E9;
+ font-size:10px;
+  
+ line-height: 15px;
+ height: 15px;
+ width: 20px;
+ /*margin-top 和 margin-left 一句就可以实现了 */
+ border: none; /* border-top\left\right\bottom 也可以缩到一句 */
+}
+a:link {
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+a:active {
+	text-decoration: none; 
+}
+.a_fontcolor{
+	color:#004779;
+}

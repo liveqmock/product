@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="GBK"?>
+<requests>
+   <request>
+		<desc>初始化保险档案list</desc>
+		<name>initInsuranceFileList</name>
+		<model name="com.baseMng.InsuranceFileBLC.initInsuranceFileList"/>
+		<dispatch url="/baseMng/insuranceFile/insuranceFileList.jsp" type="forward" on="" default="true"/>
+	</request>
+	<request>
+		<desc>初始化添加(修改)保险档案</desc>
+		<name>initInsuranceFile</name>
+		<model name="com.baseMng.InsuranceFileBLC.initInsuranceFile"/>
+		<dispatch url="/baseMng/insuranceFile/insuranceFile.jsp" type="forward" on="" default="true"/>
+	</request>
+	<request>
+		<desc>添加(修改)保险档案</desc>
+		<name>submitInsuranceFile</name>
+		<model name="com.baseMng.InsuranceFileBLC.submitInsuranceFile"/>
+		<dispatch url="%ContextPath%/baseMng/initInsuranceFileList.?pageNO=1&amp;pageSize=10" type="redirect" on="" default="true"/>
+	</request>
+	<request>
+		<desc>删除保险档案</desc>
+		<name>delInsuranceFile</name>
+		<model name="com.baseMng.InsuranceFileBLC.delInsuranceFile"/>
+		<dispatch url="%ContextPath%/baseMng/initInsuranceFileList.?pageNO=1&amp;pageSize=10" type="redirect" on="" default="true"/>
+	</request>
+</requests>

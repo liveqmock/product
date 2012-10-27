@@ -1,0 +1,289 @@
+* { margin:0; padding:0; word-wrap:break-word; word-break:break-all; }
+html, body {
+	font:normal 12px verdana;
+	margin:0;
+	padding:0;
+	border:0 none;
+	height:100%;
+	width:100%;
+	background-color: #CAE7E9;
+}
+body{
+overflow-x: auto; 
+}
+.showPointer{cursor: pointer;}
+#button{background:url(../images/button-bg.gif) repeat;border: solid 1px #7f9db9;text-align: center;cursor: pointer;}
+#last-sub{margin-top: 3px;}
+
+#xzqh-tree-left{background-color: #eeeeee;height: 100%;border: solid 1px #76C6CC;}
+a img{border: 0;}
+a{text-decoration: none;}
+/*行政区划,right页面*/
+#lable{background:url(../images/lable_bg.jpg) repeat-x; border:solid 1px #76C6CC; height: 25px;line-height: 25px;
+margin-left: 2px;border-top: none;}
+#lable span{color: #006666;font-weight: bold;margin-left: 3px;}
+#lable div{float: right;}
+.tag{width: 150px; margin-left: 3px;text-align: center}
+#top-select{border: solid 1px #76C6CC;margin-left: 2px;margin-top: 2px;height:25px;width:auto;}
+#add-icon{background: url(../images/toolbar-add-bg.gif) no-repeat;width: 18px;height: 18px;float: left;margin-left: 3px;}
+.select-div{float:left;margin-top: 2px;margin-left: 2px;height:auto;width:auto;} 
+.text{padding-top: 8px;margin-left: 3px;line-height: 20px;}
+#del-icon{background: url(../images/toolbar-delete-bg.gif) no-repeat;
+width: 18px;height: 18px;float: left;margin-left: 2px;}
+#goBack-icon{background: url(../images/go-back.png) no-repeat;
+width: 18px;height: 18px;float: left;margin-left: 2px;}
+#ok-icon{background: url(../images/toolbar-ok-bg.gif) no-repeat;
+width: 18px;height: 18px;float: left;margin-left: 2px;}
+#reset-icon{background: url(../images/toolbar-setting-bg.gif) no-repeat;
+width: 18px;height: 18px;float: left;margin-left: 2px;}
+#close-icon{background: url(../images/toolbar-close-bg.gif) no-repeat;
+width: 18px;height: 18px;float: left;margin-left: 2px;}
+#xml-icon{background: url(../images/page.gif) no-repeat;
+width: 16px;height: 16px;float: left;margin-left: 2px;}
+#if-select{background-color: #eeeeee;width: 100%;margin-left: 2px;}
+
+#list-table{background-color: #eeeeee; margin-left: 2px;margin-top: 2px; text-align: center;height:auto;}
+.datas a{text-decoration: none;}
+.datas a:link{color:black;}
+.datas a:visited{color: black;}
+.datas a:hover{color:red;}
+table.datas{margin: 1px 0 1px 0;}
+table.datas {
+	border: 0px solid #ccc;
+	border-collapse: collapse;
+	width: 100%;
+}
+html table.datas td{border: 1px solid #ccc;}
+html table.datas tr{height: 25px;}
+#first-tr{background:url(../images/header-bg.gif) repeat-x; font-weight: bold;color: #006666;height: 23px;}
+/*分页*/
+#page{border: solid 1px #76C6CC;border-left:none; height: 25px;}
+#page span{float: left;margin-top: 5px;}
+.first-page{background: url(../images/first-page.gif) no-repeat;width: 16px;height: 16px;cursor: pointer}
+.prev-page{background:url(../images/prev-page.gif) no-repeat;width: 16px;height: 16px;cursor: pointer}
+.go-to-page{margin-left: 5px;}
+.go-to-page input{width: 30px;height: 12px;}
+.next-page{background:url(../images/next-page.gif) no-repeat;width: 16px;height: 16px;cursor: pointer}
+.last-page{background:url(../images/last-page.gif) no-repeat;width: 16px;height: 16px;cursor: pointer}
+.go-to-page-icon{background:url(../images/go-to-page.gif) no-repeat;width: 14px;height: 14px;margin-left: 3px;cursor: pointer;}
+
+
+/*备注label*/
+label {
+	color: graytext;
+}
+/*自动收缩*/
+textarea {
+	width:98%;
+	overflow:auto;
+    word-break:break-all;
+}
+
+
+
+/*最外层DIV样式*/
+.width-100{width: 100%}
+.width-99{width: 99%}
+.width-98{width: 98%}
+.width-97{width: 97%}
+/*报表DIV样式*/
+.showReport{border: solid 1px #76C6CC;margin-left: 2px;margin-top: 2px;height: 28px;background: #eeeeee;width: 99.9%; margin: 0 auto;}
+/*添加页面,表格*/
+.add-table{border: solid 1px #76C6CC;margin-left: 2px;margin-top: 2px;margin-bottom:2px;margin-right:2px;height: auto;background: #eeeeee;width: 99.9%}
+.add-table tr{height: 25px;}
+.add-table tr td span{color: red;}
+.add-table tr td select{width: 150px;}
+.tishi{font-weight: bold;color: #006666;line-height: 25px;}
+/*前台收客页面*/
+#thisSelect-table{border: solid 1px #76C6CC;margin-left: 2px;margin-top: 2px;height: auto;}
+#thisSelect-table tr{height: 30px;}
+#thisSelect-table tr td span{color:#006666;font-weight: bold }
+#thisSelect-table tr td a:link{color: black;}
+#thisSelect-table tr td a:visited{color:black;}
+#thisSelect-table tr td a:hover{color:red;font-weight: bold;}
+/*报名页面*/
+#bm-table{background-color: #eeeeee; margin-left: 2px;margin-top: 2px;width: 99.9%}
+#bm-table span{color: #006666;font-weight: bold;}
+#bm-table table{border: solid 1px #29A39F;}
+#bm-table table tr td{text-indent: 7px;}
+/*计调页面*/
+#jd-table{background-color: #eeeeee; margin-left: 2px;margin-top: 2px;width: 99.9%}
+#jd-table label{font:normal 11px verdana;padding-bottom:1px;margin-top: 2px;}
+#jd-table span{color: ;font-weight: bold;}
+#jd-table table{border: solid 1px #29A39F;}
+#jd-table table tr td{text-indent: 7px;}
+#jd-table a span {display:-moz-inline-box;  display:inline-block; font-size:12px; font-weight: normal; }
+#jd-table var {display:-moz-inline-box;  display:inline-block; font-size:11px; font-weight: normal; width:65px; text-align: center;}
+
+#tourist{background-color: #eeeeee;border: solid 1px #29A39F;width: 99.9%;margin-left: 2px;}
+#tourist span{color: #006666;font-weight: bold;}
+#tourist div{margin-top: 5px;margin-left: 8px;}
+.input40{width: 40px;}
+.smallInput{width: 50px;}
+.smallerInput{width: 80px;}
+.smallerInput1{width: 100px;}
+.num_input{width: 80px;}
+/*修改,显示图片*/
+#showImg{margin-top: 2px;margin-left: 2px;}
+/*日历表样式*/
+.Calendar
+        {
+            font-family: Verdana;
+            font-size: 12px;
+            background-color: #e0ecf9;
+            text-align: center;
+            padding: 10px;
+            line-height: 1.5em;
+        }
+        .Calendar a
+        {
+            color: #1e5494;
+        }
+         .Calendar table{margin: 1px 0 1px 0;}
+		 .Calendar table{margin: 1px 0 1px 0;}
+		 .Calendar table{
+			border: 0px solid #ccc;
+			border-collapse: collapse;
+			}
+        
+        .Calendar table thead
+        {
+            color: red;
+            text-align: center;
+        }
+        
+        .Calendar table td
+        {
+            font-size: 12px;
+            padding:0 13px;
+            text-align: left;
+        }
+        #idCalendarPre
+        {
+            cursor: pointer;
+            float: left;
+            padding-right: 5px;
+        }
+        
+        #idCalendarNext
+        {
+            cursor: pointer;
+            float: left;
+            padding-right: 5px;
+        }
+		#idCalendarToday{
+			float:left;
+			font-weight:bold;
+			text-align:center;
+			color:red;
+			width: 100px;
+		}
+		#table1{
+			clear:both;
+			float:left;
+		}
+        #idCalendarPreYear
+        {
+            cursor: pointer;
+            float: left;
+            padding-right: 5px;
+        }
+        #idCalendarNextYear
+        {
+            cursor: pointer;
+            float: right;
+        }
+        #idCalendar td.onToday
+        {
+            font-weight: bold;
+            color: #C60;
+        }
+        #idCalendar td.onSelect
+        {
+            vertical-align: top;
+        }
+
+/**/
+.topTitle{background: url(../images/title_bg.jpg) repeat-x;}
+/*计调页面*/
+#guideDiv div{float: left;}
+
+
+
+
+
+/*查询条件,弹出div*/
+div.whiteOverlay { background: url(../images/if-select-img/jqmBG.gif) white;}
+div.jqDrag {cursor: move;}
+
+/* jqmModal dialog CSS courtesy of;
+  Brice Burgess <bhb@iceburg.net> */
+
+div.jqmDialog {
+  display: none;
+    
+    position: fixed;
+    top: 17%;
+    left: 30%;
+    
+    margin-left: -200px;
+  width: 400px;
+
+  overflow: hidden;
+  font-family:verdana,tahoma,helvetica;
+}
+
+/* Fixed posistioning emulation for IE6
+     Star selector used to hide definition from browsers other than IE6
+     For valid CSS, use a conditional include instead */
+* html div.jqmDialog {
+     position: absolute;
+     top: expression((document.documentElement.scrollTop || document.body.scrollTop) + Math.round(17 * (document.documentElement.offsetHeight || document.body.clientHeight) / 100) + 'px');
+}
+/* [[[ Title / Top Classes ]]] */
+div.jqmdTC { 
+  background: #d5ff84 url(../images/if-select-img/sprite.gif) repeat-x 0px -82px; 
+  color: #528c00;
+  padding: 7px 22px 5px 5px;
+  font-family:"sans serif",verdana,tahoma,helvetica;
+  font-weight: bold;
+  * zoom: 1;
+}
+div.jqmdTL { background:  url(../images/if-select-img/sprite.gif) no-repeat 0px -41px; padding-left: 3px;}
+div.jqmdTR { background: url(../images/if-select-img/sprite.gif) no-repeat right 0px; padding-right: 3px; * zoom: 1;}
+
+
+/* [[[ Body / Message Classes ]]] */
+div.jqmdBC {
+  background: url(../images/if-select-img/bc.gif) repeat-x center bottom;
+  padding: 7px 7px 7px;
+  height: 200px;
+  overflow: auto;
+}
+div.jqmdBL { background: url(../images/if-select-img/bl.gif) no-repeat left bottom; padding-left: 7px; }
+div.jqmdBR { background: url(../images/if-select-img/br.gif) no-repeat right bottom; padding-right: 7px; * zoom: 1 }
+
+div.jqmdMSG { color: #317895; }
+
+
+/* [[[ Button classes ]]] */
+input.jqmdX {
+  position: absolute;
+  right: 7px;
+  top: 4px;
+  padding: 0 0 0 19px;
+  height: 19px;
+  width: 0px;
+  background: url(../images/if-select-img/close.gif) no-repeat top left;
+  overflow: hidden;
+}
+input.jqmdXFocus {background-position: bottom left; outline: none;}
+
+div.jqmdBC button, div.jqmdBC input[type="submit"] {
+  margin: 8px 10px 4px 10px;
+  color: #777;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+div.jqmDialog input:focus, div.jqmDialog input.iefocus { background-color: #eaffc3; }

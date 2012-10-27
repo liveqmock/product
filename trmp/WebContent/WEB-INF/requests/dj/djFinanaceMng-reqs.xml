@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="GBK"?>
+<requests>
+	<!-- 餐厅 -->
+   	<request>
+		<desc>查询签单列表</desc>
+		<name>AlldjCTQiandanList</name>
+		<model name="com.trmdj.financeMng.CtQiandanMngBLC.allCTList"/>
+		<dispatch url="/maindj/financeMng/qdqkjl.jsp?target=3&amp;from=%from%" type="forward" on="" default="true"/>
+	</request>
+	<request>
+		<desc>据团ID，餐厅ID得到餐订签单信息</desc>
+		<name>getdjBXCTByTid</name>
+		<model name="com.trmdj.financeMng.CtQiandanMngBLC.getBXCTByTid"/>
+		<dispatch url="/maindj/financeMng/qdCanting/addCTQiandanjs.jsp" type="forward" on="" default="true"/>
+	</request>
+	
+	<request>
+		<desc>添加清单还款信息</desc>
+		<name>adddjCTqingdan</name>
+		<model name="com.trmdj.financeMng.CtQiandanMngBLC.addCTqingdan"/>
+		<dispatch url="/maindj/financeMng/qdqkjl.jsp?target=3" type="forward" on="" default="true"/>
+	</request>
+		<request>
+		<desc>查看清单还款信息</desc>
+		<name>querydjCTlist</name>
+		<model name="com.trmdj.financeMng.CtQiandanMngBLC.queryCTlist"/>
+		<dispatch url="/maindj/financeMng/qdCanting/viewCTQingdan.jsp" type="forward" on="" default="true"/>
+	</request>
+	
+	<!-- 车辆 -->
+	<request>
+		<desc>查询车辆签单列表</desc>
+		<name>AlldjCDList</name>
+		<model name="com.trmdj.financeMng.CdQiandanMngBLC.allCDList"/>
+		<dispatch url="/maindj/financeMng/qdqkjl.jsp?target=1" type="forward" on="" default="true"/>
+	</request>
+	<request>
+		<desc>据团ID，餐厅ID得到车队签单信息</desc>
+		<name>getdjBXCDByTid</name>
+		<model name="com.trmdj.financeMng.CdQiandanMngBLC.getBXCDByTid"/>
+		<dispatch url="/maindj/financeMng/qdCedui/addCDQiandanjs.jsp" type="forward" on="" default="true"/>
+	</request>
+	
+	<request>
+		<desc>添加清单还款信息</desc>
+		<name>adddjCDqingdan</name>
+		<model name="com.trmdj.financeMng.CdQiandanMngBLC.addCDqingdan"/>
+		<dispatch url="/maindj/financeMng/qdqkjl.jsp?target=1" type="forward" on="" default="true"/>
+	</request>
+		<request>
+		<desc>查看清单还款信息</desc>
+		<name>querydjCDlist</name>
+		<model name="com.trmdj.financeMng.CdQiandanMngBLC.queryCDlist"/>
+		<dispatch url="/maindj/financeMng/qdCedui/viewCdQingdanList.jsp" type="forward" on="" default="true"/>
+	</request>
+	
+	<!-- 酒店 -->
+	<request>
+		<desc>查询签单列表</desc>
+		<name>AlldjQiandanList</name>
+		<model name="com.trmdj.financeMng.JdQiandanMngBLC.AllQdList"/>
+		<dispatch url="/maindj/financeMng/qdqkjl.jsp?target=0" type="forward" on="" default="true"/>
+	</request>
+	  <request>
+		<desc>根据团ID结算签单</desc>
+		<name>jsdjJDqingdan</name>
+		<model name="com.trmdj.financeMng.JdQiandanMngBLC.getBXhotelByTid"/>
+		<dispatch url="/maindj/financeMng/qdHotel/addJdQiandanjs.jsp" type="forward" on="" default="true"/>
+	</request>
+	   <request>
+		<desc>提交结算酒店签单</desc>
+		<name>adddjJDqingdan</name>
+		<model name="com.trmdj.financeMng.JdQiandanMngBLC.addJDqingdan"/>
+		<dispatch url="/maindj/financeMng/qdqkjl.jsp?target=0" type="forward" on="" default="true"/>
+	</request>
+		<request>
+		<desc>查看还款列表</desc>
+		<name>querydjQDlist</name>
+		<model name="com.trmdj.financeMng.JdQiandanMngBLC.queryQDlist"/>
+		<dispatch url="/maindj/financeMng/qdHotel/viewJdQingdanList.jsp" type="forward" on="" default="true"/>
+	</request>
+	<!-- 景点 -->
+	<request>
+		<desc>查询景点签单列表</desc>
+		<name>AlldjJingDList</name>
+		<model name="com.trmdj.financeMng.JingdQiandanMngBLC.AllJingDList"/>
+		<dispatch url="/maindj/financeMng/qdqkjl.jsp?target=4" type="forward" on="" default="true"/>
+	</request>
+	<request>
+		<desc>据团ID，餐厅ID得到景点签单信息</desc>
+		<name>getdjBXJingDByTid</name>
+		<model name="com.trmdj.financeMng.JingdQiandanMngBLC.getBXJingDByTid"/>
+		<dispatch url="/maindj/financeMng/qdJingdian/addJingDQiandanjs.jsp" type="forward" on="" default="true"/>
+	</request>
+	
+	<request>
+		<desc>添加清单还款信息</desc>
+		<name>adddjJingDqingdan</name>
+		<model name="com.trmdj.financeMng.JingdQiandanMngBLC.addJingDqingdan"/>
+		<dispatch url="/maindj/financeMng/qdqkjl.jsp?target=4" type="forward" on="" default="true"/>
+	</request>
+		<request>
+		<desc>查看清单还款信息</desc>
+		<name>querydjJingDlist</name>
+		<model name="com.trmdj.financeMng.JingdQiandanMngBLC.queryJingDlist"/>
+		<dispatch url="/maindj/financeMng/qdJingdian/viewJingDQingdan.jsp" type="forward" on="" default="true"/>
+	</request>
+	<!-- 票务 -->
+	<request>
+		<desc>查询票务签单列表</desc>
+		<name>AlldjPWList</name>
+		<model name="com.trmdj.financeMng.PwQiandanMngBLC.AllPWList"/>
+		<dispatch url="/maindj/financeMng/qdqkjl.jsp?target=2" type="forward" on="" default="true"/>
+	</request>
+	<request>
+		<desc>据团ID，代购ID得到票务签单信息</desc>
+		<name>getdjBXPWByTid</name>
+		<model name="com.trmdj.financeMng.PwQiandanMngBLC.getBXPWByTid"/>
+		<dispatch url="/maindj/financeMng/qdPiaowu/addPWQiandanjs.jsp" type="forward" on="" default="true"/>
+	</request>
+	
+	<request>
+		<desc>添加清单还款信息</desc>
+		<name>adddjPWqingdan</name>
+		<model name="com.trmdj.financeMng.PwQiandanMngBLC.addPWqingdan"/>
+		<dispatch url="/maindj/financeMng/qdqkjl.jsp?target=2" type="forward" on="" default="true"/>
+	</request>
+		<request>
+		<desc>查看清单还款信息</desc>
+		<name>querydjPWlist</name>
+		<model name="com.trmdj.financeMng.PwQiandanMngBLC.queryPWlist"/>
+		<dispatch url="/maindj/financeMng/qdPiaowu/viewPWQingdan.jsp" type="forward" on="" default="true"/>
+	</request>
+	<!-- 地接 -->
+	<request>
+		<desc>查询签单列表</desc>
+		<name>AlldjTRList</name>
+		<model name="com.trmdj.financeMng.TRQiandanMngBLC.AllTRList"/>
+		<dispatch url="/maindj/financeMng/qdqkjl.jsp?target=5" type="forward" on="" default="true"/>
+	</request>
+	  <request>
+		<desc>根据团ID结算签单</desc>
+		<name>getdjBXTRByTid</name>
+		<model name="com.trmdj.financeMng.TRQiandanMngBLC.getBXTRByTid"/>
+		<dispatch url="/maindj/financeMng/qdHezuoshe/addTRQiandanjs.jsp" type="forward" on="" default="true"/>
+	</request>
+	   <request>
+		<desc>提交结算酒店签单</desc>
+		<name>adddjTRqingdan</name>
+		<model name="com.trmdj.financeMng.TRQiandanMngBLC.addTRqingdan"/>
+		<dispatch url="/maindj/financeMng/qdqkjl.jsp?target=5" type="forward" on="" default="true"/>
+	</request>
+	<request>
+		<desc>查看还款列表</desc>
+		<name>querydjTRlist</name>
+		<model name="com.trmdj.financeMng.TRQiandanMngBLC.queryTRlist"/>
+		<dispatch url="/maindj/financeMng/qdHezuoshe/viewTRQingdanList.jsp" type="forward" on="" default="true"/>
+	</request>
+	<!-- 营收 -->
+	<request>
+		<desc>营收列表</desc>
+		<name>businessEarningList</name>
+		<model name="com.trmdj.financeMng.BusinessEaningMngBLC.businessEarningList"/>
+		<dispatch url="/maindj/financeMng/businessEarning/businessEarningList.jsp" type="forward" on="" default="true"/>
+	</request>
+	
+	<request>
+		<desc>查看应收款清款记录</desc>
+		<name>showHistory</name>
+		<model name="com.trmdj.financeMng.BusinessEaningMngBLC.showHistory"/>
+		<dispatch url="/maindj/financeMng/businessEarning/businessEarningHis.jsp" type="forward" on="" default="true"/>
+	</request>
+	
+	<request>
+		<desc>初始化修改营收款</desc>
+		<name>beInit4Update</name>
+		<model name="com.trmdj.financeMng.BusinessEaningMngBLC.beInit4Update"/>
+		<dispatch url="/maindj/financeMng/businessEarning/businessEarning.jsp" type="forward" on="" default="true"/>
+	</request>
+	
+	<request>
+		<desc>修改营收款</desc>
+		<name>updateBE</name>
+		<model name="com.trmdj.financeMng.BusinessEaningMngBLC.update"/>
+		<dispatch url="%ContextPath%/maindj/financeMng/businessEarning/businessEarningList.?pageSize=10&amp;pageNO=1" type="redirect" on="" default="true"/>
+	</request>
+	<request>
+		<desc>查询签单列表</desc>
+		<name>BusinessAnalysisMng</name>
+		<model name="com.trmdj.financeAna.BusinessAnalysisMngBLC.getBusinessName"/>
+		<dispatch url="/maindj/financeAna/businessAnalysis.jsp" type="forward" on="" default="true"/>
+	</request>
+</requests>

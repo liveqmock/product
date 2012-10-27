@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<web-app
+	 xmlns="http://java.sun.com/xml/ns/j2ee"
+	 version="2.4"
+	 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	 xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+	 
+	<!-- Define servlets that are included in the eis application -->
+	<filter>
+		<filter-name>authFilter</filter-name>
+		<filter-class>com.dream.bizsdk.web.AuthFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>authFilter</filter-name>
+		<url-pattern>/files/*</url-pattern>
+	</filter-mapping>
+
+	<listener>
+		<listener-class>com.dream.bizsdk.web.Listener</listener-class>
+	</listener>
+	
+	<servlet>
+		<servlet-name>WebServer</servlet-name>
+		<servlet-class>com.dream.bizsdk.web.BLServlet</servlet-class>
+		<init-param>
+			<param-name>initLog4j</param-name>
+			<param-value>true</param-value>
+		</init-param>
+		<init-param>
+			<param-name>usingLocalConfig</param-name>
+			<param-value>true</param-value>
+		</init-param>
+		<init-param>
+			<param-name>localConfigFile</param-name>
+			<param-value>blcontext-local.xml</param-value>
+		</init-param>
+		<init-param>
+			<param-name>remoteConfigFile</param-name>
+			<param-value>blcontext-remote.xml</param-value>
+		</init-param>
+		<init-param>
+			<param-name>socketServer</param-name>
+			<param-value>true</param-value>
+		</init-param>
+		<load-on-startup>2</load-on-startup>
+	</servlet>
+	<servlet>
+		<servlet-name>FileUploader</servlet-name>
+		<servlet-class>com.dream.bizsdk.web.FileUploadServlet</servlet-class>
+		<load-on-startup>3</load-on-startup>
+	</servlet>
+	<servlet>
+		<servlet-name>ReportServlet</servlet-name>
+		<servlet-class>com.dream.bizsdk.web.ReportServlet</servlet-class>
+		<load-on-startup>4</load-on-startup>
+	</servlet>
+	<servlet>
+		<servlet-name>IS</servlet-name>
+		<servlet-class>com.dream.bizsdk.web.ImageServlet</servlet-class>
+		<load-on-startup>5</load-on-startup>
+	</servlet>
+	<servlet>
+		<servlet-name>MyServer</servlet-name>
+		<servlet-class>com.dream.bizsdk.web.MyServlet</servlet-class>
+		<load-on-startup>6</load-on-startup>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>BarcodeServlet</servlet-name>
+		<!--
+			<servlet-class>org.krysalis.barcode4j.servlet.BarcodeServlet</servlet-class>
+		-->
+		<servlet-class>com.goldensky.BarcodeServletJ</servlet-class>
+	</servlet>
+	
+    <!-- 
+    	 DWR
+     -->
+	<servlet>
+		<display-name>DWR Servlet</display-name>
+		<servlet-name>dwr-invoker</servlet-name>
+		<servlet-class>org.directwebremoting.servlet.DwrServlet</servlet-class>
+		<init-param>
+			<param-name>debug</param-name>
+			<param-value>true</param-value>
+		</init-param>
+	</servlet>
+	<servlet-mapping>
+		  <servlet-name>dwr-invoker</servlet-name>
+		  <url-pattern>/dwr/*</url-pattern>
+	</servlet-mapping>
+	<!-- dwr end -->
+	<servlet-mapping>
+		<servlet-name>BarcodeServlet</servlet-name>
+		<url-pattern>/barcode</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>WebServer</servlet-name>
+		<url-pattern>*.</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>MyServer</servlet-name>
+		<url-pattern>*.fw</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>FileUploader</servlet-name>
+		<url-pattern>*.fu</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ReportServlet</servlet-name>
+		<url-pattern>*.rpt</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>IS</servlet-name>
+		<url-pattern>/IS</url-pattern>
+	</servlet-mapping>
+
+	<welcome-file-list>
+		<welcome-file>/login/login.jsp</welcome-file>
+	</welcome-file-list>
+	<!--<error-code></error-code>-->
+	<error-page>
+		<error-code>404</error-code>
+		<location>/html/welcome.html</location>
+	</error-page>
+	
+</web-app>
+

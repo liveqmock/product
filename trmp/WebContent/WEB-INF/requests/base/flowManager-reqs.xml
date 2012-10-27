@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="GBK"?>
+<requests>
+   <request>
+		<desc>流程定义管理</desc>
+		<name>listFlow</name>
+		<model name="com.trmdj.flow.FlowManagerBLC.queryPage"/> 
+		<dispatch url="/maindj/flow/listFlow.jsp" type="forward" on="" default="true"/>
+	</request>
+	<request>
+		<name>addFlow</name>
+		<model name="com.trmdj.flow.FlowManagerBLC.insert"/>
+		<dispatch url="%ContextPath%/listFlow.?TA_FLOWDEFINITION@pageNO=1&amp;TA_FLOWDEFINITION@pageSize=10&amp;TA_FLOWDEFINITION/DEFINITIONID=" type="redirect" on="" default="true"/>
+	</request>
+		<request>
+		<name>delFlow</name>
+		<model name="com.trmdj.flow.FlowManagerBLC.delFlow"/>
+		<dispatch url="%ContextPath%/listFlow.?TA_FLOWDEFINITION@pageNO=1&amp;TA_FLOWDEFINITION@pageSize=10&amp;TA_FLOWDEFINITION/DEFINITIONID=" type="redirect" on="" default="true"/>
+	</request>
+	<request>
+		<name>getFlowById</name>
+		<model name="com.trmdj.flow.FlowManagerBLC.getFlowById"/>
+		<dispatch url="/maindj/flow/updateFlow.jsp" type="forward" on="" default="true"/>
+	</request>
+	<request>
+		<name>updateFlow</name> 
+		<model name="com.trmdj.flow.FlowManagerBLC.updateFlow"/>
+		<dispatch url="%ContextPath%/listFlow.?TA_FLOWDEFINITION@pageNO=1&amp;TA_FLOWDEFINITION@pageSize=10&amp;TA_FLOWDEFINITION/DEFINITIONID=" type="redirect" on="" default="true"/>
+	</request>
+	<request>
+		<name>getFlowBylike</name>
+		<model name="com.trmdj.flow.FlowManagerBLC.getFlowBylike"/>
+		<dispatch url="/maindj/flow/listFlow.jsp" type="forward" on="" default="true"/>
+	</request>	
+	<request>
+		<desc>修改节点</desc>
+		<name>updateNode</name>
+		<model name="com.trmdj.flow.FlowNodeMNGBLC.updateNode"/>
+		<dispatch url="%ContextPath%/maindj/flow/listFlow.?TA_FLOWDEFINITION/DEFINITIONID=&amp;TA_FLOWDEFINITION@pageNO=1&amp;TA_FLOWDEFINITION@pageSize=10" type="redirect" on="" default="true"/>
+	</request>
+	<request>
+		<name>creatMaxNodeId</name>
+		<model name="com.trmdj.flow.FlowNodeMNGBLC.creatMaxNodeId"/>
+		<dispatch url="/maindj/flow/ajaxNodeID.jsp" type="forward" on="" default="true"/>
+	</request>
+	<request>
+		<name>getNodeByFlowID</name>
+		<model name="com.trmdj.flow.FlowNodeMNGBLC.creatMaxNodeId"/>
+		<model name="com.trmdj.flow.FlowNodeMNGBLC.getNodeByFlowID"/>
+		<model name="com.trmdj.flow.FlowNodeMNGBLC.selectAllrole"/>
+		<dispatch url="/maindj/flow/nodeManager.jsp" type="forward" on="" default="true"/>
+	</request>
+</requests>

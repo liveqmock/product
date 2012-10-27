@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="GBK"?>
+<requests>
+	<request>
+		<desc>初始化制定酒店计划信息</desc>
+		<name>ztInitAddHotelPlan</name>
+		<model name="com.trm.ztPlan.ZtHotelPlanBLC.query"/>
+		<model name="com.trm.zttdMng.ZtGroupMngBLC.query"/>
+		<dispatch url="/main/ztPlans/hotelPlan/addHotelPlan.jsp" type="forward" on="" default="true"/>
+	</request>
+	
+	<request>
+		<desc>添加酒店计划信息</desc>
+		<name>ztAddHotelPlan</name>
+		<model name="com.trm.ztPlan.ZtHotelPlanBLC.editHotelPlan"/>
+		<dispatch url="%ContextPath%/main/ztPlans/ztInitMasterPlan.?TA_ZT_GROUP/ID=%groupId%&amp;TA_ZT_JHHOTEL/TID=%groupId%&amp;TA_TDJDXXZJB_ZT/TID=%groupId%&amp;TA_ZT_JHCT/TID=%groupId%&amp;TA_ZT_JH/TID=%groupId%&amp;TA_ZT_JHPW/TID=%groupId%&amp;TA_ZT_JHCL/TID=%groupId%&amp;TA_ZT_JHJD/TID=%groupId%&amp;TA_ZT_JHDJ/TID=%groupId%&amp;TA_ZT_JHGW/TID=%groupId%&amp;TA_ZT_JHJIAD/TID=%groupId%&amp;TA_ZT_JHDY/TID=%groupId%&amp;isCheck=Y&amp;mklb=1;" type="redirect" on="" default="true"/>
+	</request>	
+	<request>
+		<desc>获取酒店计划信息</desc>
+		<name>ztGetHotelPlanInfo</name>
+		<model name="com.trm.ztPlan.ZtHotelPlanBLC.getHotelInfo"/>
+		<dispatch url="/main/ztPlans/hotelPlan/hotelPlanInfo.jsp" type="forward" on="" default="true"/>
+	</request>
+	<request>
+		<desc>获取酒店联系人信息</desc>
+		<name>ztGetHotelLXR</name>
+		<model name="com.trm.ztPlan.ZtHotelPlanBLC.getHotelInfo"/>
+		<dispatch url="/main/ztPlans/hotelPlan/ajaxPage4HotelLXR.jsp" type="forward" on="" default="true"/>
+	</request>
+	
+	<request>
+		<desc>初始化修改酒店计划信息</desc>
+		<name>ztInitUpdateHotelPlan</name>
+		<model name="com.trm.ztPlan.ZtHotelPlanBLC.queryHotelPlanInfo"/>
+		<model name="com.trm.zttdMng.ZtGroupMngBLC.query"/>
+		<model name="com.trm.ztPlan.ZtJDXXZJBBLC.query"/>
+		<dispatch url="/main/ztPlans/hotelPlan/updateHotelPlan.jsp" type="forward" on="" default="true"/>
+	</request>
+	
+	<request>
+		<desc>返回初始化修改酒店计划信息</desc>
+		<name>ztReturnInitUpdateHotelPlan</name>
+		<model name="com.trm.ztPlan.ZtHotelPlanBLC.queryHotelPlanInfo"/>
+		<model name="com.trm.ztPlan.ZtJDXXZJBBLC.query"/>
+		<dispatch url="/main/ztPlans/hotelPlan/returnUpdateHotelPlan.jsp" type="forward" on="" default="true"/>
+	</request>
+	
+	<request>
+		<desc>修改酒店计划信息</desc>
+		<name>ztUpdateHotelPlan</name>
+		<model name="com.trm.ztPlan.ZtHotelPlanBLC.editHotelPlan"/>
+		<dispatch url="%ContextPath%/main/ztPlans/ztInitMasterPlan.?TA_ZT_GROUP/ID=%groupId%&amp;TA_ZT_JHHOTEL/TID=%groupId%&amp;TA_TDJDXXZJB_ZT/TID=%groupId%&amp;TA_ZT_JHCT/TID=%groupId%&amp;TA_ZT_JH/TID=%groupId%&amp;TA_ZT_JHPW/TID=%groupId%&amp;TA_ZT_JHCL/TID=%groupId%&amp;TA_ZT_JHJD/TID=%groupId%&amp;TA_ZT_JHDJ/TID=%groupId%&amp;TA_ZT_JHGW/TID=%groupId%&amp;TA_ZT_JHJIAD/TID=%groupId%&amp;TA_ZT_JHDY/TID=%groupId%&amp;isCheck=Y&amp;mklb=1;" type="redirect" on="" default="true"/>
+	</request>	
+	
+	<request>
+		<desc>查询酒店计划信息</desc>
+		<name>ztSelectHotelPlanInfo</name>
+		<model name="com.trm.ztPlan.ZtHotelPlanBLC.queryHotelPlanInfo"/>
+		<model name="com.trm.ztPlan.ZtJDXXZJBBLC.query"/>
+		<dispatch url="/main/ztPlans/hotelPlan/listHotelPlan.jsp" type="forward" on="" default="true"/>
+	</request>
+	
+	<request>
+		<desc>返回查询酒店计划信息</desc>
+		<name>ztReturnSelectHotelPlanInfo</name>
+		<model name="com.trm.ztPlan.ZtHotelPlanBLC.queryHotelPlanInfo"/>
+		<model name="com.trm.ztPlan.ZtJDXXZJBBLC.query"/>
+		<dispatch url="/main/ztPlans/hotelPlan/returnListHotelPlan.jsp" type="forward" on="" default="true"/>
+	</request>
+	
+</requests>

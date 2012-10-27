@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="GBK"?>
+<requests>
+
+	<request>
+		<desc>初始化团打印信息列表</desc>
+		<name>djQueryGroupPrintList</name>
+		<model name="com.trmdj.businessPlan.groupMng.DjGroupMngBLC.initGroupPrintList"/>
+		<dispatch url="/maindj/businessPlan/planAjaxPage/printGroupList.jsp" type="forward" on="" default="true"/>
+	</request>
+
+	<request>
+		<desc>显示要打印团信息</desc>
+		<name>showGroupPrint</name>
+		<model name="com.trmdj.businessPlan.groupMng.DjGroupMngBLC.printPlanInfo"/>
+		<model name="com.trmdj.businessPlan.groupMng.DJTDJDXXBLC.query"/>
+		<dispatch url="/maindj/businessPlan/planAjaxPage/printGroupPlan/printShowGroupPlan.jsp" type="forward" on="" default="true"/>
+	</request>
+	
+	<request>
+		<desc>打印更改团状态</desc>
+		<name>doGroupPrint</name>
+		<model name="com.trmdj.businessPlan.groupMng.DjGroupMngBLC.doGroupPrint"/>
+		<dispatch url="%ContextPath%/maindj/businessPlan/plan/djQueryGroupPrintList.?pageNO=1&amp;pageSize=10" type="redirect" on="" default="true"/>
+	</request>
+	
+	<request>
+		<desc>出团任务单--导出到word</desc>
+		<name>expWordForGroupInfo</name>
+		<model name="com.trmdj.businessPlan.groupMng.DjGroupMngBLC.print_getPlanInfo"/>
+		<model name="com.trmdj.businessPlan.groupMng.DJTDJDXXBLC.query"/>
+		<dispatch url="/maindj/businessPlan/plan/printGroupPlan/expWordForGroup.jsp" type="forward" on="" default="true"/>
+	</request>
+
+</requests>

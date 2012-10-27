@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="GBK"?>
+<requests>
+
+	<request>
+		<desc>初始化车辆报销页面</desc>
+		<name>ztInitVehBx</name>
+		<model name="com.trm.ztbx.ZtVehBxBLC.initBXPage"/>
+		<dispatch url="/main/ztbx/bxCar/vehBx.jsp" type="forward" on="" default="true"/>
+	</request>
+	
+	<request>
+		<desc>保存车辆报销</desc>
+		<name>ztSaveVehBx</name>
+		<model name="com.trm.ztbx.ZtVehBxBLC.editVehBx"/>
+		<dispatch url="/main/ztbx/bxCar/vehBx.jsp" type="forward" on="" default="true"/>
+	</request>
+
+</requests>

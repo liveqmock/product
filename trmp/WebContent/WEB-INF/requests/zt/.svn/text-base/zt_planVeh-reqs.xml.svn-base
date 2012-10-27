@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="GBK"?>
+<requests>
+
+	<request>
+		<desc>初始化车辆计调页面</desc>
+		<name>ztInitVehPlan</name>
+		<model name="com.trm.ztPlan.ZtVehPlanBLC.queryByGroupID"/>
+		<model name="com.trm.ztPlan.ZtJDXXZJBBLC.query"/><!-- 团队计划信息合计表 -->
+		<dispatch url="/main/ztPlans/vehPlan/addVehPlan.jsp" type="forward" on="" default="true"/>
+	</request>
+	
+	<request>
+		<desc>保存车辆计划</desc>
+		<name>ztSaveVehPlan</name>
+		<model name="com.trm.ztPlan.ZtVehPlanBLC.ztSaveVehPlan"/>
+		<dispatch url="%ContextPath%/main/ztPlans/ztInitMasterPlan.?TA_ZT_GROUP/ID=%groupId%&amp;TA_ZT_JHHOTEL/TID=%groupId%&amp;TA_TDJDXXZJB_ZT/TID=%groupId%&amp;TA_ZT_JHCT/TID=%groupId%&amp;TA_ZT_JH/TID=%groupId%&amp;TA_ZT_JHPW/TID=%groupId%&amp;TA_ZT_JHCL/TID=%groupId%&amp;TA_ZT_JHJD/TID=%groupId%&amp;TA_ZT_JHDJ/TID=%groupId%&amp;TA_ZT_JHGW/TID=%groupId%&amp;TA_ZT_JHJIAD/TID=%groupId%&amp;TA_ZT_JHDY/TID=%groupId%&amp;isCheck=Y&amp;mklb=1;" type="redirect" on="" default="true"/>
+	</request>
+	
+	<request>
+		<desc>根据车辆ID查询司机联系方式</desc>
+		<name>ztQueryDriverByVehID</name>
+		<model name="com.baseMng.VehBLC.query"/>
+		<dispatch url="/main/ztPlans/vehPlan/ajaxPage4QueryDriver.jsp" type="forward" on="" default="true"/>
+	</request>
+	
+	
+</requests>

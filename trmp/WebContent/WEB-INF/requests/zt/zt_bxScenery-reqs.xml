@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="GBK"?>
+<requests>
+	<request>
+		<desc>初始化制定景点计划页面</desc>
+		<name>ztInitSceneryRbt</name>
+		<model name="com.trm.ztbx.ZtSceneryBxBLC.querySceneryMng"/>
+		<dispatch url="/main/ztbx/bxScenery/bxEditScenery.jsp" type="forward" on="" default="true"/>
+	</request>
+	<request>
+		<desc>AJAX加载所在城市景点列表</desc>
+		<name>ztInitSceneryListRbt</name>
+		<model name="com.baseMng.SceneryBLC.query"/>
+		<dispatch url="/main/ztbx/bxScenery/allSceneryByCity.jsp" type="forward" on="" default="true"/>
+	</request>
+	<request>
+		<desc>AJAX加载景点价格列表</desc>
+		<name>ztInitSceneryPriceListRbt</name>
+		<model name="com.trm.ztbx.ZtSceneryBxBLC.initSceneryPriceRbt"/>
+		<dispatch url="/main/ztbx/bxScenery/priceByScenery.jsp" type="forward" on="" default="true"/>
+	</request>
+	<request>
+		<desc>景点计划增加 修改</desc>
+		<name>ztSceneryGeneralRbt</name>
+		<model name="com.trm.ztbx.ZtSceneryBxBLC.scenryGeneralRbt"/>
+		<dispatch url="/main/ztbx/bxScenery/bxEditScenery.jsp" type="forward" on="" default="true"/>
+	</request>
+</requests>

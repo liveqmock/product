@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="GBK"?>
+<requests>
+	<request>
+		<desc>AJAX初始化加点信息</desc>
+		<name>djAjaxHotelInfo</name>
+		<model name="com.trmdj.businessPlan.plan.DjHotelPlanBLC.djAjaxHotelInfo"/>
+		<dispatch url="/maindj/businessPlan/initPage4Ajax/initHotelPage.jsp" type="forward" on="" default="true"/>
+	</request>
+	<request>
+		<desc>新增加点信息</desc>
+		<name>djFrmInsertHotel</name>
+		<model name="com.trmdj.businessPlan.plan.DjHotelPlanBLC.insertHotel"/>
+		<dispatch url="/maindj/businessPlan/planSuccess.jsp" type="forward" on="" default="true"/>
+	</request>
+</requests>
