@@ -14,6 +14,10 @@ package org.redtroy.study.pattern.singleton;
 public class EagerSingleton {
 	public static EagerSingleton instance = new EagerSingleton();
 
+	private EagerSingleton() {
+
+	}
+
 	public static EagerSingleton newInstance() {
 		return instance;
 	}

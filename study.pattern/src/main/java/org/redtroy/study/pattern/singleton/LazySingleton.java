@@ -14,6 +14,11 @@ package org.redtroy.study.pattern.singleton;
 public class LazySingleton {
 	public static LazySingleton instance = null;
 
+	private LazySingleton() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
 	public static LazySingleton newInstance() {
 		if (instance == null)
 			instance = new LazySingleton();
